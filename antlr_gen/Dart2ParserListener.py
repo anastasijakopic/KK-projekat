@@ -17,6 +17,42 @@ class Dart2ParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by Dart2Parser#functionDeclaration.
+    def enterFunctionDeclaration(self, ctx:Dart2Parser.FunctionDeclarationContext):
+        pass
+
+    # Exit a parse tree produced by Dart2Parser#functionDeclaration.
+    def exitFunctionDeclaration(self, ctx:Dart2Parser.FunctionDeclarationContext):
+        pass
+
+
+    # Enter a parse tree produced by Dart2Parser#functionType.
+    def enterFunctionType(self, ctx:Dart2Parser.FunctionTypeContext):
+        pass
+
+    # Exit a parse tree produced by Dart2Parser#functionType.
+    def exitFunctionType(self, ctx:Dart2Parser.FunctionTypeContext):
+        pass
+
+
+    # Enter a parse tree produced by Dart2Parser#parameterList.
+    def enterParameterList(self, ctx:Dart2Parser.ParameterListContext):
+        pass
+
+    # Exit a parse tree produced by Dart2Parser#parameterList.
+    def exitParameterList(self, ctx:Dart2Parser.ParameterListContext):
+        pass
+
+
+    # Enter a parse tree produced by Dart2Parser#parameter.
+    def enterParameter(self, ctx:Dart2Parser.ParameterContext):
+        pass
+
+    # Exit a parse tree produced by Dart2Parser#parameter.
+    def exitParameter(self, ctx:Dart2Parser.ParameterContext):
+        pass
+
+
     # Enter a parse tree produced by Dart2Parser#statement.
     def enterStatement(self, ctx:Dart2Parser.StatementContext):
         pass
@@ -26,21 +62,75 @@ class Dart2ParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by Dart2Parser#expression.
+    def enterExpression(self, ctx:Dart2Parser.ExpressionContext):
+        pass
+
+    # Exit a parse tree produced by Dart2Parser#expression.
+    def exitExpression(self, ctx:Dart2Parser.ExpressionContext):
+        pass
+
+
+    # Enter a parse tree produced by Dart2Parser#postfixExpression.
+    def enterPostfixExpression(self, ctx:Dart2Parser.PostfixExpressionContext):
+        pass
+
+    # Exit a parse tree produced by Dart2Parser#postfixExpression.
+    def exitPostfixExpression(self, ctx:Dart2Parser.PostfixExpressionContext):
+        pass
+
+
+    # Enter a parse tree produced by Dart2Parser#assignment.
+    def enterAssignment(self, ctx:Dart2Parser.AssignmentContext):
+        pass
+
+    # Exit a parse tree produced by Dart2Parser#assignment.
+    def exitAssignment(self, ctx:Dart2Parser.AssignmentContext):
+        pass
+
+
+    # Enter a parse tree produced by Dart2Parser#primary.
+    def enterPrimary(self, ctx:Dart2Parser.PrimaryContext):
+        pass
+
+    # Exit a parse tree produced by Dart2Parser#primary.
+    def exitPrimary(self, ctx:Dart2Parser.PrimaryContext):
+        pass
+
+
+    # Enter a parse tree produced by Dart2Parser#functionCall.
+    def enterFunctionCall(self, ctx:Dart2Parser.FunctionCallContext):
+        pass
+
+    # Exit a parse tree produced by Dart2Parser#functionCall.
+    def exitFunctionCall(self, ctx:Dart2Parser.FunctionCallContext):
+        pass
+
+
+    # Enter a parse tree produced by Dart2Parser#argumentList.
+    def enterArgumentList(self, ctx:Dart2Parser.ArgumentListContext):
+        pass
+
+    # Exit a parse tree produced by Dart2Parser#argumentList.
+    def exitArgumentList(self, ctx:Dart2Parser.ArgumentListContext):
+        pass
+
+
+    # Enter a parse tree produced by Dart2Parser#literal.
+    def enterLiteral(self, ctx:Dart2Parser.LiteralContext):
+        pass
+
+    # Exit a parse tree produced by Dart2Parser#literal.
+    def exitLiteral(self, ctx:Dart2Parser.LiteralContext):
+        pass
+
+
     # Enter a parse tree produced by Dart2Parser#variableDeclaration.
     def enterVariableDeclaration(self, ctx:Dart2Parser.VariableDeclarationContext):
         pass
 
     # Exit a parse tree produced by Dart2Parser#variableDeclaration.
     def exitVariableDeclaration(self, ctx:Dart2Parser.VariableDeclarationContext):
-        pass
-
-
-    # Enter a parse tree produced by Dart2Parser#expressionStatement.
-    def enterExpressionStatement(self, ctx:Dart2Parser.ExpressionStatementContext):
-        pass
-
-    # Exit a parse tree produced by Dart2Parser#expressionStatement.
-    def exitExpressionStatement(self, ctx:Dart2Parser.ExpressionStatementContext):
         pass
 
 
@@ -125,57 +215,12 @@ class Dart2ParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by Dart2Parser#expression.
-    def enterExpression(self, ctx:Dart2Parser.ExpressionContext):
+    # Enter a parse tree produced by Dart2Parser#expressionStatement.
+    def enterExpressionStatement(self, ctx:Dart2Parser.ExpressionStatementContext):
         pass
 
-    # Exit a parse tree produced by Dart2Parser#expression.
-    def exitExpression(self, ctx:Dart2Parser.ExpressionContext):
-        pass
-
-
-    # Enter a parse tree produced by Dart2Parser#assignment.
-    def enterAssignment(self, ctx:Dart2Parser.AssignmentContext):
-        pass
-
-    # Exit a parse tree produced by Dart2Parser#assignment.
-    def exitAssignment(self, ctx:Dart2Parser.AssignmentContext):
-        pass
-
-
-    # Enter a parse tree produced by Dart2Parser#primary.
-    def enterPrimary(self, ctx:Dart2Parser.PrimaryContext):
-        pass
-
-    # Exit a parse tree produced by Dart2Parser#primary.
-    def exitPrimary(self, ctx:Dart2Parser.PrimaryContext):
-        pass
-
-
-    # Enter a parse tree produced by Dart2Parser#functionCall.
-    def enterFunctionCall(self, ctx:Dart2Parser.FunctionCallContext):
-        pass
-
-    # Exit a parse tree produced by Dart2Parser#functionCall.
-    def exitFunctionCall(self, ctx:Dart2Parser.FunctionCallContext):
-        pass
-
-
-    # Enter a parse tree produced by Dart2Parser#argumentList.
-    def enterArgumentList(self, ctx:Dart2Parser.ArgumentListContext):
-        pass
-
-    # Exit a parse tree produced by Dart2Parser#argumentList.
-    def exitArgumentList(self, ctx:Dart2Parser.ArgumentListContext):
-        pass
-
-
-    # Enter a parse tree produced by Dart2Parser#literal.
-    def enterLiteral(self, ctx:Dart2Parser.LiteralContext):
-        pass
-
-    # Exit a parse tree produced by Dart2Parser#literal.
-    def exitLiteral(self, ctx:Dart2Parser.LiteralContext):
+    # Exit a parse tree produced by Dart2Parser#expressionStatement.
+    def exitExpressionStatement(self, ctx:Dart2Parser.ExpressionStatementContext):
         pass
 
 

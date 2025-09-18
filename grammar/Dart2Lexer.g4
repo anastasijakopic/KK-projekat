@@ -29,6 +29,8 @@ GT: '>';
 GTE: '>=';
 AND: '&&';
 OR: '||';
+PLUS_PLUS: '++';
+MINUS_MINUS: '--';
 
 // Separatori
 LPAREN: '(';

@@ -3,42 +3,93 @@ from antlr_gen.Dart2ParserListener import Dart2ParserListener
 class DiagramGenerator(Dart2ParserListener):
     def __init__(self):
         super().__init__()
-        self.uml_lines = [] # Ovdje ćemo skladištiti sve linije PlantUML koda
+        self.uml_lines = []
+        self.indent_level = 0
+        self.in_expression_statement = False  # DODATO: Pratimo da li smo u expression statement
 
-    # 1. OBRADA OSNOVNIH IZRAZA (npr. "x = 5;")
+    def clean_text(self, text):
+        """Očisti tekst za PlantUML - ukloni specijalne karaktere"""
+        text = text.replace(';', '').replace('"', '\\"')
+        return text.strip()
+
     def enterExpressionStatement(self, ctx):
-        expression_text = ctx.getText() # Ovo je grubo, ali za početak
-        if expression_text: # Da izbegnemo prazne linije
+        # Označimo da smo u expression statement
+        self.in_expression_statement = True
+        expression_text = self.clean_text(ctx.getText())
+        if expression_text:
             self.uml_lines.append(f":{expression_text};")
 
-    # 2. OBRADA IF IZJAVA
+    def exitExpressionStatement(self, ctx):
+        # Izlazimo iz expression statement
+        self.in_expression_statement = False
+
+    def enterFunctionCall(self, ctx):
+        # Preskoči function call ako smo već u expression statement
+        if not self.in_expression_statement:
+            func_name = ctx.ID().getText()
+            args = ctx.argumentList()
+            if args:
+                args_text = self.clean_text(args.getText())
+                self.uml_lines.append(f":{func_name}({args_text});")
+            else:
+                self.uml_lines.append(f":{func_name}();")
+
+    # Ostale metode ostaju iste...
+    def enterVariableDeclaration(self, ctx):
+        var_name = ctx.ID().getText()
+        expression = ctx.expression()
+        if expression:
+            value = self.clean_text(expression.getText())
+            self.uml_lines.append(f":{var_name} = {value};")
+        else:
+            self.uml_lines.append(f":{var_name} = ...;")
+
+    def enterReturnStatement(self, ctx):
+        expression = ctx.expression()
+        if expression:
+            return_value = self.clean_text(expression.getText())
+            self.uml_lines.append(f":return {return_value};")
+        else:
+            self.uml_lines.append(":return;")
+
     def enterIfStatement(self, ctx):
-        # Pristupimo uslovnom izrazu unutar ifa
-        condition_ctx = ctx.expression()
-        condition_text = condition_ctx.getText() if condition_ctx else "true"
-        self.uml_lines.append(f"if ({condition_text}) then (yes)")
+        condition = self.clean_text(ctx.expression().getText())
+        self.uml_lines.append(f"if ({condition}) then (yes)")
 
     def exitIfStatement(self, ctx):
-        # Proverimo da li postoji ELSE grana
-        else_stmt = ctx.elseStatement()
-        if else_stmt is not None:
+        if ctx.elseStatement():
             self.uml_lines.append("else (no)")
         self.uml_lines.append("endif")
 
-    # 3. OBRADA FOR PETLJI (Jednostavan 'for' poput onog u C-u)
     def enterForStatement(self, ctx):
-        # Ovo je pojednostavljeno. Trebalo bi bolje parsirati inicijalizaciju, uslov i inkrement.
-        for_loop_header = ctx.getChild(2).getText() # Ovo će uhvatiti deo unutar ()
-        self.uml_lines.append(f"group for ({for_loop_header})")
+        init = self.clean_text(ctx.forInitializer().getText()) if ctx.forInitializer() else ""
+        condition = self.clean_text(ctx.expression().getText()) if ctx.expression() else "true"
+        increment = self.clean_text(ctx.forIterator().getText()) if ctx.forIterator() else ""
+        loop_header = f"{init}; {condition}; {increment}"
+        self.uml_lines.append(f"group for ({loop_header})")
 
     def exitForStatement(self, ctx):
         self.uml_lines.append("end group")
 
-    # TODO: DODAJ METODE ZA:
-    # - enterWhileStatement / exitWhileStatement
-    # - enterDoWhileStatement / exitDoWhileStatement
-    # - enterBlock / exitBlock (možda za označavanje početka/kraja bloka '{ }')
-    # - enterReturnStatement
+    def enterWhileStatement(self, ctx):
+        condition = self.clean_text(ctx.expression().getText())
+        self.uml_lines.append(f"while ({condition})")
 
-    # ctx.getText() često vraća "ružan" tekst bez formatiranja.
-    # Kasnije možeš da poboljšaš ovo da lepše izgleda u dijagramu.
+    def exitWhileStatement(self, ctx):
+        self.uml_lines.append("end while")
+
+    def enterBlock(self, ctx):
+        if self.indent_level > 0:
+            self.uml_lines.append("group")
+        self.indent_level += 1
+
+    def exitBlock(self, ctx):
+        self.indent_level -= 1
+        if self.indent_level > 0:
+            self.uml_lines.append("end group")
+
+    def enterEveryRule(self, ctx):
+        pass
+
+    def exitEveryRule(self, ctx):
+        pass
