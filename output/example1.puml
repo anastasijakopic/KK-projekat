@@ -1,0 +1,14 @@
+@startuml
+start
+:main()
+:numbers = [1,2,3,4,5];
+:sum = 0;
+group for (i<5)
+:i = 0;
+if (numbers[i]%2==0) then (yes)
+:sum = sum+numbers[i];
+endif
+end group
+:print(sum);
+stop
+@enduml

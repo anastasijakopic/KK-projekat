@@ -1,4 +1,4 @@
-# Generated from grammar/Dart2Parser.g4 by ANTLR 4.13.2
+# Generated from grammar/DartParser.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -918,9 +918,9 @@ def serializedATN():
         2192,2196
     ]
 
-class Dart2Parser ( Parser ):
+class DartParser ( Parser ):
 
-    grammarFileName = "Dart2Parser.g4"
+    grammarFileName = "DartParser.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -1396,23 +1396,23 @@ class Dart2Parser ( Parser ):
 
         def multiplicativeExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.MultiplicativeExpressionContext)
+                return self.getTypedRuleContexts(DartParser.MultiplicativeExpressionContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.MultiplicativeExpressionContext,i)
+                return self.getTypedRuleContext(DartParser.MultiplicativeExpressionContext,i)
 
 
         def additiveOperator(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.AdditiveOperatorContext)
+                return self.getTypedRuleContexts(DartParser.AdditiveOperatorContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.AdditiveOperatorContext,i)
+                return self.getTypedRuleContext(DartParser.AdditiveOperatorContext,i)
 
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_additiveExpression
+            return DartParser.RULE_additiveExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAdditiveExpression" ):
@@ -1427,7 +1427,7 @@ class Dart2Parser ( Parser ):
 
     def additiveExpression(self):
 
-        localctx = Dart2Parser.AdditiveExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.AdditiveExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_additiveExpression)
         try:
             self.state = 431
@@ -1455,7 +1455,7 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 423
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 427 
                 self._errHandler.sync(self)
                 _alt = 1
@@ -1492,13 +1492,13 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def PL(self):
-            return self.getToken(Dart2Parser.PL, 0)
+            return self.getToken(DartParser.PL, 0)
 
         def MINUS(self):
-            return self.getToken(Dart2Parser.MINUS, 0)
+            return self.getToken(DartParser.MINUS, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_additiveOperator
+            return DartParser.RULE_additiveOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAdditiveOperator" ):
@@ -1513,7 +1513,7 @@ class Dart2Parser ( Parser ):
 
     def additiveOperator(self):
 
-        localctx = Dart2Parser.AdditiveOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.AdditiveOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_additiveOperator)
         self._la = 0 # Token type
         try:
@@ -1543,23 +1543,23 @@ class Dart2Parser ( Parser ):
 
         def namedArgument(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.NamedArgumentContext)
+                return self.getTypedRuleContexts(DartParser.NamedArgumentContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.NamedArgumentContext,i)
+                return self.getTypedRuleContext(DartParser.NamedArgumentContext,i)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def expressionList(self):
-            return self.getTypedRuleContext(Dart2Parser.ExpressionListContext,0)
+            return self.getTypedRuleContext(DartParser.ExpressionListContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_argumentList
+            return DartParser.RULE_argumentList
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterArgumentList" ):
@@ -1574,7 +1574,7 @@ class Dart2Parser ( Parser ):
 
     def argumentList(self):
 
-        localctx = Dart2Parser.ArgumentListContext(self, self._ctx, self.state)
+        localctx = DartParser.ArgumentListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_argumentList)
         try:
             self.state = 451
@@ -1590,7 +1590,7 @@ class Dart2Parser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 436
-                        self.match(Dart2Parser.C)
+                        self.match(DartParser.C)
                         self.state = 437
                         self.namedArgument() 
                     self.state = 442
@@ -1609,7 +1609,7 @@ class Dart2Parser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 444
-                        self.match(Dart2Parser.C)
+                        self.match(DartParser.C)
                         self.state = 445
                         self.namedArgument() 
                     self.state = 450
@@ -1636,15 +1636,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def arguments(self):
-            return self.getTypedRuleContext(Dart2Parser.ArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.ArgumentsContext,0)
 
 
         def typeArguments(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.TypeArgumentsContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_argumentPart
+            return DartParser.RULE_argumentPart
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterArgumentPart" ):
@@ -1659,7 +1659,7 @@ class Dart2Parser ( Parser ):
 
     def argumentPart(self):
 
-        localctx = Dart2Parser.ArgumentPartContext(self, self._ctx, self.state)
+        localctx = DartParser.ArgumentPartContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_argumentPart)
         self._la = 0 # Token type
         try:
@@ -1691,20 +1691,20 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def argumentList(self):
-            return self.getTypedRuleContext(Dart2Parser.ArgumentListContext,0)
+            return self.getTypedRuleContext(DartParser.ArgumentListContext,0)
 
 
         def C(self):
-            return self.getToken(Dart2Parser.C, 0)
+            return self.getToken(DartParser.C, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_arguments
+            return DartParser.RULE_arguments
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterArguments" ):
@@ -1719,13 +1719,13 @@ class Dart2Parser ( Parser ):
 
     def arguments(self):
 
-        localctx = Dart2Parser.ArgumentsContext(self, self._ctx, self.state)
+        localctx = DartParser.ArgumentsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_arguments)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 458
-            self.match(Dart2Parser.OP)
+            self.match(DartParser.OP)
             self.state = 463
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -1737,13 +1737,13 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==5:
                     self.state = 460
-                    self.match(Dart2Parser.C)
+                    self.match(DartParser.C)
 
 
 
 
             self.state = 465
-            self.match(Dart2Parser.CP)
+            self.match(DartParser.CP)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1761,10 +1761,10 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def AS_(self):
-            return self.getToken(Dart2Parser.AS_, 0)
+            return self.getToken(DartParser.AS_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_asOperator
+            return DartParser.RULE_asOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAsOperator" ):
@@ -1779,12 +1779,12 @@ class Dart2Parser ( Parser ):
 
     def asOperator(self):
 
-        localctx = Dart2Parser.AsOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.AsOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_asOperator)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 467
-            self.match(Dart2Parser.AS_)
+            self.match(DartParser.AS_)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1802,29 +1802,29 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def ASSERT_(self):
-            return self.getToken(Dart2Parser.ASSERT_, 0)
+            return self.getToken(DartParser.ASSERT_, 0)
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ExprContext)
+                return self.getTypedRuleContexts(DartParser.ExprContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ExprContext,i)
+                return self.getTypedRuleContext(DartParser.ExprContext,i)
 
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_assertion
+            return DartParser.RULE_assertion
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAssertion" ):
@@ -1839,15 +1839,15 @@ class Dart2Parser ( Parser ):
 
     def assertion(self):
 
-        localctx = Dart2Parser.AssertionContext(self, self._ctx, self.state)
+        localctx = DartParser.AssertionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_assertion)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 469
-            self.match(Dart2Parser.ASSERT_)
+            self.match(DartParser.ASSERT_)
             self.state = 470
-            self.match(Dart2Parser.OP)
+            self.match(DartParser.OP)
             self.state = 471
             self.expr()
             self.state = 474
@@ -1855,7 +1855,7 @@ class Dart2Parser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
             if la_ == 1:
                 self.state = 472
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 473
                 self.expr()
 
@@ -1865,11 +1865,11 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==5:
                 self.state = 476
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
 
 
             self.state = 479
-            self.match(Dart2Parser.CP)
+            self.match(DartParser.CP)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1887,14 +1887,14 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def assertion(self):
-            return self.getTypedRuleContext(Dart2Parser.AssertionContext,0)
+            return self.getTypedRuleContext(DartParser.AssertionContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_assertStatement
+            return DartParser.RULE_assertStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAssertStatement" ):
@@ -1909,14 +1909,14 @@ class Dart2Parser ( Parser ):
 
     def assertStatement(self):
 
-        localctx = Dart2Parser.AssertStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.AssertStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_assertStatement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 481
             self.assertion()
             self.state = 482
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1934,26 +1934,26 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def primary(self):
-            return self.getTypedRuleContext(Dart2Parser.PrimaryContext,0)
+            return self.getTypedRuleContext(DartParser.PrimaryContext,0)
 
 
         def assignableSelectorPart(self):
-            return self.getTypedRuleContext(Dart2Parser.AssignableSelectorPartContext,0)
+            return self.getTypedRuleContext(DartParser.AssignableSelectorPartContext,0)
 
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def unconditionalAssignableSelector(self):
-            return self.getTypedRuleContext(Dart2Parser.UnconditionalAssignableSelectorContext,0)
+            return self.getTypedRuleContext(DartParser.UnconditionalAssignableSelectorContext,0)
 
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_assignableExpression
+            return DartParser.RULE_assignableExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAssignableExpression" ):
@@ -1968,7 +1968,7 @@ class Dart2Parser ( Parser ):
 
     def assignableExpression(self):
 
-        localctx = Dart2Parser.AssignableExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.AssignableExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 16, self.RULE_assignableExpression)
         try:
             self.state = 490
@@ -1985,7 +1985,7 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 487
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 488
                 self.unconditionalAssignableSelector()
                 pass
@@ -2014,31 +2014,31 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def unconditionalAssignableSelector(self):
-            return self.getTypedRuleContext(Dart2Parser.UnconditionalAssignableSelectorContext,0)
+            return self.getTypedRuleContext(DartParser.UnconditionalAssignableSelectorContext,0)
 
 
         def QUD(self):
-            return self.getToken(Dart2Parser.QUD, 0)
+            return self.getToken(DartParser.QUD, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def QU(self):
-            return self.getToken(Dart2Parser.QU, 0)
+            return self.getToken(DartParser.QU, 0)
 
         def OB(self):
-            return self.getToken(Dart2Parser.OB, 0)
+            return self.getToken(DartParser.OB, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def CB(self):
-            return self.getToken(Dart2Parser.CB, 0)
+            return self.getToken(DartParser.CB, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_assignableSelector
+            return DartParser.RULE_assignableSelector
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAssignableSelector" ):
@@ -2053,7 +2053,7 @@ class Dart2Parser ( Parser ):
 
     def assignableSelector(self):
 
-        localctx = Dart2Parser.AssignableSelectorContext(self, self._ctx, self.state)
+        localctx = DartParser.AssignableSelectorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_assignableSelector)
         try:
             self.state = 500
@@ -2067,20 +2067,20 @@ class Dart2Parser ( Parser ):
             elif token in [42]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 493
-                self.match(Dart2Parser.QUD)
+                self.match(DartParser.QUD)
                 self.state = 494
                 self.identifier()
                 pass
             elif token in [41]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 495
-                self.match(Dart2Parser.QU)
+                self.match(DartParser.QU)
                 self.state = 496
-                self.match(Dart2Parser.OB)
+                self.match(DartParser.OB)
                 self.state = 497
                 self.expr()
                 self.state = 498
-                self.match(Dart2Parser.CB)
+                self.match(DartParser.CB)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -2102,18 +2102,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def assignableSelector(self):
-            return self.getTypedRuleContext(Dart2Parser.AssignableSelectorContext,0)
+            return self.getTypedRuleContext(DartParser.AssignableSelectorContext,0)
 
 
         def selector(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.SelectorContext)
+                return self.getTypedRuleContexts(DartParser.SelectorContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.SelectorContext,i)
+                return self.getTypedRuleContext(DartParser.SelectorContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_assignableSelectorPart
+            return DartParser.RULE_assignableSelectorPart
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAssignableSelectorPart" ):
@@ -2128,7 +2128,7 @@ class Dart2Parser ( Parser ):
 
     def assignableSelectorPart(self):
 
-        localctx = Dart2Parser.AssignableSelectorPartContext(self, self._ctx, self.state)
+        localctx = DartParser.AssignableSelectorPartContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_assignableSelectorPart)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2162,14 +2162,14 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def compoundAssignmentOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.CompoundAssignmentOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.CompoundAssignmentOperatorContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_assignmentOperator
+            return DartParser.RULE_assignmentOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAssignmentOperator" ):
@@ -2184,7 +2184,7 @@ class Dart2Parser ( Parser ):
 
     def assignmentOperator(self):
 
-        localctx = Dart2Parser.AssignmentOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.AssignmentOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_assignmentOperator)
         try:
             self.state = 512
@@ -2193,7 +2193,7 @@ class Dart2Parser ( Parser ):
             if token in [18]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 510
-                self.match(Dart2Parser.EQ)
+                self.match(DartParser.EQ)
                 pass
             elif token in [3, 9, 19, 23, 24, 34, 36, 39, 45, 47, 50, 53]:
                 self.enterOuterAlt(localctx, 2)
@@ -2220,14 +2220,14 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def AWAIT_(self):
-            return self.getToken(Dart2Parser.AWAIT_, 0)
+            return self.getToken(DartParser.AWAIT_, 0)
 
         def unaryExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.UnaryExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.UnaryExpressionContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_awaitExpression
+            return DartParser.RULE_awaitExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAwaitExpression" ):
@@ -2242,12 +2242,12 @@ class Dart2Parser ( Parser ):
 
     def awaitExpression(self):
 
-        localctx = Dart2Parser.AwaitExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.AwaitExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 24, self.RULE_awaitExpression)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 514
-            self.match(Dart2Parser.AWAIT_)
+            self.match(DartParser.AWAIT_)
             self.state = 515
             self.unaryExpression()
         except RecognitionException as re:
@@ -2267,30 +2267,30 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def multiplicativeOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.MultiplicativeOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.MultiplicativeOperatorContext,0)
 
 
         def additiveOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.AdditiveOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.AdditiveOperatorContext,0)
 
 
         def shiftOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.ShiftOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.ShiftOperatorContext,0)
 
 
         def relationalOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.RelationalOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.RelationalOperatorContext,0)
 
 
         def EE(self):
-            return self.getToken(Dart2Parser.EE, 0)
+            return self.getToken(DartParser.EE, 0)
 
         def bitwiseOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.BitwiseOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.BitwiseOperatorContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_binaryOperator
+            return DartParser.RULE_binaryOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBinaryOperator" ):
@@ -2305,7 +2305,7 @@ class Dart2Parser ( Parser ):
 
     def binaryOperator(self):
 
-        localctx = Dart2Parser.BinaryOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.BinaryOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 26, self.RULE_binaryOperator)
         try:
             self.state = 523
@@ -2338,7 +2338,7 @@ class Dart2Parser ( Parser ):
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 521
-                self.match(Dart2Parser.EE)
+                self.match(DartParser.EE)
                 pass
 
             elif la_ == 6:
@@ -2366,22 +2366,22 @@ class Dart2Parser ( Parser ):
 
         def shiftExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ShiftExpressionContext)
+                return self.getTypedRuleContexts(DartParser.ShiftExpressionContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ShiftExpressionContext,i)
+                return self.getTypedRuleContext(DartParser.ShiftExpressionContext,i)
 
 
         def A(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.A)
+                return self.getTokens(DartParser.A)
             else:
-                return self.getToken(Dart2Parser.A, i)
+                return self.getToken(DartParser.A, i)
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_bitwiseAndExpression
+            return DartParser.RULE_bitwiseAndExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBitwiseAndExpression" ):
@@ -2396,7 +2396,7 @@ class Dart2Parser ( Parser ):
 
     def bitwiseAndExpression(self):
 
-        localctx = Dart2Parser.BitwiseAndExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.BitwiseAndExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 28, self.RULE_bitwiseAndExpression)
         try:
             self.state = 540
@@ -2412,7 +2412,7 @@ class Dart2Parser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 526
-                        self.match(Dart2Parser.A)
+                        self.match(DartParser.A)
                         self.state = 527
                         self.shiftExpression() 
                     self.state = 532
@@ -2424,14 +2424,14 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 533
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 536 
                 self._errHandler.sync(self)
                 _alt = 1
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 534
-                        self.match(Dart2Parser.A)
+                        self.match(DartParser.A)
                         self.state = 535
                         self.shiftExpression()
 
@@ -2461,16 +2461,16 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def A(self):
-            return self.getToken(Dart2Parser.A, 0)
+            return self.getToken(DartParser.A, 0)
 
         def CIR(self):
-            return self.getToken(Dart2Parser.CIR, 0)
+            return self.getToken(DartParser.CIR, 0)
 
         def P(self):
-            return self.getToken(Dart2Parser.P, 0)
+            return self.getToken(DartParser.P, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_bitwiseOperator
+            return DartParser.RULE_bitwiseOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBitwiseOperator" ):
@@ -2485,7 +2485,7 @@ class Dart2Parser ( Parser ):
 
     def bitwiseOperator(self):
 
-        localctx = Dart2Parser.BitwiseOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.BitwiseOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 30, self.RULE_bitwiseOperator)
         self._la = 0 # Token type
         try:
@@ -2515,22 +2515,22 @@ class Dart2Parser ( Parser ):
 
         def bitwiseXorExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.BitwiseXorExpressionContext)
+                return self.getTypedRuleContexts(DartParser.BitwiseXorExpressionContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.BitwiseXorExpressionContext,i)
+                return self.getTypedRuleContext(DartParser.BitwiseXorExpressionContext,i)
 
 
         def P(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.P)
+                return self.getTokens(DartParser.P)
             else:
-                return self.getToken(Dart2Parser.P, i)
+                return self.getToken(DartParser.P, i)
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_bitwiseOrExpression
+            return DartParser.RULE_bitwiseOrExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBitwiseOrExpression" ):
@@ -2545,7 +2545,7 @@ class Dart2Parser ( Parser ):
 
     def bitwiseOrExpression(self):
 
-        localctx = Dart2Parser.BitwiseOrExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.BitwiseOrExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 32, self.RULE_bitwiseOrExpression)
         try:
             self.state = 559
@@ -2561,7 +2561,7 @@ class Dart2Parser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 545
-                        self.match(Dart2Parser.P)
+                        self.match(DartParser.P)
                         self.state = 546
                         self.bitwiseXorExpression() 
                     self.state = 551
@@ -2573,14 +2573,14 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 552
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 555 
                 self._errHandler.sync(self)
                 _alt = 1
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 553
-                        self.match(Dart2Parser.P)
+                        self.match(DartParser.P)
                         self.state = 554
                         self.bitwiseXorExpression()
 
@@ -2611,22 +2611,22 @@ class Dart2Parser ( Parser ):
 
         def bitwiseAndExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.BitwiseAndExpressionContext)
+                return self.getTypedRuleContexts(DartParser.BitwiseAndExpressionContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.BitwiseAndExpressionContext,i)
+                return self.getTypedRuleContext(DartParser.BitwiseAndExpressionContext,i)
 
 
         def CIR(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.CIR)
+                return self.getTokens(DartParser.CIR)
             else:
-                return self.getToken(Dart2Parser.CIR, i)
+                return self.getToken(DartParser.CIR, i)
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_bitwiseXorExpression
+            return DartParser.RULE_bitwiseXorExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBitwiseXorExpression" ):
@@ -2641,7 +2641,7 @@ class Dart2Parser ( Parser ):
 
     def bitwiseXorExpression(self):
 
-        localctx = Dart2Parser.BitwiseXorExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.BitwiseXorExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 34, self.RULE_bitwiseXorExpression)
         try:
             self.state = 576
@@ -2657,7 +2657,7 @@ class Dart2Parser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 562
-                        self.match(Dart2Parser.CIR)
+                        self.match(DartParser.CIR)
                         self.state = 563
                         self.bitwiseAndExpression() 
                     self.state = 568
@@ -2669,14 +2669,14 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 569
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 572 
                 self._errHandler.sync(self)
                 _alt = 1
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 570
-                        self.match(Dart2Parser.CIR)
+                        self.match(DartParser.CIR)
                         self.state = 571
                         self.bitwiseAndExpression()
 
@@ -2706,17 +2706,17 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OBC(self):
-            return self.getToken(Dart2Parser.OBC, 0)
+            return self.getToken(DartParser.OBC, 0)
 
         def statements(self):
-            return self.getTypedRuleContext(Dart2Parser.StatementsContext,0)
+            return self.getTypedRuleContext(DartParser.StatementsContext,0)
 
 
         def CBC(self):
-            return self.getToken(Dart2Parser.CBC, 0)
+            return self.getToken(DartParser.CBC, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_block
+            return DartParser.RULE_block
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBlock" ):
@@ -2731,16 +2731,16 @@ class Dart2Parser ( Parser ):
 
     def block(self):
 
-        localctx = Dart2Parser.BlockContext(self, self._ctx, self.state)
+        localctx = DartParser.BlockContext(self, self._ctx, self.state)
         self.enterRule(localctx, 36, self.RULE_block)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 578
-            self.match(Dart2Parser.OBC)
+            self.match(DartParser.OBC)
             self.state = 579
             self.statements()
             self.state = 580
-            self.match(Dart2Parser.CBC)
+            self.match(DartParser.CBC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2758,13 +2758,13 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def TRUE_(self):
-            return self.getToken(Dart2Parser.TRUE_, 0)
+            return self.getToken(DartParser.TRUE_, 0)
 
         def FALSE_(self):
-            return self.getToken(Dart2Parser.FALSE_, 0)
+            return self.getToken(DartParser.FALSE_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_booleanLiteral
+            return DartParser.RULE_booleanLiteral
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBooleanLiteral" ):
@@ -2779,7 +2779,7 @@ class Dart2Parser ( Parser ):
 
     def booleanLiteral(self):
 
-        localctx = Dart2Parser.BooleanLiteralContext(self, self._ctx, self.state)
+        localctx = DartParser.BooleanLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 38, self.RULE_booleanLiteral)
         self._la = 0 # Token type
         try:
@@ -2808,17 +2808,17 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def BREAK_(self):
-            return self.getToken(Dart2Parser.BREAK_, 0)
+            return self.getToken(DartParser.BREAK_, 0)
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_breakStatement
+            return DartParser.RULE_breakStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterBreakStatement" ):
@@ -2833,13 +2833,13 @@ class Dart2Parser ( Parser ):
 
     def breakStatement(self):
 
-        localctx = Dart2Parser.BreakStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.BreakStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 40, self.RULE_breakStatement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 584
-            self.match(Dart2Parser.BREAK_)
+            self.match(DartParser.BREAK_)
             self.state = 586
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -2849,7 +2849,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 588
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2867,25 +2867,25 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def conditionalExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.ConditionalExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.ConditionalExpressionContext,0)
 
 
         def cascadeSection(self):
-            return self.getTypedRuleContext(Dart2Parser.CascadeSectionContext,0)
+            return self.getTypedRuleContext(DartParser.CascadeSectionContext,0)
 
 
         def QUDD(self):
-            return self.getToken(Dart2Parser.QUDD, 0)
+            return self.getToken(DartParser.QUDD, 0)
 
         def DD(self):
-            return self.getToken(Dart2Parser.DD, 0)
+            return self.getToken(DartParser.DD, 0)
 
         def cascade(self):
-            return self.getTypedRuleContext(Dart2Parser.CascadeContext,0)
+            return self.getTypedRuleContext(DartParser.CascadeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_cascade
+            return DartParser.RULE_cascade
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCascade" ):
@@ -2900,7 +2900,7 @@ class Dart2Parser ( Parser ):
     def cascade(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
-        localctx = Dart2Parser.CascadeContext(self, self._ctx, _parentState)
+        localctx = DartParser.CascadeContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 42
         self.enterRecursionRule(localctx, 42, self.RULE_cascade, _p)
@@ -2927,14 +2927,14 @@ class Dart2Parser ( Parser ):
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    localctx = Dart2Parser.CascadeContext(self, _parentctx, _parentState)
+                    localctx = DartParser.CascadeContext(self, _parentctx, _parentState)
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_cascade)
                     self.state = 595
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
                     self.state = 596
-                    self.match(Dart2Parser.DD)
+                    self.match(DartParser.DD)
                     self.state = 597
                     self.cascadeSection() 
                 self.state = 602
@@ -2958,15 +2958,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def assignmentOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.AssignmentOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.AssignmentOperatorContext,0)
 
 
         def expressionWithoutCascade(self):
-            return self.getTypedRuleContext(Dart2Parser.ExpressionWithoutCascadeContext,0)
+            return self.getTypedRuleContext(DartParser.ExpressionWithoutCascadeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_cascadeAssignment
+            return DartParser.RULE_cascadeAssignment
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCascadeAssignment" ):
@@ -2981,7 +2981,7 @@ class Dart2Parser ( Parser ):
 
     def cascadeAssignment(self):
 
-        localctx = Dart2Parser.CascadeAssignmentContext(self, self._ctx, self.state)
+        localctx = DartParser.CascadeAssignmentContext(self, self._ctx, self.state)
         self.enterRule(localctx, 44, self.RULE_cascadeAssignment)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -3006,15 +3006,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def cascadeSelector(self):
-            return self.getTypedRuleContext(Dart2Parser.CascadeSelectorContext,0)
+            return self.getTypedRuleContext(DartParser.CascadeSelectorContext,0)
 
 
         def cascadeSectionTail(self):
-            return self.getTypedRuleContext(Dart2Parser.CascadeSectionTailContext,0)
+            return self.getTypedRuleContext(DartParser.CascadeSectionTailContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_cascadeSection
+            return DartParser.RULE_cascadeSection
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCascadeSection" ):
@@ -3029,7 +3029,7 @@ class Dart2Parser ( Parser ):
 
     def cascadeSection(self):
 
-        localctx = Dart2Parser.CascadeSectionContext(self, self._ctx, self.state)
+        localctx = DartParser.CascadeSectionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 46, self.RULE_cascadeSection)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -3054,22 +3054,22 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def cascadeAssignment(self):
-            return self.getTypedRuleContext(Dart2Parser.CascadeAssignmentContext,0)
+            return self.getTypedRuleContext(DartParser.CascadeAssignmentContext,0)
 
 
         def selector(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.SelectorContext)
+                return self.getTypedRuleContexts(DartParser.SelectorContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.SelectorContext,i)
+                return self.getTypedRuleContext(DartParser.SelectorContext,i)
 
 
         def assignableSelector(self):
-            return self.getTypedRuleContext(Dart2Parser.AssignableSelectorContext,0)
+            return self.getTypedRuleContext(DartParser.AssignableSelectorContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_cascadeSectionTail
+            return DartParser.RULE_cascadeSectionTail
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCascadeSectionTail" ):
@@ -3084,7 +3084,7 @@ class Dart2Parser ( Parser ):
 
     def cascadeSectionTail(self):
 
-        localctx = Dart2Parser.CascadeSectionTailContext(self, self._ctx, self.state)
+        localctx = DartParser.CascadeSectionTailContext(self, self._ctx, self.state)
         self.enterRule(localctx, 48, self.RULE_cascadeSectionTail)
         try:
             self.state = 621
@@ -3139,21 +3139,21 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OB(self):
-            return self.getToken(Dart2Parser.OB, 0)
+            return self.getToken(DartParser.OB, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def CB(self):
-            return self.getToken(Dart2Parser.CB, 0)
+            return self.getToken(DartParser.CB, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_cascadeSelector
+            return DartParser.RULE_cascadeSelector
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCascadeSelector" ):
@@ -3168,7 +3168,7 @@ class Dart2Parser ( Parser ):
 
     def cascadeSelector(self):
 
-        localctx = Dart2Parser.CascadeSelectorContext(self, self._ctx, self.state)
+        localctx = DartParser.CascadeSelectorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 50, self.RULE_cascadeSelector)
         try:
             self.state = 628
@@ -3177,11 +3177,11 @@ class Dart2Parser ( Parser ):
             if token in [29]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 623
-                self.match(Dart2Parser.OB)
+                self.match(DartParser.OB)
                 self.state = 624
                 self.expr()
                 self.state = 625
-                self.match(Dart2Parser.CB)
+                self.match(DartParser.CB)
                 pass
             elif token in [54, 55, 57, 58, 65, 67, 69, 72, 74, 75, 76, 81, 82, 84, 86, 87, 89, 91, 93, 94, 95, 98, 99, 100, 101, 102, 105, 106, 107, 110, 115, 120, 125]:
                 self.enterOuterAlt(localctx, 2)
@@ -3208,26 +3208,26 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def CATCH_(self):
-            return self.getToken(Dart2Parser.CATCH_, 0)
+            return self.getToken(DartParser.CATCH_, 0)
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def identifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.IdentifierContext)
+                return self.getTypedRuleContexts(DartParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.IdentifierContext,i)
+                return self.getTypedRuleContext(DartParser.IdentifierContext,i)
 
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def C(self):
-            return self.getToken(Dart2Parser.C, 0)
+            return self.getToken(DartParser.C, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_catchPart
+            return DartParser.RULE_catchPart
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCatchPart" ):
@@ -3242,15 +3242,15 @@ class Dart2Parser ( Parser ):
 
     def catchPart(self):
 
-        localctx = Dart2Parser.CatchPartContext(self, self._ctx, self.state)
+        localctx = DartParser.CatchPartContext(self, self._ctx, self.state)
         self.enterRule(localctx, 52, self.RULE_catchPart)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 630
-            self.match(Dart2Parser.CATCH_)
+            self.match(DartParser.CATCH_)
             self.state = 631
-            self.match(Dart2Parser.OP)
+            self.match(DartParser.OP)
             self.state = 632
             self.identifier()
             self.state = 635
@@ -3258,13 +3258,13 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==5:
                 self.state = 633
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 634
                 self.identifier()
 
 
             self.state = 637
-            self.match(Dart2Parser.CP)
+            self.match(DartParser.CP)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -3282,53 +3282,53 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def CLASS_(self):
-            return self.getToken(Dart2Parser.CLASS_, 0)
+            return self.getToken(DartParser.CLASS_, 0)
 
         def typeIdentifier(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeIdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.TypeIdentifierContext,0)
 
 
         def OBC(self):
-            return self.getToken(Dart2Parser.OBC, 0)
+            return self.getToken(DartParser.OBC, 0)
 
         def CBC(self):
-            return self.getToken(Dart2Parser.CBC, 0)
+            return self.getToken(DartParser.CBC, 0)
 
         def ABSTRACT_(self):
-            return self.getToken(Dart2Parser.ABSTRACT_, 0)
+            return self.getToken(DartParser.ABSTRACT_, 0)
 
         def typeParameters(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeParametersContext,0)
+            return self.getTypedRuleContext(DartParser.TypeParametersContext,0)
 
 
         def superclass(self):
-            return self.getTypedRuleContext(Dart2Parser.SuperclassContext,0)
+            return self.getTypedRuleContext(DartParser.SuperclassContext,0)
 
 
         def interfaces(self):
-            return self.getTypedRuleContext(Dart2Parser.InterfacesContext,0)
+            return self.getTypedRuleContext(DartParser.InterfacesContext,0)
 
 
         def metadata(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.MetadataContext)
+                return self.getTypedRuleContexts(DartParser.MetadataContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.MetadataContext,i)
+                return self.getTypedRuleContext(DartParser.MetadataContext,i)
 
 
         def classMemberDeclaration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ClassMemberDeclarationContext)
+                return self.getTypedRuleContexts(DartParser.ClassMemberDeclarationContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ClassMemberDeclarationContext,i)
+                return self.getTypedRuleContext(DartParser.ClassMemberDeclarationContext,i)
 
 
         def mixinApplicationClass(self):
-            return self.getTypedRuleContext(Dart2Parser.MixinApplicationClassContext,0)
+            return self.getTypedRuleContext(DartParser.MixinApplicationClassContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_classDeclaration
+            return DartParser.RULE_classDeclaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterClassDeclaration" ):
@@ -3343,7 +3343,7 @@ class Dart2Parser ( Parser ):
 
     def classDeclaration(self):
 
-        localctx = Dart2Parser.ClassDeclarationContext(self, self._ctx, self.state)
+        localctx = DartParser.ClassDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 54, self.RULE_classDeclaration)
         self._la = 0 # Token type
         try:
@@ -3357,11 +3357,11 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==54:
                     self.state = 639
-                    self.match(Dart2Parser.ABSTRACT_)
+                    self.match(DartParser.ABSTRACT_)
 
 
                 self.state = 642
-                self.match(Dart2Parser.CLASS_)
+                self.match(DartParser.CLASS_)
                 self.state = 643
                 self.typeIdentifier()
                 self.state = 645
@@ -3389,7 +3389,7 @@ class Dart2Parser ( Parser ):
 
 
                 self.state = 653
-                self.match(Dart2Parser.OBC)
+                self.match(DartParser.OBC)
                 self.state = 659
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -3403,7 +3403,7 @@ class Dart2Parser ( Parser ):
                     _la = self._input.LA(1)
 
                 self.state = 662
-                self.match(Dart2Parser.CBC)
+                self.match(DartParser.CBC)
                 pass
 
             elif la_ == 2:
@@ -3413,11 +3413,11 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==54:
                     self.state = 664
-                    self.match(Dart2Parser.ABSTRACT_)
+                    self.match(DartParser.ABSTRACT_)
 
 
                 self.state = 667
-                self.match(Dart2Parser.CLASS_)
+                self.match(DartParser.CLASS_)
                 self.state = 668
                 self.mixinApplicationClass()
                 pass
@@ -3440,22 +3440,22 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def declaration(self):
-            return self.getTypedRuleContext(Dart2Parser.DeclarationContext,0)
+            return self.getTypedRuleContext(DartParser.DeclarationContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def methodSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.MethodSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.MethodSignatureContext,0)
 
 
         def functionBody(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionBodyContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionBodyContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_classMemberDeclaration
+            return DartParser.RULE_classMemberDeclaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterClassMemberDeclaration" ):
@@ -3470,7 +3470,7 @@ class Dart2Parser ( Parser ):
 
     def classMemberDeclaration(self):
 
-        localctx = Dart2Parser.ClassMemberDeclarationContext(self, self._ctx, self.state)
+        localctx = DartParser.ClassMemberDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 56, self.RULE_classMemberDeclaration)
         try:
             self.state = 677
@@ -3481,7 +3481,7 @@ class Dart2Parser ( Parser ):
                 self.state = 671
                 self.declaration()
                 self.state = 672
-                self.match(Dart2Parser.SC)
+                self.match(DartParser.SC)
                 pass
 
             elif la_ == 2:
@@ -3510,17 +3510,17 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def SHOW_(self):
-            return self.getToken(Dart2Parser.SHOW_, 0)
+            return self.getToken(DartParser.SHOW_, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierListContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierListContext,0)
 
 
         def HIDE_(self):
-            return self.getToken(Dart2Parser.HIDE_, 0)
+            return self.getToken(DartParser.HIDE_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_combinator
+            return DartParser.RULE_combinator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCombinator" ):
@@ -3535,7 +3535,7 @@ class Dart2Parser ( Parser ):
 
     def combinator(self):
 
-        localctx = Dart2Parser.CombinatorContext(self, self._ctx, self.state)
+        localctx = DartParser.CombinatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 58, self.RULE_combinator)
         try:
             self.state = 683
@@ -3544,14 +3544,14 @@ class Dart2Parser ( Parser ):
             if token in [106]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 679
-                self.match(Dart2Parser.SHOW_)
+                self.match(DartParser.SHOW_)
                 self.state = 680
                 self.identifierList()
                 pass
             elif token in [84]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 681
-                self.match(Dart2Parser.HIDE_)
+                self.match(DartParser.HIDE_)
                 self.state = 682
                 self.identifierList()
                 pass
@@ -3575,26 +3575,26 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def EOF(self):
-            return self.getToken(Dart2Parser.EOF, 0)
+            return self.getToken(DartParser.EOF, 0)
 
         def libraryDeclaration(self):
-            return self.getTypedRuleContext(Dart2Parser.LibraryDeclarationContext,0)
+            return self.getTypedRuleContext(DartParser.LibraryDeclarationContext,0)
 
 
         def partDeclaration(self):
-            return self.getTypedRuleContext(Dart2Parser.PartDeclarationContext,0)
+            return self.getTypedRuleContext(DartParser.PartDeclarationContext,0)
 
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def statement(self):
-            return self.getTypedRuleContext(Dart2Parser.StatementContext,0)
+            return self.getTypedRuleContext(DartParser.StatementContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_compilationUnit
+            return DartParser.RULE_compilationUnit
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCompilationUnit" ):
@@ -3609,7 +3609,7 @@ class Dart2Parser ( Parser ):
 
     def compilationUnit(self):
 
-        localctx = Dart2Parser.CompilationUnitContext(self, self._ctx, self.state)
+        localctx = DartParser.CompilationUnitContext(self, self._ctx, self.state)
         self.enterRule(localctx, 60, self.RULE_compilationUnit)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -3638,7 +3638,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 691
-            self.match(Dart2Parser.EOF)
+            self.match(DartParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -3656,49 +3656,49 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def STE(self):
-            return self.getToken(Dart2Parser.STE, 0)
+            return self.getToken(DartParser.STE, 0)
 
         def SE(self):
-            return self.getToken(Dart2Parser.SE, 0)
+            return self.getToken(DartParser.SE, 0)
 
         def SQSE(self):
-            return self.getToken(Dart2Parser.SQSE, 0)
+            return self.getToken(DartParser.SQSE, 0)
 
         def PE(self):
-            return self.getToken(Dart2Parser.PE, 0)
+            return self.getToken(DartParser.PE, 0)
 
         def PLE(self):
-            return self.getToken(Dart2Parser.PLE, 0)
+            return self.getToken(DartParser.PLE, 0)
 
         def ME(self):
-            return self.getToken(Dart2Parser.ME, 0)
+            return self.getToken(DartParser.ME, 0)
 
         def LTLTE(self):
-            return self.getToken(Dart2Parser.LTLTE, 0)
+            return self.getToken(DartParser.LTLTE, 0)
 
         def GT(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.GT)
+                return self.getTokens(DartParser.GT)
             else:
-                return self.getToken(Dart2Parser.GT, i)
+                return self.getToken(DartParser.GT, i)
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def AE(self):
-            return self.getToken(Dart2Parser.AE, 0)
+            return self.getToken(DartParser.AE, 0)
 
         def CIRE(self):
-            return self.getToken(Dart2Parser.CIRE, 0)
+            return self.getToken(DartParser.CIRE, 0)
 
         def POE(self):
-            return self.getToken(Dart2Parser.POE, 0)
+            return self.getToken(DartParser.POE, 0)
 
         def QUQUEQ(self):
-            return self.getToken(Dart2Parser.QUQUEQ, 0)
+            return self.getToken(DartParser.QUQUEQ, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_compoundAssignmentOperator
+            return DartParser.RULE_compoundAssignmentOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterCompoundAssignmentOperator" ):
@@ -3713,7 +3713,7 @@ class Dart2Parser ( Parser ):
 
     def compoundAssignmentOperator(self):
 
-        localctx = Dart2Parser.CompoundAssignmentOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.CompoundAssignmentOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 62, self.RULE_compoundAssignmentOperator)
         try:
             self.state = 711
@@ -3722,89 +3722,89 @@ class Dart2Parser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 693
-                self.match(Dart2Parser.STE)
+                self.match(DartParser.STE)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 694
-                self.match(Dart2Parser.SE)
+                self.match(DartParser.SE)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 695
-                self.match(Dart2Parser.SQSE)
+                self.match(DartParser.SQSE)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 696
-                self.match(Dart2Parser.PE)
+                self.match(DartParser.PE)
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 697
-                self.match(Dart2Parser.PLE)
+                self.match(DartParser.PLE)
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 698
-                self.match(Dart2Parser.ME)
+                self.match(DartParser.ME)
                 pass
 
             elif la_ == 7:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 699
-                self.match(Dart2Parser.LTLTE)
+                self.match(DartParser.LTLTE)
                 pass
 
             elif la_ == 8:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 700
-                self.match(Dart2Parser.GT)
+                self.match(DartParser.GT)
                 self.state = 701
-                self.match(Dart2Parser.GT)
+                self.match(DartParser.GT)
                 self.state = 702
-                self.match(Dart2Parser.GT)
+                self.match(DartParser.GT)
                 self.state = 703
-                self.match(Dart2Parser.EQ)
+                self.match(DartParser.EQ)
                 pass
 
             elif la_ == 9:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 704
-                self.match(Dart2Parser.GT)
+                self.match(DartParser.GT)
                 self.state = 705
-                self.match(Dart2Parser.GT)
+                self.match(DartParser.GT)
                 self.state = 706
-                self.match(Dart2Parser.EQ)
+                self.match(DartParser.EQ)
                 pass
 
             elif la_ == 10:
                 self.enterOuterAlt(localctx, 10)
                 self.state = 707
-                self.match(Dart2Parser.AE)
+                self.match(DartParser.AE)
                 pass
 
             elif la_ == 11:
                 self.enterOuterAlt(localctx, 11)
                 self.state = 708
-                self.match(Dart2Parser.CIRE)
+                self.match(DartParser.CIRE)
                 pass
 
             elif la_ == 12:
                 self.enterOuterAlt(localctx, 12)
                 self.state = 709
-                self.match(Dart2Parser.POE)
+                self.match(DartParser.POE)
                 pass
 
             elif la_ == 13:
                 self.enterOuterAlt(localctx, 13)
                 self.state = 710
-                self.match(Dart2Parser.QUQUEQ)
+                self.match(DartParser.QUQUEQ)
                 pass
 
 
@@ -3825,24 +3825,24 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def ifNullExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.IfNullExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.IfNullExpressionContext,0)
 
 
         def QU(self):
-            return self.getToken(Dart2Parser.QU, 0)
+            return self.getToken(DartParser.QU, 0)
 
         def expressionWithoutCascade(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ExpressionWithoutCascadeContext)
+                return self.getTypedRuleContexts(DartParser.ExpressionWithoutCascadeContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ExpressionWithoutCascadeContext,i)
+                return self.getTypedRuleContext(DartParser.ExpressionWithoutCascadeContext,i)
 
 
         def CO(self):
-            return self.getToken(Dart2Parser.CO, 0)
+            return self.getToken(DartParser.CO, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_conditionalExpression
+            return DartParser.RULE_conditionalExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterConditionalExpression" ):
@@ -3857,7 +3857,7 @@ class Dart2Parser ( Parser ):
 
     def conditionalExpression(self):
 
-        localctx = Dart2Parser.ConditionalExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.ConditionalExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 64, self.RULE_conditionalExpression)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -3868,11 +3868,11 @@ class Dart2Parser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,43,self._ctx)
             if la_ == 1:
                 self.state = 714
-                self.match(Dart2Parser.QU)
+                self.match(DartParser.QU)
                 self.state = 715
                 self.expressionWithoutCascade()
                 self.state = 716
-                self.match(Dart2Parser.CO)
+                self.match(DartParser.CO)
                 self.state = 717
                 self.expressionWithoutCascade()
 
@@ -3894,18 +3894,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def uri(self):
-            return self.getTypedRuleContext(Dart2Parser.UriContext,0)
+            return self.getTypedRuleContext(DartParser.UriContext,0)
 
 
         def configurationUri(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ConfigurationUriContext)
+                return self.getTypedRuleContexts(DartParser.ConfigurationUriContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ConfigurationUriContext,i)
+                return self.getTypedRuleContext(DartParser.ConfigurationUriContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_configurableUri
+            return DartParser.RULE_configurableUri
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterConfigurableUri" ):
@@ -3920,7 +3920,7 @@ class Dart2Parser ( Parser ):
 
     def configurableUri(self):
 
-        localctx = Dart2Parser.ConfigurableUriContext(self, self._ctx, self.state)
+        localctx = DartParser.ConfigurableUriContext(self, self._ctx, self.state)
         self.enterRule(localctx, 66, self.RULE_configurableUri)
         self._la = 0 # Token type
         try:
@@ -3954,24 +3954,24 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def IF_(self):
-            return self.getToken(Dart2Parser.IF_, 0)
+            return self.getToken(DartParser.IF_, 0)
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def uriTest(self):
-            return self.getTypedRuleContext(Dart2Parser.UriTestContext,0)
+            return self.getTypedRuleContext(DartParser.UriTestContext,0)
 
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def uri(self):
-            return self.getTypedRuleContext(Dart2Parser.UriContext,0)
+            return self.getTypedRuleContext(DartParser.UriContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_configurationUri
+            return DartParser.RULE_configurationUri
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterConfigurationUri" ):
@@ -3986,18 +3986,18 @@ class Dart2Parser ( Parser ):
 
     def configurationUri(self):
 
-        localctx = Dart2Parser.ConfigurationUriContext(self, self._ctx, self.state)
+        localctx = DartParser.ConfigurationUriContext(self, self._ctx, self.state)
         self.enterRule(localctx, 68, self.RULE_configurationUri)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 728
-            self.match(Dart2Parser.IF_)
+            self.match(DartParser.IF_)
             self.state = 729
-            self.match(Dart2Parser.OP)
+            self.match(DartParser.OP)
             self.state = 730
             self.uriTest()
             self.state = 731
-            self.match(Dart2Parser.CP)
+            self.match(DartParser.CP)
             self.state = 732
             self.uri()
         except RecognitionException as re:
@@ -4017,18 +4017,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def CONST_(self):
-            return self.getToken(Dart2Parser.CONST_, 0)
+            return self.getToken(DartParser.CONST_, 0)
 
         def constructorName(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstructorNameContext,0)
+            return self.getTypedRuleContext(DartParser.ConstructorNameContext,0)
 
 
         def formalParameterList(self):
-            return self.getTypedRuleContext(Dart2Parser.FormalParameterListContext,0)
+            return self.getTypedRuleContext(DartParser.FormalParameterListContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_constantConstructorSignature
+            return DartParser.RULE_constantConstructorSignature
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterConstantConstructorSignature" ):
@@ -4043,12 +4043,12 @@ class Dart2Parser ( Parser ):
 
     def constantConstructorSignature(self):
 
-        localctx = Dart2Parser.ConstantConstructorSignatureContext(self, self._ctx, self.state)
+        localctx = DartParser.ConstantConstructorSignatureContext(self, self._ctx, self.state)
         self.enterRule(localctx, 70, self.RULE_constantConstructorSignature)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 734
-            self.match(Dart2Parser.CONST_)
+            self.match(DartParser.CONST_)
             self.state = 735
             self.constructorName()
             self.state = 736
@@ -4070,18 +4070,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def CONST_(self):
-            return self.getToken(Dart2Parser.CONST_, 0)
+            return self.getToken(DartParser.CONST_, 0)
 
         def constructorDesignation(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstructorDesignationContext,0)
+            return self.getTypedRuleContext(DartParser.ConstructorDesignationContext,0)
 
 
         def arguments(self):
-            return self.getTypedRuleContext(Dart2Parser.ArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.ArgumentsContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_constObjectExpression
+            return DartParser.RULE_constObjectExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterConstObjectExpression" ):
@@ -4096,12 +4096,12 @@ class Dart2Parser ( Parser ):
 
     def constObjectExpression(self):
 
-        localctx = Dart2Parser.ConstObjectExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.ConstObjectExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 72, self.RULE_constObjectExpression)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 738
-            self.match(Dart2Parser.CONST_)
+            self.match(DartParser.CONST_)
             self.state = 739
             self.constructorDesignation()
             self.state = 740
@@ -4123,30 +4123,30 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def typeIdentifier(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeIdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.TypeIdentifierContext,0)
 
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(Dart2Parser.QualifiedNameContext,0)
+            return self.getTypedRuleContext(DartParser.QualifiedNameContext,0)
 
 
         def typeName(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNameContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNameContext,0)
 
 
         def typeArguments(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.TypeArgumentsContext,0)
 
 
         def D(self):
-            return self.getToken(Dart2Parser.D, 0)
+            return self.getToken(DartParser.D, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_constructorDesignation
+            return DartParser.RULE_constructorDesignation
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterConstructorDesignation" ):
@@ -4161,7 +4161,7 @@ class Dart2Parser ( Parser ):
 
     def constructorDesignation(self):
 
-        localctx = Dart2Parser.ConstructorDesignationContext(self, self._ctx, self.state)
+        localctx = DartParser.ConstructorDesignationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 74, self.RULE_constructorDesignation)
         self._la = 0 # Token type
         try:
@@ -4191,7 +4191,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==12:
                     self.state = 746
-                    self.match(Dart2Parser.D)
+                    self.match(DartParser.D)
                     self.state = 747
                     self.identifier()
 
@@ -4216,26 +4216,26 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def typeName(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNameContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNameContext,0)
 
 
         def typeArguments(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.TypeArgumentsContext,0)
 
 
         def D(self):
-            return self.getToken(Dart2Parser.D, 0)
+            return self.getToken(DartParser.D, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def arguments(self):
-            return self.getTypedRuleContext(Dart2Parser.ArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.ArgumentsContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_constructorInvocation
+            return DartParser.RULE_constructorInvocation
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterConstructorInvocation" ):
@@ -4250,7 +4250,7 @@ class Dart2Parser ( Parser ):
 
     def constructorInvocation(self):
 
-        localctx = Dart2Parser.ConstructorInvocationContext(self, self._ctx, self.state)
+        localctx = DartParser.ConstructorInvocationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 76, self.RULE_constructorInvocation)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -4259,7 +4259,7 @@ class Dart2Parser ( Parser ):
             self.state = 753
             self.typeArguments()
             self.state = 754
-            self.match(Dart2Parser.D)
+            self.match(DartParser.D)
             self.state = 755
             self.identifier()
             self.state = 756
@@ -4281,18 +4281,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def typeIdentifier(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeIdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.TypeIdentifierContext,0)
 
 
         def D(self):
-            return self.getToken(Dart2Parser.D, 0)
+            return self.getToken(DartParser.D, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_constructorName
+            return DartParser.RULE_constructorName
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterConstructorName" ):
@@ -4307,7 +4307,7 @@ class Dart2Parser ( Parser ):
 
     def constructorName(self):
 
-        localctx = Dart2Parser.ConstructorNameContext(self, self._ctx, self.state)
+        localctx = DartParser.ConstructorNameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 78, self.RULE_constructorName)
         self._la = 0 # Token type
         try:
@@ -4319,7 +4319,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==12:
                 self.state = 759
-                self.match(Dart2Parser.D)
+                self.match(DartParser.D)
                 self.state = 760
                 self.identifier()
 
@@ -4341,15 +4341,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def constructorName(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstructorNameContext,0)
+            return self.getTypedRuleContext(DartParser.ConstructorNameContext,0)
 
 
         def formalParameterList(self):
-            return self.getTypedRuleContext(Dart2Parser.FormalParameterListContext,0)
+            return self.getTypedRuleContext(DartParser.FormalParameterListContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_constructorSignature
+            return DartParser.RULE_constructorSignature
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterConstructorSignature" ):
@@ -4364,7 +4364,7 @@ class Dart2Parser ( Parser ):
 
     def constructorSignature(self):
 
-        localctx = Dart2Parser.ConstructorSignatureContext(self, self._ctx, self.state)
+        localctx = DartParser.ConstructorSignatureContext(self, self._ctx, self.state)
         self.enterRule(localctx, 80, self.RULE_constructorSignature)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -4389,17 +4389,17 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def CONTINUE_(self):
-            return self.getToken(Dart2Parser.CONTINUE_, 0)
+            return self.getToken(DartParser.CONTINUE_, 0)
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_continueStatement
+            return DartParser.RULE_continueStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterContinueStatement" ):
@@ -4414,13 +4414,13 @@ class Dart2Parser ( Parser ):
 
     def continueStatement(self):
 
-        localctx = Dart2Parser.ContinueStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.ContinueStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 82, self.RULE_continueStatement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 766
-            self.match(Dart2Parser.CONTINUE_)
+            self.match(DartParser.CONTINUE_)
             self.state = 768
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -4430,7 +4430,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 770
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -4448,88 +4448,88 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def EXTERNAL_(self):
-            return self.getToken(Dart2Parser.EXTERNAL_, 0)
+            return self.getToken(DartParser.EXTERNAL_, 0)
 
         def factoryConstructorSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.FactoryConstructorSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.FactoryConstructorSignatureContext,0)
 
 
         def constantConstructorSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstantConstructorSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.ConstantConstructorSignatureContext,0)
 
 
         def constructorSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstructorSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.ConstructorSignatureContext,0)
 
 
         def getterSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.GetterSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.GetterSignatureContext,0)
 
 
         def setterSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.SetterSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.SetterSignatureContext,0)
 
 
         def functionSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionSignatureContext,0)
 
 
         def operatorSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.OperatorSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.OperatorSignatureContext,0)
 
 
         def STATIC_(self):
-            return self.getToken(Dart2Parser.STATIC_, 0)
+            return self.getToken(DartParser.STATIC_, 0)
 
         def CONST_(self):
-            return self.getToken(Dart2Parser.CONST_, 0)
+            return self.getToken(DartParser.CONST_, 0)
 
         def staticFinalDeclarationList(self):
-            return self.getTypedRuleContext(Dart2Parser.StaticFinalDeclarationListContext,0)
+            return self.getTypedRuleContext(DartParser.StaticFinalDeclarationListContext,0)
 
 
         def FINAL_(self):
-            return self.getToken(Dart2Parser.FINAL_, 0)
+            return self.getToken(DartParser.FINAL_, 0)
 
         def LATE_(self):
-            return self.getToken(Dart2Parser.LATE_, 0)
+            return self.getToken(DartParser.LATE_, 0)
 
         def initializedIdentifierList(self):
-            return self.getTypedRuleContext(Dart2Parser.InitializedIdentifierListContext,0)
+            return self.getTypedRuleContext(DartParser.InitializedIdentifierListContext,0)
 
 
         def varOrType(self):
-            return self.getTypedRuleContext(Dart2Parser.VarOrTypeContext,0)
+            return self.getTypedRuleContext(DartParser.VarOrTypeContext,0)
 
 
         def COVARIANT_(self):
-            return self.getToken(Dart2Parser.COVARIANT_, 0)
+            return self.getToken(DartParser.COVARIANT_, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierListContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierListContext,0)
 
 
         def redirectingFactoryConstructorSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.RedirectingFactoryConstructorSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.RedirectingFactoryConstructorSignatureContext,0)
 
 
         def ABSTRACT_(self):
-            return self.getToken(Dart2Parser.ABSTRACT_, 0)
+            return self.getToken(DartParser.ABSTRACT_, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def redirection(self):
-            return self.getTypedRuleContext(Dart2Parser.RedirectionContext,0)
+            return self.getTypedRuleContext(DartParser.RedirectionContext,0)
 
 
         def initializers(self):
-            return self.getTypedRuleContext(Dart2Parser.InitializersContext,0)
+            return self.getTypedRuleContext(DartParser.InitializersContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_declaration
+            return DartParser.RULE_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDeclaration" ):
@@ -4544,7 +4544,7 @@ class Dart2Parser ( Parser ):
 
     def declaration(self):
 
-        localctx = Dart2Parser.DeclarationContext(self, self._ctx, self.state)
+        localctx = DartParser.DeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 84, self.RULE_declaration)
         self._la = 0 # Token type
         try:
@@ -4554,7 +4554,7 @@ class Dart2Parser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,49,self._ctx)
             if la_ == 1:
                 self.state = 772
-                self.match(Dart2Parser.ABSTRACT_)
+                self.match(DartParser.ABSTRACT_)
 
 
             self.state = 871
@@ -4562,21 +4562,21 @@ class Dart2Parser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,68,self._ctx)
             if la_ == 1:
                 self.state = 775
-                self.match(Dart2Parser.EXTERNAL_)
+                self.match(DartParser.EXTERNAL_)
                 self.state = 776
                 self.factoryConstructorSignature()
                 pass
 
             elif la_ == 2:
                 self.state = 777
-                self.match(Dart2Parser.EXTERNAL_)
+                self.match(DartParser.EXTERNAL_)
                 self.state = 778
                 self.constantConstructorSignature()
                 pass
 
             elif la_ == 3:
                 self.state = 779
-                self.match(Dart2Parser.EXTERNAL_)
+                self.match(DartParser.EXTERNAL_)
                 self.state = 780
                 self.constructorSignature()
                 pass
@@ -4587,13 +4587,13 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 781
-                    self.match(Dart2Parser.EXTERNAL_)
+                    self.match(DartParser.EXTERNAL_)
                     self.state = 783
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if _la==107:
                         self.state = 782
-                        self.match(Dart2Parser.STATIC_)
+                        self.match(DartParser.STATIC_)
 
 
 
@@ -4608,13 +4608,13 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 788
-                    self.match(Dart2Parser.EXTERNAL_)
+                    self.match(DartParser.EXTERNAL_)
                     self.state = 790
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if _la==107:
                         self.state = 789
-                        self.match(Dart2Parser.STATIC_)
+                        self.match(DartParser.STATIC_)
 
 
 
@@ -4629,13 +4629,13 @@ class Dart2Parser ( Parser ):
                 la_ = self._interp.adaptivePredict(self._input,55,self._ctx)
                 if la_ == 1:
                     self.state = 795
-                    self.match(Dart2Parser.EXTERNAL_)
+                    self.match(DartParser.EXTERNAL_)
                     self.state = 797
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,54,self._ctx)
                     if la_ == 1:
                         self.state = 796
-                        self.match(Dart2Parser.STATIC_)
+                        self.match(DartParser.STATIC_)
 
 
 
@@ -4650,7 +4650,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==75:
                     self.state = 802
-                    self.match(Dart2Parser.EXTERNAL_)
+                    self.match(DartParser.EXTERNAL_)
 
 
                 self.state = 805
@@ -4659,9 +4659,9 @@ class Dart2Parser ( Parser ):
 
             elif la_ == 8:
                 self.state = 806
-                self.match(Dart2Parser.STATIC_)
+                self.match(DartParser.STATIC_)
                 self.state = 807
-                self.match(Dart2Parser.CONST_)
+                self.match(DartParser.CONST_)
                 self.state = 809
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,57,self._ctx)
@@ -4676,9 +4676,9 @@ class Dart2Parser ( Parser ):
 
             elif la_ == 9:
                 self.state = 812
-                self.match(Dart2Parser.STATIC_)
+                self.match(DartParser.STATIC_)
                 self.state = 813
-                self.match(Dart2Parser.FINAL_)
+                self.match(DartParser.FINAL_)
                 self.state = 815
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,58,self._ctx)
@@ -4693,11 +4693,11 @@ class Dart2Parser ( Parser ):
 
             elif la_ == 10:
                 self.state = 818
-                self.match(Dart2Parser.STATIC_)
+                self.match(DartParser.STATIC_)
                 self.state = 819
-                self.match(Dart2Parser.LATE_)
+                self.match(DartParser.LATE_)
                 self.state = 820
-                self.match(Dart2Parser.FINAL_)
+                self.match(DartParser.FINAL_)
                 self.state = 822
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,59,self._ctx)
@@ -4712,13 +4712,13 @@ class Dart2Parser ( Parser ):
 
             elif la_ == 11:
                 self.state = 825
-                self.match(Dart2Parser.STATIC_)
+                self.match(DartParser.STATIC_)
                 self.state = 827
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==91:
                     self.state = 826
-                    self.match(Dart2Parser.LATE_)
+                    self.match(DartParser.LATE_)
 
 
                 self.state = 829
@@ -4729,11 +4729,11 @@ class Dart2Parser ( Parser ):
 
             elif la_ == 12:
                 self.state = 832
-                self.match(Dart2Parser.COVARIANT_)
+                self.match(DartParser.COVARIANT_)
                 self.state = 833
-                self.match(Dart2Parser.LATE_)
+                self.match(DartParser.LATE_)
                 self.state = 834
-                self.match(Dart2Parser.FINAL_)
+                self.match(DartParser.FINAL_)
                 self.state = 836
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,61,self._ctx)
@@ -4748,13 +4748,13 @@ class Dart2Parser ( Parser ):
 
             elif la_ == 13:
                 self.state = 839
-                self.match(Dart2Parser.COVARIANT_)
+                self.match(DartParser.COVARIANT_)
                 self.state = 841
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==91:
                     self.state = 840
-                    self.match(Dart2Parser.LATE_)
+                    self.match(DartParser.LATE_)
 
 
                 self.state = 843
@@ -4769,11 +4769,11 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==91:
                     self.state = 846
-                    self.match(Dart2Parser.LATE_)
+                    self.match(DartParser.LATE_)
 
 
                 self.state = 849
-                self.match(Dart2Parser.FINAL_)
+                self.match(DartParser.FINAL_)
                 self.state = 851
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,64,self._ctx)
@@ -4792,7 +4792,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==91:
                     self.state = 854
-                    self.match(Dart2Parser.LATE_)
+                    self.match(DartParser.LATE_)
 
 
                 self.state = 857
@@ -4858,18 +4858,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def finalConstVarOrType(self):
-            return self.getTypedRuleContext(Dart2Parser.FinalConstVarOrTypeContext,0)
+            return self.getTypedRuleContext(DartParser.FinalConstVarOrTypeContext,0)
 
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def COVARIANT_(self):
-            return self.getToken(Dart2Parser.COVARIANT_, 0)
+            return self.getToken(DartParser.COVARIANT_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_declaredIdentifier
+            return DartParser.RULE_declaredIdentifier
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDeclaredIdentifier" ):
@@ -4884,7 +4884,7 @@ class Dart2Parser ( Parser ):
 
     def declaredIdentifier(self):
 
-        localctx = Dart2Parser.DeclaredIdentifierContext(self, self._ctx, self.state)
+        localctx = DartParser.DeclaredIdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 86, self.RULE_declaredIdentifier)
         self._la = 0 # Token type
         try:
@@ -4894,7 +4894,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==65:
                 self.state = 873
-                self.match(Dart2Parser.COVARIANT_)
+                self.match(DartParser.COVARIANT_)
 
 
             self.state = 876
@@ -4918,24 +4918,24 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def DEFAULT_(self):
-            return self.getToken(Dart2Parser.DEFAULT_, 0)
+            return self.getToken(DartParser.DEFAULT_, 0)
 
         def CO(self):
-            return self.getToken(Dart2Parser.CO, 0)
+            return self.getToken(DartParser.CO, 0)
 
         def statements(self):
-            return self.getTypedRuleContext(Dart2Parser.StatementsContext,0)
+            return self.getTypedRuleContext(DartParser.StatementsContext,0)
 
 
         def label(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.LabelContext)
+                return self.getTypedRuleContexts(DartParser.LabelContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.LabelContext,i)
+                return self.getTypedRuleContext(DartParser.LabelContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_defaultCase
+            return DartParser.RULE_defaultCase
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDefaultCase" ):
@@ -4950,7 +4950,7 @@ class Dart2Parser ( Parser ):
 
     def defaultCase(self):
 
-        localctx = Dart2Parser.DefaultCaseContext(self, self._ctx, self.state)
+        localctx = DartParser.DefaultCaseContext(self, self._ctx, self.state)
         self.enterRule(localctx, 88, self.RULE_defaultCase)
         self._la = 0 # Token type
         try:
@@ -4966,9 +4966,9 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 885
-            self.match(Dart2Parser.DEFAULT_)
+            self.match(DartParser.DEFAULT_)
             self.state = 886
-            self.match(Dart2Parser.CO)
+            self.match(DartParser.CO)
             self.state = 887
             self.statements()
         except RecognitionException as re:
@@ -4988,18 +4988,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def normalFormalParameter(self):
-            return self.getTypedRuleContext(Dart2Parser.NormalFormalParameterContext,0)
+            return self.getTypedRuleContext(DartParser.NormalFormalParameterContext,0)
 
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_defaultFormalParameter
+            return DartParser.RULE_defaultFormalParameter
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDefaultFormalParameter" ):
@@ -5014,7 +5014,7 @@ class Dart2Parser ( Parser ):
 
     def defaultFormalParameter(self):
 
-        localctx = Dart2Parser.DefaultFormalParameterContext(self, self._ctx, self.state)
+        localctx = DartParser.DefaultFormalParameterContext(self, self._ctx, self.state)
         self.enterRule(localctx, 90, self.RULE_defaultFormalParameter)
         self._la = 0 # Token type
         try:
@@ -5026,7 +5026,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==18:
                 self.state = 890
-                self.match(Dart2Parser.EQ)
+                self.match(DartParser.EQ)
                 self.state = 891
                 self.expr()
 
@@ -5048,28 +5048,28 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def normalFormalParameterNoMetadata(self):
-            return self.getTypedRuleContext(Dart2Parser.NormalFormalParameterNoMetadataContext,0)
+            return self.getTypedRuleContext(DartParser.NormalFormalParameterNoMetadataContext,0)
 
 
         def REQUIRED_(self):
-            return self.getToken(Dart2Parser.REQUIRED_, 0)
+            return self.getToken(DartParser.REQUIRED_, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def CO(self):
-            return self.getToken(Dart2Parser.CO, 0)
+            return self.getToken(DartParser.CO, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_defaultNamedParameter
+            return DartParser.RULE_defaultNamedParameter
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDefaultNamedParameter" ):
@@ -5084,7 +5084,7 @@ class Dart2Parser ( Parser ):
 
     def defaultNamedParameter(self):
 
-        localctx = Dart2Parser.DefaultNamedParameterContext(self, self._ctx, self.state)
+        localctx = DartParser.DefaultNamedParameterContext(self, self._ctx, self.state)
         self.enterRule(localctx, 92, self.RULE_defaultNamedParameter)
         self._la = 0 # Token type
         try:
@@ -5096,7 +5096,7 @@ class Dart2Parser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,72,self._ctx)
             if la_ == 1:
                 self.state = 895
-                self.match(Dart2Parser.REQUIRED_)
+                self.match(DartParser.REQUIRED_)
 
 
             self.state = 898
@@ -5133,30 +5133,30 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def DO_(self):
-            return self.getToken(Dart2Parser.DO_, 0)
+            return self.getToken(DartParser.DO_, 0)
 
         def statement(self):
-            return self.getTypedRuleContext(Dart2Parser.StatementContext,0)
+            return self.getTypedRuleContext(DartParser.StatementContext,0)
 
 
         def WHILE_(self):
-            return self.getToken(Dart2Parser.WHILE_, 0)
+            return self.getToken(DartParser.WHILE_, 0)
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_doStatement
+            return DartParser.RULE_doStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDoStatement" ):
@@ -5171,24 +5171,24 @@ class Dart2Parser ( Parser ):
 
     def doStatement(self):
 
-        localctx = Dart2Parser.DoStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.DoStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 94, self.RULE_doStatement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 903
-            self.match(Dart2Parser.DO_)
+            self.match(DartParser.DO_)
             self.state = 904
             self.statement()
             self.state = 905
-            self.match(Dart2Parser.WHILE_)
+            self.match(DartParser.WHILE_)
             self.state = 906
-            self.match(Dart2Parser.OP)
+            self.match(DartParser.OP)
             self.state = 907
             self.expr()
             self.state = 908
-            self.match(Dart2Parser.CP)
+            self.match(DartParser.CP)
             self.state = 909
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -5207,19 +5207,19 @@ class Dart2Parser ( Parser ):
 
         def identifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.IdentifierContext)
+                return self.getTypedRuleContexts(DartParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.IdentifierContext,i)
+                return self.getTypedRuleContext(DartParser.IdentifierContext,i)
 
 
         def D(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.D)
+                return self.getTokens(DartParser.D)
             else:
-                return self.getToken(Dart2Parser.D, i)
+                return self.getToken(DartParser.D, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_dottedIdentifierList
+            return DartParser.RULE_dottedIdentifierList
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDottedIdentifierList" ):
@@ -5234,7 +5234,7 @@ class Dart2Parser ( Parser ):
 
     def dottedIdentifierList(self):
 
-        localctx = Dart2Parser.DottedIdentifierListContext(self, self._ctx, self.state)
+        localctx = DartParser.DottedIdentifierListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 96, self.RULE_dottedIdentifierList)
         self._la = 0 # Token type
         try:
@@ -5246,7 +5246,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             while _la==12:
                 self.state = 912
-                self.match(Dart2Parser.D)
+                self.match(DartParser.D)
                 self.state = 913
                 self.identifier()
                 self.state = 918
@@ -5270,27 +5270,27 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def expressionElement(self):
-            return self.getTypedRuleContext(Dart2Parser.ExpressionElementContext,0)
+            return self.getTypedRuleContext(DartParser.ExpressionElementContext,0)
 
 
         def mapElement(self):
-            return self.getTypedRuleContext(Dart2Parser.MapElementContext,0)
+            return self.getTypedRuleContext(DartParser.MapElementContext,0)
 
 
         def spreadElement(self):
-            return self.getTypedRuleContext(Dart2Parser.SpreadElementContext,0)
+            return self.getTypedRuleContext(DartParser.SpreadElementContext,0)
 
 
         def ifElement(self):
-            return self.getTypedRuleContext(Dart2Parser.IfElementContext,0)
+            return self.getTypedRuleContext(DartParser.IfElementContext,0)
 
 
         def forElement(self):
-            return self.getTypedRuleContext(Dart2Parser.ForElementContext,0)
+            return self.getTypedRuleContext(DartParser.ForElementContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_element
+            return DartParser.RULE_element
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterElement" ):
@@ -5305,7 +5305,7 @@ class Dart2Parser ( Parser ):
 
     def element(self):
 
-        localctx = Dart2Parser.ElementContext(self, self._ctx, self.state)
+        localctx = DartParser.ElementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 98, self.RULE_element)
         try:
             self.state = 924
@@ -5360,19 +5360,19 @@ class Dart2Parser ( Parser ):
 
         def element(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ElementContext)
+                return self.getTypedRuleContexts(DartParser.ElementContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ElementContext,i)
+                return self.getTypedRuleContext(DartParser.ElementContext,i)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_elements
+            return DartParser.RULE_elements
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterElements" ):
@@ -5387,7 +5387,7 @@ class Dart2Parser ( Parser ):
 
     def elements(self):
 
-        localctx = Dart2Parser.ElementsContext(self, self._ctx, self.state)
+        localctx = DartParser.ElementsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 100, self.RULE_elements)
         self._la = 0 # Token type
         try:
@@ -5400,7 +5400,7 @@ class Dart2Parser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 927
-                    self.match(Dart2Parser.C)
+                    self.match(DartParser.C)
                     self.state = 928
                     self.element() 
                 self.state = 933
@@ -5412,7 +5412,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==5:
                 self.state = 934
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
 
 
         except RecognitionException as re:
@@ -5432,15 +5432,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_enumEntry
+            return DartParser.RULE_enumEntry
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterEnumEntry" ):
@@ -5455,7 +5455,7 @@ class Dart2Parser ( Parser ):
 
     def enumEntry(self):
 
-        localctx = Dart2Parser.EnumEntryContext(self, self._ctx, self.state)
+        localctx = DartParser.EnumEntryContext(self, self._ctx, self.state)
         self.enterRule(localctx, 102, self.RULE_enumEntry)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -5480,33 +5480,33 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def ENUM_(self):
-            return self.getToken(Dart2Parser.ENUM_, 0)
+            return self.getToken(DartParser.ENUM_, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def OBC(self):
-            return self.getToken(Dart2Parser.OBC, 0)
+            return self.getToken(DartParser.OBC, 0)
 
         def enumEntry(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.EnumEntryContext)
+                return self.getTypedRuleContexts(DartParser.EnumEntryContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.EnumEntryContext,i)
+                return self.getTypedRuleContext(DartParser.EnumEntryContext,i)
 
 
         def CBC(self):
-            return self.getToken(Dart2Parser.CBC, 0)
+            return self.getToken(DartParser.CBC, 0)
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_enumType
+            return DartParser.RULE_enumType
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterEnumType" ):
@@ -5521,17 +5521,17 @@ class Dart2Parser ( Parser ):
 
     def enumType(self):
 
-        localctx = Dart2Parser.EnumTypeContext(self, self._ctx, self.state)
+        localctx = DartParser.EnumTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 104, self.RULE_enumType)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 940
-            self.match(Dart2Parser.ENUM_)
+            self.match(DartParser.ENUM_)
             self.state = 941
             self.identifier()
             self.state = 942
-            self.match(Dart2Parser.OBC)
+            self.match(DartParser.OBC)
             self.state = 943
             self.enumEntry()
             self.state = 948
@@ -5540,7 +5540,7 @@ class Dart2Parser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 944
-                    self.match(Dart2Parser.C)
+                    self.match(DartParser.C)
                     self.state = 945
                     self.enumEntry() 
                 self.state = 950
@@ -5552,11 +5552,11 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==5:
                 self.state = 951
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
 
 
             self.state = 954
-            self.match(Dart2Parser.CBC)
+            self.match(DartParser.CBC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -5575,20 +5575,20 @@ class Dart2Parser ( Parser ):
 
         def relationalExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.RelationalExpressionContext)
+                return self.getTypedRuleContexts(DartParser.RelationalExpressionContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.RelationalExpressionContext,i)
+                return self.getTypedRuleContext(DartParser.RelationalExpressionContext,i)
 
 
         def equalityOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.EqualityOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.EqualityOperatorContext,0)
 
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_equalityExpression
+            return DartParser.RULE_equalityExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterEqualityExpression" ):
@@ -5603,7 +5603,7 @@ class Dart2Parser ( Parser ):
 
     def equalityExpression(self):
 
-        localctx = Dart2Parser.EqualityExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.EqualityExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 106, self.RULE_equalityExpression)
         try:
             self.state = 966
@@ -5628,7 +5628,7 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 962
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 963
                 self.equalityOperator()
                 self.state = 964
@@ -5653,13 +5653,13 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def EE(self):
-            return self.getToken(Dart2Parser.EE, 0)
+            return self.getToken(DartParser.EE, 0)
 
         def NE(self):
-            return self.getToken(Dart2Parser.NE, 0)
+            return self.getToken(DartParser.NE, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_equalityOperator
+            return DartParser.RULE_equalityOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterEqualityOperator" ):
@@ -5674,7 +5674,7 @@ class Dart2Parser ( Parser ):
 
     def equalityOperator(self):
 
-        localctx = Dart2Parser.EqualityOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.EqualityOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 108, self.RULE_equalityOperator)
         self._la = 0 # Token type
         try:
@@ -5703,31 +5703,31 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def assignableExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.AssignableExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.AssignableExpressionContext,0)
 
 
         def assignmentOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.AssignmentOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.AssignmentOperatorContext,0)
 
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def conditionalExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.ConditionalExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.ConditionalExpressionContext,0)
 
 
         def cascade(self):
-            return self.getTypedRuleContext(Dart2Parser.CascadeContext,0)
+            return self.getTypedRuleContext(DartParser.CascadeContext,0)
 
 
         def throwExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.ThrowExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.ThrowExpressionContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_expr
+            return DartParser.RULE_expr
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExpr" ):
@@ -5742,7 +5742,7 @@ class Dart2Parser ( Parser ):
 
     def expr(self):
 
-        localctx = Dart2Parser.ExprContext(self, self._ctx, self.state)
+        localctx = DartParser.ExprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 110, self.RULE_expr)
         try:
             self.state = 977
@@ -5794,11 +5794,11 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_expressionElement
+            return DartParser.RULE_expressionElement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExpressionElement" ):
@@ -5813,7 +5813,7 @@ class Dart2Parser ( Parser ):
 
     def expressionElement(self):
 
-        localctx = Dart2Parser.ExpressionElementContext(self, self._ctx, self.state)
+        localctx = DartParser.ExpressionElementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 112, self.RULE_expressionElement)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -5837,19 +5837,19 @@ class Dart2Parser ( Parser ):
 
         def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ExprContext)
+                return self.getTypedRuleContexts(DartParser.ExprContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ExprContext,i)
+                return self.getTypedRuleContext(DartParser.ExprContext,i)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_expressionList
+            return DartParser.RULE_expressionList
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExpressionList" ):
@@ -5864,7 +5864,7 @@ class Dart2Parser ( Parser ):
 
     def expressionList(self):
 
-        localctx = Dart2Parser.ExpressionListContext(self, self._ctx, self.state)
+        localctx = DartParser.ExpressionListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 114, self.RULE_expressionList)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -5876,7 +5876,7 @@ class Dart2Parser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 982
-                    self.match(Dart2Parser.C)
+                    self.match(DartParser.C)
                     self.state = 983
                     self.expr() 
                 self.state = 988
@@ -5900,14 +5900,14 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_expressionStatement
+            return DartParser.RULE_expressionStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExpressionStatement" ):
@@ -5922,7 +5922,7 @@ class Dart2Parser ( Parser ):
 
     def expressionStatement(self):
 
-        localctx = Dart2Parser.ExpressionStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.ExpressionStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 116, self.RULE_expressionStatement)
         self._la = 0 # Token type
         try:
@@ -5936,7 +5936,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 992
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -5954,27 +5954,27 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def assignableExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.AssignableExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.AssignableExpressionContext,0)
 
 
         def assignmentOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.AssignmentOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.AssignmentOperatorContext,0)
 
 
         def expressionWithoutCascade(self):
-            return self.getTypedRuleContext(Dart2Parser.ExpressionWithoutCascadeContext,0)
+            return self.getTypedRuleContext(DartParser.ExpressionWithoutCascadeContext,0)
 
 
         def conditionalExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.ConditionalExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.ConditionalExpressionContext,0)
 
 
         def throwExpressionWithoutCascade(self):
-            return self.getTypedRuleContext(Dart2Parser.ThrowExpressionWithoutCascadeContext,0)
+            return self.getTypedRuleContext(DartParser.ThrowExpressionWithoutCascadeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_expressionWithoutCascade
+            return DartParser.RULE_expressionWithoutCascade
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExpressionWithoutCascade" ):
@@ -5989,7 +5989,7 @@ class Dart2Parser ( Parser ):
 
     def expressionWithoutCascade(self):
 
-        localctx = Dart2Parser.ExpressionWithoutCascadeContext(self, self._ctx, self.state)
+        localctx = DartParser.ExpressionWithoutCascadeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 118, self.RULE_expressionWithoutCascade)
         try:
             self.state = 1000
@@ -6035,45 +6035,45 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def EXTENSION_(self):
-            return self.getToken(Dart2Parser.EXTENSION_, 0)
+            return self.getToken(DartParser.EXTENSION_, 0)
 
         def ON_(self):
-            return self.getToken(Dart2Parser.ON_, 0)
+            return self.getToken(DartParser.ON_, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def OBC(self):
-            return self.getToken(Dart2Parser.OBC, 0)
+            return self.getToken(DartParser.OBC, 0)
 
         def CBC(self):
-            return self.getToken(Dart2Parser.CBC, 0)
+            return self.getToken(DartParser.CBC, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def typeParameters(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeParametersContext,0)
+            return self.getTypedRuleContext(DartParser.TypeParametersContext,0)
 
 
         def metadata(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.MetadataContext)
+                return self.getTypedRuleContexts(DartParser.MetadataContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.MetadataContext,i)
+                return self.getTypedRuleContext(DartParser.MetadataContext,i)
 
 
         def classMemberDeclaration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ClassMemberDeclarationContext)
+                return self.getTypedRuleContexts(DartParser.ClassMemberDeclarationContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ClassMemberDeclarationContext,i)
+                return self.getTypedRuleContext(DartParser.ClassMemberDeclarationContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_extensionDeclaration
+            return DartParser.RULE_extensionDeclaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExtensionDeclaration" ):
@@ -6088,13 +6088,13 @@ class Dart2Parser ( Parser ):
 
     def extensionDeclaration(self):
 
-        localctx = Dart2Parser.ExtensionDeclarationContext(self, self._ctx, self.state)
+        localctx = DartParser.ExtensionDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 120, self.RULE_extensionDeclaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1002
-            self.match(Dart2Parser.EXTENSION_)
+            self.match(DartParser.EXTENSION_)
             self.state = 1004
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,86,self._ctx)
@@ -6112,11 +6112,11 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1009
-            self.match(Dart2Parser.ON_)
+            self.match(DartParser.ON_)
             self.state = 1010
             self.type_()
             self.state = 1011
-            self.match(Dart2Parser.OBC)
+            self.match(DartParser.OBC)
             self.state = 1017
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -6130,7 +6130,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 1020
-            self.match(Dart2Parser.CBC)
+            self.match(DartParser.CBC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -6148,21 +6148,21 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def FACTORY_(self):
-            return self.getToken(Dart2Parser.FACTORY_, 0)
+            return self.getToken(DartParser.FACTORY_, 0)
 
         def constructorName(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstructorNameContext,0)
+            return self.getTypedRuleContext(DartParser.ConstructorNameContext,0)
 
 
         def formalParameterList(self):
-            return self.getTypedRuleContext(Dart2Parser.FormalParameterListContext,0)
+            return self.getTypedRuleContext(DartParser.FormalParameterListContext,0)
 
 
         def CONST_(self):
-            return self.getToken(Dart2Parser.CONST_, 0)
+            return self.getToken(DartParser.CONST_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_factoryConstructorSignature
+            return DartParser.RULE_factoryConstructorSignature
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFactoryConstructorSignature" ):
@@ -6177,7 +6177,7 @@ class Dart2Parser ( Parser ):
 
     def factoryConstructorSignature(self):
 
-        localctx = Dart2Parser.FactoryConstructorSignatureContext(self, self._ctx, self.state)
+        localctx = DartParser.FactoryConstructorSignatureContext(self, self._ctx, self.state)
         self.enterRule(localctx, 122, self.RULE_factoryConstructorSignature)
         self._la = 0 # Token type
         try:
@@ -6187,11 +6187,11 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==63:
                 self.state = 1022
-                self.match(Dart2Parser.CONST_)
+                self.match(DartParser.CONST_)
 
 
             self.state = 1025
-            self.match(Dart2Parser.FACTORY_)
+            self.match(DartParser.FACTORY_)
             self.state = 1026
             self.constructorName()
             self.state = 1027
@@ -6213,28 +6213,28 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def THIS_(self):
-            return self.getToken(Dart2Parser.THIS_, 0)
+            return self.getToken(DartParser.THIS_, 0)
 
         def D(self):
-            return self.getToken(Dart2Parser.D, 0)
+            return self.getToken(DartParser.D, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def finalConstVarOrType(self):
-            return self.getTypedRuleContext(Dart2Parser.FinalConstVarOrTypeContext,0)
+            return self.getTypedRuleContext(DartParser.FinalConstVarOrTypeContext,0)
 
 
         def formalParameterPart(self):
-            return self.getTypedRuleContext(Dart2Parser.FormalParameterPartContext,0)
+            return self.getTypedRuleContext(DartParser.FormalParameterPartContext,0)
 
 
         def QU(self):
-            return self.getToken(Dart2Parser.QU, 0)
+            return self.getToken(DartParser.QU, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_fieldFormalParameter
+            return DartParser.RULE_fieldFormalParameter
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFieldFormalParameter" ):
@@ -6249,7 +6249,7 @@ class Dart2Parser ( Parser ):
 
     def fieldFormalParameter(self):
 
-        localctx = Dart2Parser.FieldFormalParameterContext(self, self._ctx, self.state)
+        localctx = DartParser.FieldFormalParameterContext(self, self._ctx, self.state)
         self.enterRule(localctx, 124, self.RULE_fieldFormalParameter)
         self._la = 0 # Token type
         try:
@@ -6263,9 +6263,9 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1032
-            self.match(Dart2Parser.THIS_)
+            self.match(DartParser.THIS_)
             self.state = 1033
-            self.match(Dart2Parser.D)
+            self.match(DartParser.D)
             self.state = 1034
             self.identifier()
             self.state = 1039
@@ -6279,7 +6279,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==41:
                     self.state = 1036
-                    self.match(Dart2Parser.QU)
+                    self.match(DartParser.QU)
 
 
 
@@ -6301,24 +6301,24 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def initializerExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.InitializerExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.InitializerExpressionContext,0)
 
 
         def THIS_(self):
-            return self.getToken(Dart2Parser.THIS_, 0)
+            return self.getToken(DartParser.THIS_, 0)
 
         def D(self):
-            return self.getToken(Dart2Parser.D, 0)
+            return self.getToken(DartParser.D, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_fieldInitializer
+            return DartParser.RULE_fieldInitializer
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFieldInitializer" ):
@@ -6333,7 +6333,7 @@ class Dart2Parser ( Parser ):
 
     def fieldInitializer(self):
 
-        localctx = Dart2Parser.FieldInitializerContext(self, self._ctx, self.state)
+        localctx = DartParser.FieldInitializerContext(self, self._ctx, self.state)
         self.enterRule(localctx, 126, self.RULE_fieldInitializer)
         self._la = 0 # Token type
         try:
@@ -6343,15 +6343,15 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==111:
                 self.state = 1041
-                self.match(Dart2Parser.THIS_)
+                self.match(DartParser.THIS_)
                 self.state = 1042
-                self.match(Dart2Parser.D)
+                self.match(DartParser.D)
 
 
             self.state = 1045
             self.identifier()
             self.state = 1046
-            self.match(Dart2Parser.EQ)
+            self.match(DartParser.EQ)
             self.state = 1047
             self.initializerExpression()
         except RecognitionException as re:
@@ -6371,24 +6371,24 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def FINAL_(self):
-            return self.getToken(Dart2Parser.FINAL_, 0)
+            return self.getToken(DartParser.FINAL_, 0)
 
         def LATE_(self):
-            return self.getToken(Dart2Parser.LATE_, 0)
+            return self.getToken(DartParser.LATE_, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def CONST_(self):
-            return self.getToken(Dart2Parser.CONST_, 0)
+            return self.getToken(DartParser.CONST_, 0)
 
         def varOrType(self):
-            return self.getTypedRuleContext(Dart2Parser.VarOrTypeContext,0)
+            return self.getTypedRuleContext(DartParser.VarOrTypeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_finalConstVarOrType
+            return DartParser.RULE_finalConstVarOrType
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFinalConstVarOrType" ):
@@ -6403,7 +6403,7 @@ class Dart2Parser ( Parser ):
 
     def finalConstVarOrType(self):
 
-        localctx = Dart2Parser.FinalConstVarOrTypeContext(self, self._ctx, self.state)
+        localctx = DartParser.FinalConstVarOrTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 128, self.RULE_finalConstVarOrType)
         self._la = 0 # Token type
         try:
@@ -6417,11 +6417,11 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==91:
                     self.state = 1049
-                    self.match(Dart2Parser.LATE_)
+                    self.match(DartParser.LATE_)
 
 
                 self.state = 1052
-                self.match(Dart2Parser.FINAL_)
+                self.match(DartParser.FINAL_)
                 self.state = 1054
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,95,self._ctx)
@@ -6435,7 +6435,7 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1056
-                self.match(Dart2Parser.CONST_)
+                self.match(DartParser.CONST_)
                 self.state = 1058
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,96,self._ctx)
@@ -6453,7 +6453,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==91:
                     self.state = 1060
-                    self.match(Dart2Parser.LATE_)
+                    self.match(DartParser.LATE_)
 
 
                 self.state = 1063
@@ -6478,14 +6478,14 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def FINALLY_(self):
-            return self.getToken(Dart2Parser.FINALLY_, 0)
+            return self.getToken(DartParser.FINALLY_, 0)
 
         def block(self):
-            return self.getTypedRuleContext(Dart2Parser.BlockContext,0)
+            return self.getTypedRuleContext(DartParser.BlockContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_finallyPart
+            return DartParser.RULE_finallyPart
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFinallyPart" ):
@@ -6500,12 +6500,12 @@ class Dart2Parser ( Parser ):
 
     def finallyPart(self):
 
-        localctx = Dart2Parser.FinallyPartContext(self, self._ctx, self.state)
+        localctx = DartParser.FinallyPartContext(self, self._ctx, self.state)
         self.enterRule(localctx, 130, self.RULE_finallyPart)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1066
-            self.match(Dart2Parser.FINALLY_)
+            self.match(DartParser.FINALLY_)
             self.state = 1067
             self.block()
         except RecognitionException as re:
@@ -6525,27 +6525,27 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def FOR_(self):
-            return self.getToken(Dart2Parser.FOR_, 0)
+            return self.getToken(DartParser.FOR_, 0)
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def forLoopParts(self):
-            return self.getTypedRuleContext(Dart2Parser.ForLoopPartsContext,0)
+            return self.getTypedRuleContext(DartParser.ForLoopPartsContext,0)
 
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def element(self):
-            return self.getTypedRuleContext(Dart2Parser.ElementContext,0)
+            return self.getTypedRuleContext(DartParser.ElementContext,0)
 
 
         def AWAIT_(self):
-            return self.getToken(Dart2Parser.AWAIT_, 0)
+            return self.getToken(DartParser.AWAIT_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_forElement
+            return DartParser.RULE_forElement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterForElement" ):
@@ -6560,7 +6560,7 @@ class Dart2Parser ( Parser ):
 
     def forElement(self):
 
-        localctx = Dart2Parser.ForElementContext(self, self._ctx, self.state)
+        localctx = DartParser.ForElementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 132, self.RULE_forElement)
         self._la = 0 # Token type
         try:
@@ -6570,17 +6570,17 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==58:
                 self.state = 1069
-                self.match(Dart2Parser.AWAIT_)
+                self.match(DartParser.AWAIT_)
 
 
             self.state = 1072
-            self.match(Dart2Parser.FOR_)
+            self.match(DartParser.FOR_)
             self.state = 1073
-            self.match(Dart2Parser.OP)
+            self.match(DartParser.OP)
             self.state = 1074
             self.forLoopParts()
             self.state = 1075
-            self.match(Dart2Parser.CP)
+            self.match(DartParser.CP)
             self.state = 1076
             self.element()
         except RecognitionException as re:
@@ -6600,18 +6600,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def localVariableDeclaration(self):
-            return self.getTypedRuleContext(Dart2Parser.LocalVariableDeclarationContext,0)
+            return self.getTypedRuleContext(DartParser.LocalVariableDeclarationContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_forInitializerStatement
+            return DartParser.RULE_forInitializerStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterForInitializerStatement" ):
@@ -6626,7 +6626,7 @@ class Dart2Parser ( Parser ):
 
     def forInitializerStatement(self):
 
-        localctx = Dart2Parser.ForInitializerStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.ForInitializerStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 134, self.RULE_forInitializerStatement)
         self._la = 0 # Token type
         try:
@@ -6650,7 +6650,7 @@ class Dart2Parser ( Parser ):
 
 
                 self.state = 1082
-                self.match(Dart2Parser.SC)
+                self.match(DartParser.SC)
                 pass
 
 
@@ -6671,37 +6671,37 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def forInitializerStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.ForInitializerStatementContext,0)
+            return self.getTypedRuleContext(DartParser.ForInitializerStatementContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def expressionList(self):
-            return self.getTypedRuleContext(Dart2Parser.ExpressionListContext,0)
+            return self.getTypedRuleContext(DartParser.ExpressionListContext,0)
 
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def declaredIdentifier(self):
-            return self.getTypedRuleContext(Dart2Parser.DeclaredIdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.DeclaredIdentifierContext,0)
 
 
         def IN_(self):
-            return self.getToken(Dart2Parser.IN_, 0)
+            return self.getToken(DartParser.IN_, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_forLoopParts
+            return DartParser.RULE_forLoopParts
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterForLoopParts" ):
@@ -6716,7 +6716,7 @@ class Dart2Parser ( Parser ):
 
     def forLoopParts(self):
 
-        localctx = Dart2Parser.ForLoopPartsContext(self, self._ctx, self.state)
+        localctx = DartParser.ForLoopPartsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 136, self.RULE_forLoopParts)
         self._la = 0 # Token type
         try:
@@ -6736,7 +6736,7 @@ class Dart2Parser ( Parser ):
 
 
                 self.state = 1089
-                self.match(Dart2Parser.SC)
+                self.match(DartParser.SC)
                 self.state = 1091
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -6754,7 +6754,7 @@ class Dart2Parser ( Parser ):
                 self.state = 1094
                 self.declaredIdentifier()
                 self.state = 1095
-                self.match(Dart2Parser.IN_)
+                self.match(DartParser.IN_)
                 self.state = 1096
                 self.expr()
                 pass
@@ -6764,7 +6764,7 @@ class Dart2Parser ( Parser ):
                 self.state = 1098
                 self.identifier()
                 self.state = 1099
-                self.match(Dart2Parser.IN_)
+                self.match(DartParser.IN_)
                 self.state = 1100
                 self.expr()
                 pass
@@ -6787,24 +6787,24 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def normalFormalParameters(self):
-            return self.getTypedRuleContext(Dart2Parser.NormalFormalParametersContext,0)
+            return self.getTypedRuleContext(DartParser.NormalFormalParametersContext,0)
 
 
         def C(self):
-            return self.getToken(Dart2Parser.C, 0)
+            return self.getToken(DartParser.C, 0)
 
         def optionalOrNamedFormalParameters(self):
-            return self.getTypedRuleContext(Dart2Parser.OptionalOrNamedFormalParametersContext,0)
+            return self.getTypedRuleContext(DartParser.OptionalOrNamedFormalParametersContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_formalParameterList
+            return DartParser.RULE_formalParameterList
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFormalParameterList" ):
@@ -6819,7 +6819,7 @@ class Dart2Parser ( Parser ):
 
     def formalParameterList(self):
 
-        localctx = Dart2Parser.FormalParameterListContext(self, self._ctx, self.state)
+        localctx = DartParser.FormalParameterListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 138, self.RULE_formalParameterList)
         self._la = 0 # Token type
         try:
@@ -6829,15 +6829,15 @@ class Dart2Parser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1104
-                self.match(Dart2Parser.OP)
+                self.match(DartParser.OP)
                 self.state = 1105
-                self.match(Dart2Parser.CP)
+                self.match(DartParser.CP)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1106
-                self.match(Dart2Parser.OP)
+                self.match(DartParser.OP)
                 self.state = 1107
                 self.normalFormalParameters()
                 self.state = 1109
@@ -6845,35 +6845,35 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==5:
                     self.state = 1108
-                    self.match(Dart2Parser.C)
+                    self.match(DartParser.C)
 
 
                 self.state = 1111
-                self.match(Dart2Parser.CP)
+                self.match(DartParser.CP)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1113
-                self.match(Dart2Parser.OP)
+                self.match(DartParser.OP)
                 self.state = 1114
                 self.normalFormalParameters()
                 self.state = 1115
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 1116
                 self.optionalOrNamedFormalParameters()
                 self.state = 1117
-                self.match(Dart2Parser.CP)
+                self.match(DartParser.CP)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1119
-                self.match(Dart2Parser.OP)
+                self.match(DartParser.OP)
                 self.state = 1120
                 self.optionalOrNamedFormalParameters()
                 self.state = 1121
-                self.match(Dart2Parser.CP)
+                self.match(DartParser.CP)
                 pass
 
 
@@ -6894,15 +6894,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def formalParameterList(self):
-            return self.getTypedRuleContext(Dart2Parser.FormalParameterListContext,0)
+            return self.getTypedRuleContext(DartParser.FormalParameterListContext,0)
 
 
         def typeParameters(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeParametersContext,0)
+            return self.getTypedRuleContext(DartParser.TypeParametersContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_formalParameterPart
+            return DartParser.RULE_formalParameterPart
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFormalParameterPart" ):
@@ -6917,7 +6917,7 @@ class Dart2Parser ( Parser ):
 
     def formalParameterPart(self):
 
-        localctx = Dart2Parser.FormalParameterPartContext(self, self._ctx, self.state)
+        localctx = DartParser.FormalParameterPartContext(self, self._ctx, self.state)
         self.enterRule(localctx, 140, self.RULE_formalParameterPart)
         self._la = 0 # Token type
         try:
@@ -6949,27 +6949,27 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def FOR_(self):
-            return self.getToken(Dart2Parser.FOR_, 0)
+            return self.getToken(DartParser.FOR_, 0)
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def forLoopParts(self):
-            return self.getTypedRuleContext(Dart2Parser.ForLoopPartsContext,0)
+            return self.getTypedRuleContext(DartParser.ForLoopPartsContext,0)
 
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def statement(self):
-            return self.getTypedRuleContext(Dart2Parser.StatementContext,0)
+            return self.getTypedRuleContext(DartParser.StatementContext,0)
 
 
         def AWAIT_(self):
-            return self.getToken(Dart2Parser.AWAIT_, 0)
+            return self.getToken(DartParser.AWAIT_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_forStatement
+            return DartParser.RULE_forStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterForStatement" ):
@@ -6984,7 +6984,7 @@ class Dart2Parser ( Parser ):
 
     def forStatement(self):
 
-        localctx = Dart2Parser.ForStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.ForStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 142, self.RULE_forStatement)
         self._la = 0 # Token type
         try:
@@ -6994,17 +6994,17 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==58:
                 self.state = 1130
-                self.match(Dart2Parser.AWAIT_)
+                self.match(DartParser.AWAIT_)
 
 
             self.state = 1133
-            self.match(Dart2Parser.FOR_)
+            self.match(DartParser.FOR_)
             self.state = 1134
-            self.match(Dart2Parser.OP)
+            self.match(DartParser.OP)
             self.state = 1135
             self.forLoopParts()
             self.state = 1136
-            self.match(Dart2Parser.CP)
+            self.match(DartParser.CP)
             self.state = 1137
             self.statement()
         except RecognitionException as re:
@@ -7024,37 +7024,37 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def NATIVE_(self):
-            return self.getToken(Dart2Parser.NATIVE_, 0)
+            return self.getToken(DartParser.NATIVE_, 0)
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def stringLiteral(self):
-            return self.getTypedRuleContext(Dart2Parser.StringLiteralContext,0)
+            return self.getTypedRuleContext(DartParser.StringLiteralContext,0)
 
 
         def EG(self):
-            return self.getToken(Dart2Parser.EG, 0)
+            return self.getToken(DartParser.EG, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def ASYNC_(self):
-            return self.getToken(Dart2Parser.ASYNC_, 0)
+            return self.getToken(DartParser.ASYNC_, 0)
 
         def block(self):
-            return self.getTypedRuleContext(Dart2Parser.BlockContext,0)
+            return self.getTypedRuleContext(DartParser.BlockContext,0)
 
 
         def SYNC_(self):
-            return self.getToken(Dart2Parser.SYNC_, 0)
+            return self.getToken(DartParser.SYNC_, 0)
 
         def ST(self):
-            return self.getToken(Dart2Parser.ST, 0)
+            return self.getToken(DartParser.ST, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_functionBody
+            return DartParser.RULE_functionBody
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunctionBody" ):
@@ -7069,7 +7069,7 @@ class Dart2Parser ( Parser ):
 
     def functionBody(self):
 
-        localctx = Dart2Parser.FunctionBodyContext(self, self._ctx, self.state)
+        localctx = DartParser.FunctionBodyContext(self, self._ctx, self.state)
         self.enterRule(localctx, 144, self.RULE_functionBody)
         self._la = 0 # Token type
         try:
@@ -7079,7 +7079,7 @@ class Dart2Parser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1139
-                self.match(Dart2Parser.NATIVE_)
+                self.match(DartParser.NATIVE_)
                 self.state = 1141
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -7089,7 +7089,7 @@ class Dart2Parser ( Parser ):
 
 
                 self.state = 1143
-                self.match(Dart2Parser.SC)
+                self.match(DartParser.SC)
                 pass
 
             elif la_ == 2:
@@ -7099,15 +7099,15 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==57:
                     self.state = 1144
-                    self.match(Dart2Parser.ASYNC_)
+                    self.match(DartParser.ASYNC_)
 
 
                 self.state = 1147
-                self.match(Dart2Parser.EG)
+                self.match(DartParser.EG)
                 self.state = 1148
                 self.expr()
                 self.state = 1149
-                self.match(Dart2Parser.SC)
+                self.match(DartParser.SC)
                 pass
 
             elif la_ == 3:
@@ -7117,21 +7117,21 @@ class Dart2Parser ( Parser ):
                 token = self._input.LA(1)
                 if token in [57]:
                     self.state = 1151
-                    self.match(Dart2Parser.ASYNC_)
+                    self.match(DartParser.ASYNC_)
                     self.state = 1153
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if _la==52:
                         self.state = 1152
-                        self.match(Dart2Parser.ST)
+                        self.match(DartParser.ST)
 
 
                     pass
                 elif token in [110]:
                     self.state = 1155
-                    self.match(Dart2Parser.SYNC_)
+                    self.match(DartParser.SYNC_)
                     self.state = 1156
-                    self.match(Dart2Parser.ST)
+                    self.match(DartParser.ST)
                     pass
                 elif token in [30]:
                     pass
@@ -7159,15 +7159,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def formalParameterPart(self):
-            return self.getTypedRuleContext(Dart2Parser.FormalParameterPartContext,0)
+            return self.getTypedRuleContext(DartParser.FormalParameterPartContext,0)
 
 
         def functionExpressionBody(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionExpressionBodyContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionExpressionBodyContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_functionExpression
+            return DartParser.RULE_functionExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunctionExpression" ):
@@ -7182,7 +7182,7 @@ class Dart2Parser ( Parser ):
 
     def functionExpression(self):
 
-        localctx = Dart2Parser.FunctionExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.FunctionExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 146, self.RULE_functionExpression)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -7207,27 +7207,27 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def EG(self):
-            return self.getToken(Dart2Parser.EG, 0)
+            return self.getToken(DartParser.EG, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def ASYNC_(self):
-            return self.getToken(Dart2Parser.ASYNC_, 0)
+            return self.getToken(DartParser.ASYNC_, 0)
 
         def block(self):
-            return self.getTypedRuleContext(Dart2Parser.BlockContext,0)
+            return self.getTypedRuleContext(DartParser.BlockContext,0)
 
 
         def SYNC_(self):
-            return self.getToken(Dart2Parser.SYNC_, 0)
+            return self.getToken(DartParser.SYNC_, 0)
 
         def ST(self):
-            return self.getToken(Dart2Parser.ST, 0)
+            return self.getToken(DartParser.ST, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_functionExpressionBody
+            return DartParser.RULE_functionExpressionBody
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunctionExpressionBody" ):
@@ -7242,7 +7242,7 @@ class Dart2Parser ( Parser ):
 
     def functionExpressionBody(self):
 
-        localctx = Dart2Parser.FunctionExpressionBodyContext(self, self._ctx, self.state)
+        localctx = DartParser.FunctionExpressionBodyContext(self, self._ctx, self.state)
         self.enterRule(localctx, 148, self.RULE_functionExpressionBody)
         self._la = 0 # Token type
         try:
@@ -7256,11 +7256,11 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==57:
                     self.state = 1165
-                    self.match(Dart2Parser.ASYNC_)
+                    self.match(DartParser.ASYNC_)
 
 
                 self.state = 1168
-                self.match(Dart2Parser.EG)
+                self.match(DartParser.EG)
                 self.state = 1169
                 self.expr()
                 pass
@@ -7272,21 +7272,21 @@ class Dart2Parser ( Parser ):
                 token = self._input.LA(1)
                 if token in [57]:
                     self.state = 1170
-                    self.match(Dart2Parser.ASYNC_)
+                    self.match(DartParser.ASYNC_)
                     self.state = 1172
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if _la==52:
                         self.state = 1171
-                        self.match(Dart2Parser.ST)
+                        self.match(DartParser.ST)
 
 
                     pass
                 elif token in [110]:
                     self.state = 1174
-                    self.match(Dart2Parser.SYNC_)
+                    self.match(DartParser.SYNC_)
                     self.state = 1175
-                    self.match(Dart2Parser.ST)
+                    self.match(DartParser.ST)
                     pass
                 elif token in [30]:
                     pass
@@ -7314,25 +7314,25 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def formalParameterPart(self):
-            return self.getTypedRuleContext(Dart2Parser.FormalParameterPartContext,0)
+            return self.getTypedRuleContext(DartParser.FormalParameterPartContext,0)
 
 
         def COVARIANT_(self):
-            return self.getToken(Dart2Parser.COVARIANT_, 0)
+            return self.getToken(DartParser.COVARIANT_, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def QU(self):
-            return self.getToken(Dart2Parser.QU, 0)
+            return self.getToken(DartParser.QU, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_functionFormalParameter
+            return DartParser.RULE_functionFormalParameter
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunctionFormalParameter" ):
@@ -7347,7 +7347,7 @@ class Dart2Parser ( Parser ):
 
     def functionFormalParameter(self):
 
-        localctx = Dart2Parser.FunctionFormalParameterContext(self, self._ctx, self.state)
+        localctx = DartParser.FunctionFormalParameterContext(self, self._ctx, self.state)
         self.enterRule(localctx, 150, self.RULE_functionFormalParameter)
         self._la = 0 # Token type
         try:
@@ -7357,7 +7357,7 @@ class Dart2Parser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,118,self._ctx)
             if la_ == 1:
                 self.state = 1181
-                self.match(Dart2Parser.COVARIANT_)
+                self.match(DartParser.COVARIANT_)
 
 
             self.state = 1185
@@ -7377,7 +7377,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==41:
                 self.state = 1189
-                self.match(Dart2Parser.QU)
+                self.match(DartParser.QU)
 
 
         except RecognitionException as re:
@@ -7397,15 +7397,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_functionPrefix
+            return DartParser.RULE_functionPrefix
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunctionPrefix" ):
@@ -7420,7 +7420,7 @@ class Dart2Parser ( Parser ):
 
     def functionPrefix(self):
 
-        localctx = Dart2Parser.FunctionPrefixContext(self, self._ctx, self.state)
+        localctx = DartParser.FunctionPrefixContext(self, self._ctx, self.state)
         self.enterRule(localctx, 152, self.RULE_functionPrefix)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -7451,19 +7451,19 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def formalParameterPart(self):
-            return self.getTypedRuleContext(Dart2Parser.FormalParameterPartContext,0)
+            return self.getTypedRuleContext(DartParser.FormalParameterPartContext,0)
 
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_functionSignature
+            return DartParser.RULE_functionSignature
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunctionSignature" ):
@@ -7478,7 +7478,7 @@ class Dart2Parser ( Parser ):
 
     def functionSignature(self):
 
-        localctx = Dart2Parser.FunctionSignatureContext(self, self._ctx, self.state)
+        localctx = DartParser.FunctionSignatureContext(self, self._ctx, self.state)
         self.enterRule(localctx, 154, self.RULE_functionSignature)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -7511,15 +7511,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def functionTypeTails(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionTypeTailsContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionTypeTailsContext,0)
 
 
         def typeNotFunction(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotFunctionContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotFunctionContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_functionType
+            return DartParser.RULE_functionType
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunctionType" ):
@@ -7534,7 +7534,7 @@ class Dart2Parser ( Parser ):
 
     def functionType(self):
 
-        localctx = Dart2Parser.FunctionTypeContext(self, self._ctx, self.state)
+        localctx = DartParser.FunctionTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 156, self.RULE_functionType)
         try:
             self.state = 1207
@@ -7572,18 +7572,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def functionPrefix(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionPrefixContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionPrefixContext,0)
 
 
         def formalParameterPart(self):
-            return self.getTypedRuleContext(Dart2Parser.FormalParameterPartContext,0)
+            return self.getTypedRuleContext(DartParser.FormalParameterPartContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_functionTypeAlias
+            return DartParser.RULE_functionTypeAlias
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunctionTypeAlias" ):
@@ -7598,7 +7598,7 @@ class Dart2Parser ( Parser ):
 
     def functionTypeAlias(self):
 
-        localctx = Dart2Parser.FunctionTypeAliasContext(self, self._ctx, self.state)
+        localctx = DartParser.FunctionTypeAliasContext(self, self._ctx, self.state)
         self.enterRule(localctx, 158, self.RULE_functionTypeAlias)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -7607,7 +7607,7 @@ class Dart2Parser ( Parser ):
             self.state = 1210
             self.formalParameterPart()
             self.state = 1211
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -7625,18 +7625,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def FUNCTION_(self):
-            return self.getToken(Dart2Parser.FUNCTION_, 0)
+            return self.getToken(DartParser.FUNCTION_, 0)
 
         def parameterTypeList(self):
-            return self.getTypedRuleContext(Dart2Parser.ParameterTypeListContext,0)
+            return self.getTypedRuleContext(DartParser.ParameterTypeListContext,0)
 
 
         def typeParameters(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeParametersContext,0)
+            return self.getTypedRuleContext(DartParser.TypeParametersContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_functionTypeTail
+            return DartParser.RULE_functionTypeTail
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunctionTypeTail" ):
@@ -7651,13 +7651,13 @@ class Dart2Parser ( Parser ):
 
     def functionTypeTail(self):
 
-        localctx = Dart2Parser.FunctionTypeTailContext(self, self._ctx, self.state)
+        localctx = DartParser.FunctionTypeTailContext(self, self._ctx, self.state)
         self.enterRule(localctx, 160, self.RULE_functionTypeTail)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1213
-            self.match(Dart2Parser.FUNCTION_)
+            self.match(DartParser.FUNCTION_)
             self.state = 1215
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -7685,18 +7685,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def functionTypeTail(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionTypeTailContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionTypeTailContext,0)
 
 
         def functionTypeTails(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionTypeTailsContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionTypeTailsContext,0)
 
 
         def QU(self):
-            return self.getToken(Dart2Parser.QU, 0)
+            return self.getToken(DartParser.QU, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_functionTypeTails
+            return DartParser.RULE_functionTypeTails
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunctionTypeTails" ):
@@ -7711,7 +7711,7 @@ class Dart2Parser ( Parser ):
 
     def functionTypeTails(self):
 
-        localctx = Dart2Parser.FunctionTypeTailsContext(self, self._ctx, self.state)
+        localctx = DartParser.FunctionTypeTailsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 162, self.RULE_functionTypeTails)
         self._la = 0 # Token type
         try:
@@ -7727,7 +7727,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==41:
                     self.state = 1220
-                    self.match(Dart2Parser.QU)
+                    self.match(DartParser.QU)
 
 
                 self.state = 1223
@@ -7758,18 +7758,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def GET_(self):
-            return self.getToken(Dart2Parser.GET_, 0)
+            return self.getToken(DartParser.GET_, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_getterSignature
+            return DartParser.RULE_getterSignature
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterGetterSignature" ):
@@ -7784,7 +7784,7 @@ class Dart2Parser ( Parser ):
 
     def getterSignature(self):
 
-        localctx = Dart2Parser.GetterSignatureContext(self, self._ctx, self.state)
+        localctx = DartParser.GetterSignatureContext(self, self._ctx, self.state)
         self.enterRule(localctx, 164, self.RULE_getterSignature)
         self._la = 0 # Token type
         try:
@@ -7798,7 +7798,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1231
-            self.match(Dart2Parser.GET_)
+            self.match(DartParser.GET_)
             self.state = 1232
             self.identifier()
         except RecognitionException as re:
@@ -7818,106 +7818,106 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def IDENTIFIER(self):
-            return self.getToken(Dart2Parser.IDENTIFIER, 0)
+            return self.getToken(DartParser.IDENTIFIER, 0)
 
         def ABSTRACT_(self):
-            return self.getToken(Dart2Parser.ABSTRACT_, 0)
+            return self.getToken(DartParser.ABSTRACT_, 0)
 
         def AS_(self):
-            return self.getToken(Dart2Parser.AS_, 0)
+            return self.getToken(DartParser.AS_, 0)
 
         def COVARIANT_(self):
-            return self.getToken(Dart2Parser.COVARIANT_, 0)
+            return self.getToken(DartParser.COVARIANT_, 0)
 
         def DEFERRED_(self):
-            return self.getToken(Dart2Parser.DEFERRED_, 0)
+            return self.getToken(DartParser.DEFERRED_, 0)
 
         def DYNAMIC_(self):
-            return self.getToken(Dart2Parser.DYNAMIC_, 0)
+            return self.getToken(DartParser.DYNAMIC_, 0)
 
         def EXPORT_(self):
-            return self.getToken(Dart2Parser.EXPORT_, 0)
+            return self.getToken(DartParser.EXPORT_, 0)
 
         def EXTERNAL_(self):
-            return self.getToken(Dart2Parser.EXTERNAL_, 0)
+            return self.getToken(DartParser.EXTERNAL_, 0)
 
         def EXTENSION_(self):
-            return self.getToken(Dart2Parser.EXTENSION_, 0)
+            return self.getToken(DartParser.EXTENSION_, 0)
 
         def FACTORY_(self):
-            return self.getToken(Dart2Parser.FACTORY_, 0)
+            return self.getToken(DartParser.FACTORY_, 0)
 
         def FUNCTION_(self):
-            return self.getToken(Dart2Parser.FUNCTION_, 0)
+            return self.getToken(DartParser.FUNCTION_, 0)
 
         def GET_(self):
-            return self.getToken(Dart2Parser.GET_, 0)
+            return self.getToken(DartParser.GET_, 0)
 
         def IMPLEMENTS_(self):
-            return self.getToken(Dart2Parser.IMPLEMENTS_, 0)
+            return self.getToken(DartParser.IMPLEMENTS_, 0)
 
         def IMPORT_(self):
-            return self.getToken(Dart2Parser.IMPORT_, 0)
+            return self.getToken(DartParser.IMPORT_, 0)
 
         def INTERFACE_(self):
-            return self.getToken(Dart2Parser.INTERFACE_, 0)
+            return self.getToken(DartParser.INTERFACE_, 0)
 
         def LATE_(self):
-            return self.getToken(Dart2Parser.LATE_, 0)
+            return self.getToken(DartParser.LATE_, 0)
 
         def LIBRARY_(self):
-            return self.getToken(Dart2Parser.LIBRARY_, 0)
+            return self.getToken(DartParser.LIBRARY_, 0)
 
         def MIXIN_(self):
-            return self.getToken(Dart2Parser.MIXIN_, 0)
+            return self.getToken(DartParser.MIXIN_, 0)
 
         def OPERATOR_(self):
-            return self.getToken(Dart2Parser.OPERATOR_, 0)
+            return self.getToken(DartParser.OPERATOR_, 0)
 
         def PART_(self):
-            return self.getToken(Dart2Parser.PART_, 0)
+            return self.getToken(DartParser.PART_, 0)
 
         def REQUIRED_(self):
-            return self.getToken(Dart2Parser.REQUIRED_, 0)
+            return self.getToken(DartParser.REQUIRED_, 0)
 
         def SET_(self):
-            return self.getToken(Dart2Parser.SET_, 0)
+            return self.getToken(DartParser.SET_, 0)
 
         def STATIC_(self):
-            return self.getToken(Dart2Parser.STATIC_, 0)
+            return self.getToken(DartParser.STATIC_, 0)
 
         def TYPEDEF_(self):
-            return self.getToken(Dart2Parser.TYPEDEF_, 0)
+            return self.getToken(DartParser.TYPEDEF_, 0)
 
         def ASYNC_(self):
-            return self.getToken(Dart2Parser.ASYNC_, 0)
+            return self.getToken(DartParser.ASYNC_, 0)
 
         def HIDE_(self):
-            return self.getToken(Dart2Parser.HIDE_, 0)
+            return self.getToken(DartParser.HIDE_, 0)
 
         def OF_(self):
-            return self.getToken(Dart2Parser.OF_, 0)
+            return self.getToken(DartParser.OF_, 0)
 
         def ON_(self):
-            return self.getToken(Dart2Parser.ON_, 0)
+            return self.getToken(DartParser.ON_, 0)
 
         def SHOW_(self):
-            return self.getToken(Dart2Parser.SHOW_, 0)
+            return self.getToken(DartParser.SHOW_, 0)
 
         def SYNC_(self):
-            return self.getToken(Dart2Parser.SYNC_, 0)
+            return self.getToken(DartParser.SYNC_, 0)
 
         def AWAIT_(self):
-            return self.getToken(Dart2Parser.AWAIT_, 0)
+            return self.getToken(DartParser.AWAIT_, 0)
 
         def YIELD_(self):
-            return self.getToken(Dart2Parser.YIELD_, 0)
+            return self.getToken(DartParser.YIELD_, 0)
 
         def NATIVE_(self):
-            return self.getToken(Dart2Parser.NATIVE_, 0)
+            return self.getToken(DartParser.NATIVE_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_identifier
+            return DartParser.RULE_identifier
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterIdentifier" ):
@@ -7932,7 +7932,7 @@ class Dart2Parser ( Parser ):
 
     def identifier(self):
 
-        localctx = Dart2Parser.IdentifierContext(self, self._ctx, self.state)
+        localctx = DartParser.IdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 166, self.RULE_identifier)
         self._la = 0 # Token type
         try:
@@ -7962,19 +7962,19 @@ class Dart2Parser ( Parser ):
 
         def identifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.IdentifierContext)
+                return self.getTypedRuleContexts(DartParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.IdentifierContext,i)
+                return self.getTypedRuleContext(DartParser.IdentifierContext,i)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_identifierList
+            return DartParser.RULE_identifierList
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterIdentifierList" ):
@@ -7989,7 +7989,7 @@ class Dart2Parser ( Parser ):
 
     def identifierList(self):
 
-        localctx = Dart2Parser.IdentifierListContext(self, self._ctx, self.state)
+        localctx = DartParser.IdentifierListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 168, self.RULE_identifierList)
         self._la = 0 # Token type
         try:
@@ -8001,7 +8001,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             while _la==5:
                 self.state = 1237
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 1238
                 self.identifier()
                 self.state = 1243
@@ -8025,30 +8025,30 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def IF_(self):
-            return self.getToken(Dart2Parser.IF_, 0)
+            return self.getToken(DartParser.IF_, 0)
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def element(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ElementContext)
+                return self.getTypedRuleContexts(DartParser.ElementContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ElementContext,i)
+                return self.getTypedRuleContext(DartParser.ElementContext,i)
 
 
         def ELSE_(self):
-            return self.getToken(Dart2Parser.ELSE_, 0)
+            return self.getToken(DartParser.ELSE_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_ifElement
+            return DartParser.RULE_ifElement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterIfElement" ):
@@ -8063,18 +8063,18 @@ class Dart2Parser ( Parser ):
 
     def ifElement(self):
 
-        localctx = Dart2Parser.IfElementContext(self, self._ctx, self.state)
+        localctx = DartParser.IfElementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 170, self.RULE_ifElement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1244
-            self.match(Dart2Parser.IF_)
+            self.match(DartParser.IF_)
             self.state = 1245
-            self.match(Dart2Parser.OP)
+            self.match(DartParser.OP)
             self.state = 1246
             self.expr()
             self.state = 1247
-            self.match(Dart2Parser.CP)
+            self.match(DartParser.CP)
             self.state = 1248
             self.element()
             self.state = 1251
@@ -8082,7 +8082,7 @@ class Dart2Parser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,129,self._ctx)
             if la_ == 1:
                 self.state = 1249
-                self.match(Dart2Parser.ELSE_)
+                self.match(DartParser.ELSE_)
                 self.state = 1250
                 self.element()
 
@@ -8105,19 +8105,19 @@ class Dart2Parser ( Parser ):
 
         def logicalOrExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.LogicalOrExpressionContext)
+                return self.getTypedRuleContexts(DartParser.LogicalOrExpressionContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.LogicalOrExpressionContext,i)
+                return self.getTypedRuleContext(DartParser.LogicalOrExpressionContext,i)
 
 
         def QUQU(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.QUQU)
+                return self.getTokens(DartParser.QUQU)
             else:
-                return self.getToken(Dart2Parser.QUQU, i)
+                return self.getToken(DartParser.QUQU, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_ifNullExpression
+            return DartParser.RULE_ifNullExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterIfNullExpression" ):
@@ -8132,7 +8132,7 @@ class Dart2Parser ( Parser ):
 
     def ifNullExpression(self):
 
-        localctx = Dart2Parser.IfNullExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.IfNullExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 172, self.RULE_ifNullExpression)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -8144,7 +8144,7 @@ class Dart2Parser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1254
-                    self.match(Dart2Parser.QUQU)
+                    self.match(DartParser.QUQU)
                     self.state = 1255
                     self.logicalOrExpression() 
                 self.state = 1260
@@ -8168,30 +8168,30 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def IF_(self):
-            return self.getToken(Dart2Parser.IF_, 0)
+            return self.getToken(DartParser.IF_, 0)
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def statement(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.StatementContext)
+                return self.getTypedRuleContexts(DartParser.StatementContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.StatementContext,i)
+                return self.getTypedRuleContext(DartParser.StatementContext,i)
 
 
         def ELSE_(self):
-            return self.getToken(Dart2Parser.ELSE_, 0)
+            return self.getToken(DartParser.ELSE_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_ifStatement
+            return DartParser.RULE_ifStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterIfStatement" ):
@@ -8206,18 +8206,18 @@ class Dart2Parser ( Parser ):
 
     def ifStatement(self):
 
-        localctx = Dart2Parser.IfStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.IfStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 174, self.RULE_ifStatement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1261
-            self.match(Dart2Parser.IF_)
+            self.match(DartParser.IF_)
             self.state = 1262
-            self.match(Dart2Parser.OP)
+            self.match(DartParser.OP)
             self.state = 1263
             self.expr()
             self.state = 1264
-            self.match(Dart2Parser.CP)
+            self.match(DartParser.CP)
             self.state = 1265
             self.statement()
             self.state = 1268
@@ -8225,7 +8225,7 @@ class Dart2Parser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,131,self._ctx)
             if la_ == 1:
                 self.state = 1266
-                self.match(Dart2Parser.ELSE_)
+                self.match(DartParser.ELSE_)
                 self.state = 1267
                 self.statement()
 
@@ -8247,15 +8247,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def libraryImport(self):
-            return self.getTypedRuleContext(Dart2Parser.LibraryImportContext,0)
+            return self.getTypedRuleContext(DartParser.LibraryImportContext,0)
 
 
         def libraryExport(self):
-            return self.getTypedRuleContext(Dart2Parser.LibraryExportContext,0)
+            return self.getTypedRuleContext(DartParser.LibraryExportContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_importOrExport
+            return DartParser.RULE_importOrExport
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterImportOrExport" ):
@@ -8270,7 +8270,7 @@ class Dart2Parser ( Parser ):
 
     def importOrExport(self):
 
-        localctx = Dart2Parser.ImportOrExportContext(self, self._ctx, self.state)
+        localctx = DartParser.ImportOrExportContext(self, self._ctx, self.state)
         self.enterRule(localctx, 176, self.RULE_importOrExport)
         try:
             self.state = 1272
@@ -8306,34 +8306,34 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def IMPORT_(self):
-            return self.getToken(Dart2Parser.IMPORT_, 0)
+            return self.getToken(DartParser.IMPORT_, 0)
 
         def configurableUri(self):
-            return self.getTypedRuleContext(Dart2Parser.ConfigurableUriContext,0)
+            return self.getTypedRuleContext(DartParser.ConfigurableUriContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def AS_(self):
-            return self.getToken(Dart2Parser.AS_, 0)
+            return self.getToken(DartParser.AS_, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def combinator(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.CombinatorContext)
+                return self.getTypedRuleContexts(DartParser.CombinatorContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.CombinatorContext,i)
+                return self.getTypedRuleContext(DartParser.CombinatorContext,i)
 
 
         def DEFERRED_(self):
-            return self.getToken(Dart2Parser.DEFERRED_, 0)
+            return self.getToken(DartParser.DEFERRED_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_importSpecification
+            return DartParser.RULE_importSpecification
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterImportSpecification" ):
@@ -8348,13 +8348,13 @@ class Dart2Parser ( Parser ):
 
     def importSpecification(self):
 
-        localctx = Dart2Parser.ImportSpecificationContext(self, self._ctx, self.state)
+        localctx = DartParser.ImportSpecificationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 178, self.RULE_importSpecification)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1274
-            self.match(Dart2Parser.IMPORT_)
+            self.match(DartParser.IMPORT_)
             self.state = 1275
             self.configurableUri()
             self.state = 1281
@@ -8366,11 +8366,11 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==67:
                     self.state = 1276
-                    self.match(Dart2Parser.DEFERRED_)
+                    self.match(DartParser.DEFERRED_)
 
 
                 self.state = 1279
-                self.match(Dart2Parser.AS_)
+                self.match(DartParser.AS_)
                 self.state = 1280
                 self.identifier()
 
@@ -8386,7 +8386,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 1289
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -8404,13 +8404,13 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def PLPL(self):
-            return self.getToken(Dart2Parser.PLPL, 0)
+            return self.getToken(DartParser.PLPL, 0)
 
         def MM(self):
-            return self.getToken(Dart2Parser.MM, 0)
+            return self.getToken(DartParser.MM, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_incrementOperator
+            return DartParser.RULE_incrementOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterIncrementOperator" ):
@@ -8425,7 +8425,7 @@ class Dart2Parser ( Parser ):
 
     def incrementOperator(self):
 
-        localctx = Dart2Parser.IncrementOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.IncrementOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 180, self.RULE_incrementOperator)
         self._la = 0 # Token type
         try:
@@ -8454,18 +8454,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_initializedIdentifier
+            return DartParser.RULE_initializedIdentifier
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterInitializedIdentifier" ):
@@ -8480,7 +8480,7 @@ class Dart2Parser ( Parser ):
 
     def initializedIdentifier(self):
 
-        localctx = Dart2Parser.InitializedIdentifierContext(self, self._ctx, self.state)
+        localctx = DartParser.InitializedIdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 182, self.RULE_initializedIdentifier)
         self._la = 0 # Token type
         try:
@@ -8492,7 +8492,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==18:
                 self.state = 1294
-                self.match(Dart2Parser.EQ)
+                self.match(DartParser.EQ)
                 self.state = 1295
                 self.expr()
 
@@ -8515,19 +8515,19 @@ class Dart2Parser ( Parser ):
 
         def initializedIdentifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.InitializedIdentifierContext)
+                return self.getTypedRuleContexts(DartParser.InitializedIdentifierContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.InitializedIdentifierContext,i)
+                return self.getTypedRuleContext(DartParser.InitializedIdentifierContext,i)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_initializedIdentifierList
+            return DartParser.RULE_initializedIdentifierList
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterInitializedIdentifierList" ):
@@ -8542,7 +8542,7 @@ class Dart2Parser ( Parser ):
 
     def initializedIdentifierList(self):
 
-        localctx = Dart2Parser.InitializedIdentifierListContext(self, self._ctx, self.state)
+        localctx = DartParser.InitializedIdentifierListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 184, self.RULE_initializedIdentifierList)
         self._la = 0 # Token type
         try:
@@ -8554,7 +8554,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             while _la==5:
                 self.state = 1299
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 1300
                 self.initializedIdentifier()
                 self.state = 1305
@@ -8578,31 +8578,31 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def declaredIdentifier(self):
-            return self.getTypedRuleContext(Dart2Parser.DeclaredIdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.DeclaredIdentifierContext,0)
 
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def initializedIdentifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.InitializedIdentifierContext)
+                return self.getTypedRuleContexts(DartParser.InitializedIdentifierContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.InitializedIdentifierContext,i)
+                return self.getTypedRuleContext(DartParser.InitializedIdentifierContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_initializedVariableDeclaration
+            return DartParser.RULE_initializedVariableDeclaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterInitializedVariableDeclaration" ):
@@ -8617,7 +8617,7 @@ class Dart2Parser ( Parser ):
 
     def initializedVariableDeclaration(self):
 
-        localctx = Dart2Parser.InitializedVariableDeclarationContext(self, self._ctx, self.state)
+        localctx = DartParser.InitializedVariableDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 186, self.RULE_initializedVariableDeclaration)
         self._la = 0 # Token type
         try:
@@ -8629,7 +8629,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==18:
                 self.state = 1307
-                self.match(Dart2Parser.EQ)
+                self.match(DartParser.EQ)
                 self.state = 1308
                 self.expr()
 
@@ -8639,7 +8639,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             while _la==5:
                 self.state = 1311
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 1312
                 self.initializedIdentifier()
                 self.state = 1317
@@ -8663,15 +8663,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def conditionalExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.ConditionalExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.ConditionalExpressionContext,0)
 
 
         def cascade(self):
-            return self.getTypedRuleContext(Dart2Parser.CascadeContext,0)
+            return self.getTypedRuleContext(DartParser.CascadeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_initializerExpression
+            return DartParser.RULE_initializerExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterInitializerExpression" ):
@@ -8686,7 +8686,7 @@ class Dart2Parser ( Parser ):
 
     def initializerExpression(self):
 
-        localctx = Dart2Parser.InitializerExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.InitializerExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 188, self.RULE_initializerExpression)
         try:
             self.state = 1320
@@ -8722,29 +8722,29 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def arguments(self):
-            return self.getTypedRuleContext(Dart2Parser.ArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.ArgumentsContext,0)
 
 
         def D(self):
-            return self.getToken(Dart2Parser.D, 0)
+            return self.getToken(DartParser.D, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def fieldInitializer(self):
-            return self.getTypedRuleContext(Dart2Parser.FieldInitializerContext,0)
+            return self.getTypedRuleContext(DartParser.FieldInitializerContext,0)
 
 
         def assertion(self):
-            return self.getTypedRuleContext(Dart2Parser.AssertionContext,0)
+            return self.getTypedRuleContext(DartParser.AssertionContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_initializerListEntry
+            return DartParser.RULE_initializerListEntry
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterInitializerListEntry" ):
@@ -8759,7 +8759,7 @@ class Dart2Parser ( Parser ):
 
     def initializerListEntry(self):
 
-        localctx = Dart2Parser.InitializerListEntryContext(self, self._ctx, self.state)
+        localctx = DartParser.InitializerListEntryContext(self, self._ctx, self.state)
         self.enterRule(localctx, 190, self.RULE_initializerListEntry)
         try:
             self.state = 1331
@@ -8768,7 +8768,7 @@ class Dart2Parser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1322
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 1323
                 self.arguments()
                 pass
@@ -8776,9 +8776,9 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1324
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 1325
-                self.match(Dart2Parser.D)
+                self.match(DartParser.D)
                 self.state = 1326
                 self.identifier()
                 self.state = 1327
@@ -8815,23 +8815,23 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def CO(self):
-            return self.getToken(Dart2Parser.CO, 0)
+            return self.getToken(DartParser.CO, 0)
 
         def initializerListEntry(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.InitializerListEntryContext)
+                return self.getTypedRuleContexts(DartParser.InitializerListEntryContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.InitializerListEntryContext,i)
+                return self.getTypedRuleContext(DartParser.InitializerListEntryContext,i)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_initializers
+            return DartParser.RULE_initializers
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterInitializers" ):
@@ -8846,13 +8846,13 @@ class Dart2Parser ( Parser ):
 
     def initializers(self):
 
-        localctx = Dart2Parser.InitializersContext(self, self._ctx, self.state)
+        localctx = DartParser.InitializersContext(self, self._ctx, self.state)
         self.enterRule(localctx, 192, self.RULE_initializers)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1333
-            self.match(Dart2Parser.CO)
+            self.match(DartParser.CO)
             self.state = 1334
             self.initializerListEntry()
             self.state = 1339
@@ -8860,7 +8860,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             while _la==5:
                 self.state = 1335
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 1336
                 self.initializerListEntry()
                 self.state = 1341
@@ -8884,14 +8884,14 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def IMPLEMENTS_(self):
-            return self.getToken(Dart2Parser.IMPLEMENTS_, 0)
+            return self.getToken(DartParser.IMPLEMENTS_, 0)
 
         def typeNotVoidList(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotVoidListContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotVoidListContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_interfaces
+            return DartParser.RULE_interfaces
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterInterfaces" ):
@@ -8906,12 +8906,12 @@ class Dart2Parser ( Parser ):
 
     def interfaces(self):
 
-        localctx = Dart2Parser.InterfacesContext(self, self._ctx, self.state)
+        localctx = DartParser.InterfacesContext(self, self._ctx, self.state)
         self.enterRule(localctx, 194, self.RULE_interfaces)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1342
-            self.match(Dart2Parser.IMPLEMENTS_)
+            self.match(DartParser.IMPLEMENTS_)
             self.state = 1343
             self.typeNotVoidList()
         except RecognitionException as re:
@@ -8931,13 +8931,13 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def IS_(self):
-            return self.getToken(Dart2Parser.IS_, 0)
+            return self.getToken(DartParser.IS_, 0)
 
         def NOT(self):
-            return self.getToken(Dart2Parser.NOT, 0)
+            return self.getToken(DartParser.NOT, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_isOperator
+            return DartParser.RULE_isOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterIsOperator" ):
@@ -8952,19 +8952,19 @@ class Dart2Parser ( Parser ):
 
     def isOperator(self):
 
-        localctx = Dart2Parser.IsOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.IsOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 196, self.RULE_isOperator)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1345
-            self.match(Dart2Parser.IS_)
+            self.match(DartParser.IS_)
             self.state = 1347
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==28:
                 self.state = 1346
-                self.match(Dart2Parser.NOT)
+                self.match(DartParser.NOT)
 
 
         except RecognitionException as re:
@@ -8984,14 +8984,14 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def CO(self):
-            return self.getToken(Dart2Parser.CO, 0)
+            return self.getToken(DartParser.CO, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_label
+            return DartParser.RULE_label
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLabel" ):
@@ -9006,14 +9006,14 @@ class Dart2Parser ( Parser ):
 
     def label(self):
 
-        localctx = Dart2Parser.LabelContext(self, self._ctx, self.state)
+        localctx = DartParser.LabelContext(self, self._ctx, self.state)
         self.enterRule(localctx, 198, self.RULE_label)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1349
             self.identifier()
             self.state = 1350
-            self.match(Dart2Parser.CO)
+            self.match(DartParser.CO)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -9031,21 +9031,21 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def LET_(self):
-            return self.getToken(Dart2Parser.LET_, 0)
+            return self.getToken(DartParser.LET_, 0)
 
         def staticFinalDeclarationList(self):
-            return self.getTypedRuleContext(Dart2Parser.StaticFinalDeclarationListContext,0)
+            return self.getTypedRuleContext(DartParser.StaticFinalDeclarationListContext,0)
 
 
         def IN_(self):
-            return self.getToken(Dart2Parser.IN_, 0)
+            return self.getToken(DartParser.IN_, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_letExpression
+            return DartParser.RULE_letExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLetExpression" ):
@@ -9060,16 +9060,16 @@ class Dart2Parser ( Parser ):
 
     def letExpression(self):
 
-        localctx = Dart2Parser.LetExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.LetExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 200, self.RULE_letExpression)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1352
-            self.match(Dart2Parser.LET_)
+            self.match(DartParser.LET_)
             self.state = 1353
             self.staticFinalDeclarationList()
             self.state = 1354
-            self.match(Dart2Parser.IN_)
+            self.match(DartParser.IN_)
             self.state = 1355
             self.expr()
         except RecognitionException as re:
@@ -9089,39 +9089,39 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def libraryName(self):
-            return self.getTypedRuleContext(Dart2Parser.LibraryNameContext,0)
+            return self.getTypedRuleContext(DartParser.LibraryNameContext,0)
 
 
         def importOrExport(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ImportOrExportContext)
+                return self.getTypedRuleContexts(DartParser.ImportOrExportContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ImportOrExportContext,i)
+                return self.getTypedRuleContext(DartParser.ImportOrExportContext,i)
 
 
         def partDirective(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.PartDirectiveContext)
+                return self.getTypedRuleContexts(DartParser.PartDirectiveContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.PartDirectiveContext,i)
+                return self.getTypedRuleContext(DartParser.PartDirectiveContext,i)
 
 
         def metadata(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.MetadataContext)
+                return self.getTypedRuleContexts(DartParser.MetadataContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.MetadataContext,i)
+                return self.getTypedRuleContext(DartParser.MetadataContext,i)
 
 
         def topLevelDeclaration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.TopLevelDeclarationContext)
+                return self.getTypedRuleContexts(DartParser.TopLevelDeclarationContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.TopLevelDeclarationContext,i)
+                return self.getTypedRuleContext(DartParser.TopLevelDeclarationContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_libraryDeclaration
+            return DartParser.RULE_libraryDeclaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLibraryDeclaration" ):
@@ -9136,7 +9136,7 @@ class Dart2Parser ( Parser ):
 
     def libraryDeclaration(self):
 
-        localctx = Dart2Parser.LibraryDeclarationContext(self, self._ctx, self.state)
+        localctx = DartParser.LibraryDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 202, self.RULE_libraryDeclaration)
         self._la = 0 # Token type
         try:
@@ -9200,28 +9200,28 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def EXPORT_(self):
-            return self.getToken(Dart2Parser.EXPORT_, 0)
+            return self.getToken(DartParser.EXPORT_, 0)
 
         def configurableUri(self):
-            return self.getTypedRuleContext(Dart2Parser.ConfigurableUriContext,0)
+            return self.getTypedRuleContext(DartParser.ConfigurableUriContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def combinator(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.CombinatorContext)
+                return self.getTypedRuleContexts(DartParser.CombinatorContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.CombinatorContext,i)
+                return self.getTypedRuleContext(DartParser.CombinatorContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_libraryExport
+            return DartParser.RULE_libraryExport
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLibraryExport" ):
@@ -9236,7 +9236,7 @@ class Dart2Parser ( Parser ):
 
     def libraryExport(self):
 
-        localctx = Dart2Parser.LibraryExportContext(self, self._ctx, self.state)
+        localctx = DartParser.LibraryExportContext(self, self._ctx, self.state)
         self.enterRule(localctx, 204, self.RULE_libraryExport)
         self._la = 0 # Token type
         try:
@@ -9244,7 +9244,7 @@ class Dart2Parser ( Parser ):
             self.state = 1380
             self.metadata()
             self.state = 1381
-            self.match(Dart2Parser.EXPORT_)
+            self.match(DartParser.EXPORT_)
             self.state = 1382
             self.configurableUri()
             self.state = 1386
@@ -9258,7 +9258,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 1389
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -9276,15 +9276,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def importSpecification(self):
-            return self.getTypedRuleContext(Dart2Parser.ImportSpecificationContext,0)
+            return self.getTypedRuleContext(DartParser.ImportSpecificationContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_libraryImport
+            return DartParser.RULE_libraryImport
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLibraryImport" ):
@@ -9299,7 +9299,7 @@ class Dart2Parser ( Parser ):
 
     def libraryImport(self):
 
-        localctx = Dart2Parser.LibraryImportContext(self, self._ctx, self.state)
+        localctx = DartParser.LibraryImportContext(self, self._ctx, self.state)
         self.enterRule(localctx, 206, self.RULE_libraryImport)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -9324,21 +9324,21 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def LIBRARY_(self):
-            return self.getToken(Dart2Parser.LIBRARY_, 0)
+            return self.getToken(DartParser.LIBRARY_, 0)
 
         def dottedIdentifierList(self):
-            return self.getTypedRuleContext(Dart2Parser.DottedIdentifierListContext,0)
+            return self.getTypedRuleContext(DartParser.DottedIdentifierListContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_libraryName
+            return DartParser.RULE_libraryName
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLibraryName" ):
@@ -9353,18 +9353,18 @@ class Dart2Parser ( Parser ):
 
     def libraryName(self):
 
-        localctx = Dart2Parser.LibraryNameContext(self, self._ctx, self.state)
+        localctx = DartParser.LibraryNameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 208, self.RULE_libraryName)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1394
             self.metadata()
             self.state = 1395
-            self.match(Dart2Parser.LIBRARY_)
+            self.match(DartParser.LIBRARY_)
             self.state = 1396
             self.dottedIdentifierList()
             self.state = 1397
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -9382,24 +9382,24 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OB(self):
-            return self.getToken(Dart2Parser.OB, 0)
+            return self.getToken(DartParser.OB, 0)
 
         def CB(self):
-            return self.getToken(Dart2Parser.CB, 0)
+            return self.getToken(DartParser.CB, 0)
 
         def CONST_(self):
-            return self.getToken(Dart2Parser.CONST_, 0)
+            return self.getToken(DartParser.CONST_, 0)
 
         def typeArguments(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.TypeArgumentsContext,0)
 
 
         def elements(self):
-            return self.getTypedRuleContext(Dart2Parser.ElementsContext,0)
+            return self.getTypedRuleContext(DartParser.ElementsContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_listLiteral
+            return DartParser.RULE_listLiteral
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterListLiteral" ):
@@ -9414,7 +9414,7 @@ class Dart2Parser ( Parser ):
 
     def listLiteral(self):
 
-        localctx = Dart2Parser.ListLiteralContext(self, self._ctx, self.state)
+        localctx = DartParser.ListLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 210, self.RULE_listLiteral)
         self._la = 0 # Token type
         try:
@@ -9424,7 +9424,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==63:
                 self.state = 1399
-                self.match(Dart2Parser.CONST_)
+                self.match(DartParser.CONST_)
 
 
             self.state = 1403
@@ -9436,7 +9436,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1405
-            self.match(Dart2Parser.OB)
+            self.match(DartParser.OB)
             self.state = 1407
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -9446,7 +9446,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1409
-            self.match(Dart2Parser.CB)
+            self.match(DartParser.CB)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -9464,35 +9464,35 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def nullLiteral(self):
-            return self.getTypedRuleContext(Dart2Parser.NullLiteralContext,0)
+            return self.getTypedRuleContext(DartParser.NullLiteralContext,0)
 
 
         def booleanLiteral(self):
-            return self.getTypedRuleContext(Dart2Parser.BooleanLiteralContext,0)
+            return self.getTypedRuleContext(DartParser.BooleanLiteralContext,0)
 
 
         def numericLiteral(self):
-            return self.getTypedRuleContext(Dart2Parser.NumericLiteralContext,0)
+            return self.getTypedRuleContext(DartParser.NumericLiteralContext,0)
 
 
         def stringLiteral(self):
-            return self.getTypedRuleContext(Dart2Parser.StringLiteralContext,0)
+            return self.getTypedRuleContext(DartParser.StringLiteralContext,0)
 
 
         def symbolLiteral(self):
-            return self.getTypedRuleContext(Dart2Parser.SymbolLiteralContext,0)
+            return self.getTypedRuleContext(DartParser.SymbolLiteralContext,0)
 
 
         def listLiteral(self):
-            return self.getTypedRuleContext(Dart2Parser.ListLiteralContext,0)
+            return self.getTypedRuleContext(DartParser.ListLiteralContext,0)
 
 
         def setOrMapLiteral(self):
-            return self.getTypedRuleContext(Dart2Parser.SetOrMapLiteralContext,0)
+            return self.getTypedRuleContext(DartParser.SetOrMapLiteralContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_literal
+            return DartParser.RULE_literal
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLiteral" ):
@@ -9507,7 +9507,7 @@ class Dart2Parser ( Parser ):
 
     def literal(self):
 
-        localctx = Dart2Parser.LiteralContext(self, self._ctx, self.state)
+        localctx = DartParser.LiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 212, self.RULE_literal)
         try:
             self.state = 1418
@@ -9573,19 +9573,19 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def functionSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionSignatureContext,0)
 
 
         def functionBody(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionBodyContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionBodyContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_localFunctionDeclaration
+            return DartParser.RULE_localFunctionDeclaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLocalFunctionDeclaration" ):
@@ -9600,7 +9600,7 @@ class Dart2Parser ( Parser ):
 
     def localFunctionDeclaration(self):
 
-        localctx = Dart2Parser.LocalFunctionDeclarationContext(self, self._ctx, self.state)
+        localctx = DartParser.LocalFunctionDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 214, self.RULE_localFunctionDeclaration)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -9627,18 +9627,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def initializedVariableDeclaration(self):
-            return self.getTypedRuleContext(Dart2Parser.InitializedVariableDeclarationContext,0)
+            return self.getTypedRuleContext(DartParser.InitializedVariableDeclarationContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_localVariableDeclaration
+            return DartParser.RULE_localVariableDeclaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLocalVariableDeclaration" ):
@@ -9653,7 +9653,7 @@ class Dart2Parser ( Parser ):
 
     def localVariableDeclaration(self):
 
-        localctx = Dart2Parser.LocalVariableDeclarationContext(self, self._ctx, self.state)
+        localctx = DartParser.LocalVariableDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 216, self.RULE_localVariableDeclaration)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -9662,7 +9662,7 @@ class Dart2Parser ( Parser ):
             self.state = 1425
             self.initializedVariableDeclaration()
             self.state = 1426
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -9681,19 +9681,19 @@ class Dart2Parser ( Parser ):
 
         def equalityExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.EqualityExpressionContext)
+                return self.getTypedRuleContexts(DartParser.EqualityExpressionContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.EqualityExpressionContext,i)
+                return self.getTypedRuleContext(DartParser.EqualityExpressionContext,i)
 
 
         def AA(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.AA)
+                return self.getTokens(DartParser.AA)
             else:
-                return self.getToken(Dart2Parser.AA, i)
+                return self.getToken(DartParser.AA, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_logicalAndExpression
+            return DartParser.RULE_logicalAndExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLogicalAndExpression" ):
@@ -9708,7 +9708,7 @@ class Dart2Parser ( Parser ):
 
     def logicalAndExpression(self):
 
-        localctx = Dart2Parser.LogicalAndExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.LogicalAndExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 218, self.RULE_logicalAndExpression)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -9720,7 +9720,7 @@ class Dart2Parser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1429
-                    self.match(Dart2Parser.AA)
+                    self.match(DartParser.AA)
                     self.state = 1430
                     self.equalityExpression() 
                 self.state = 1435
@@ -9745,19 +9745,19 @@ class Dart2Parser ( Parser ):
 
         def logicalAndExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.LogicalAndExpressionContext)
+                return self.getTypedRuleContexts(DartParser.LogicalAndExpressionContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.LogicalAndExpressionContext,i)
+                return self.getTypedRuleContext(DartParser.LogicalAndExpressionContext,i)
 
 
         def PP(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.PP)
+                return self.getTokens(DartParser.PP)
             else:
-                return self.getToken(Dart2Parser.PP, i)
+                return self.getToken(DartParser.PP, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_logicalOrExpression
+            return DartParser.RULE_logicalOrExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLogicalOrExpression" ):
@@ -9772,7 +9772,7 @@ class Dart2Parser ( Parser ):
 
     def logicalOrExpression(self):
 
-        localctx = Dart2Parser.LogicalOrExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.LogicalOrExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 220, self.RULE_logicalOrExpression)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -9784,7 +9784,7 @@ class Dart2Parser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1437
-                    self.match(Dart2Parser.PP)
+                    self.match(DartParser.PP)
                     self.state = 1438
                     self.logicalAndExpression() 
                 self.state = 1443
@@ -9809,16 +9809,16 @@ class Dart2Parser ( Parser ):
 
         def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ExprContext)
+                return self.getTypedRuleContexts(DartParser.ExprContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ExprContext,i)
+                return self.getTypedRuleContext(DartParser.ExprContext,i)
 
 
         def CO(self):
-            return self.getToken(Dart2Parser.CO, 0)
+            return self.getToken(DartParser.CO, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_mapElement
+            return DartParser.RULE_mapElement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMapElement" ):
@@ -9833,14 +9833,14 @@ class Dart2Parser ( Parser ):
 
     def mapElement(self):
 
-        localctx = Dart2Parser.MapElementContext(self, self._ctx, self.state)
+        localctx = DartParser.MapElementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 222, self.RULE_mapElement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1444
             self.expr()
             self.state = 1445
-            self.match(Dart2Parser.CO)
+            self.match(DartParser.CO)
             self.state = 1446
             self.expr()
         except RecognitionException as re:
@@ -9861,19 +9861,19 @@ class Dart2Parser ( Parser ):
 
         def AT(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.AT)
+                return self.getTokens(DartParser.AT)
             else:
-                return self.getToken(Dart2Parser.AT, i)
+                return self.getToken(DartParser.AT, i)
 
         def metadatum(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.MetadatumContext)
+                return self.getTypedRuleContexts(DartParser.MetadatumContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.MetadatumContext,i)
+                return self.getTypedRuleContext(DartParser.MetadatumContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_metadata
+            return DartParser.RULE_metadata
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMetadata" ):
@@ -9888,7 +9888,7 @@ class Dart2Parser ( Parser ):
 
     def metadata(self):
 
-        localctx = Dart2Parser.MetadataContext(self, self._ctx, self.state)
+        localctx = DartParser.MetadataContext(self, self._ctx, self.state)
         self.enterRule(localctx, 224, self.RULE_metadata)
         self._la = 0 # Token type
         try:
@@ -9898,7 +9898,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             while _la==4:
                 self.state = 1448
-                self.match(Dart2Parser.AT)
+                self.match(DartParser.AT)
                 self.state = 1449
                 self.metadatum()
                 self.state = 1454
@@ -9922,23 +9922,23 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(Dart2Parser.QualifiedNameContext,0)
+            return self.getTypedRuleContext(DartParser.QualifiedNameContext,0)
 
 
         def constructorDesignation(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstructorDesignationContext,0)
+            return self.getTypedRuleContext(DartParser.ConstructorDesignationContext,0)
 
 
         def arguments(self):
-            return self.getTypedRuleContext(Dart2Parser.ArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.ArgumentsContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_metadatum
+            return DartParser.RULE_metadatum
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMetadatum" ):
@@ -9953,7 +9953,7 @@ class Dart2Parser ( Parser ):
 
     def metadatum(self):
 
-        localctx = Dart2Parser.MetadatumContext(self, self._ctx, self.state)
+        localctx = DartParser.MetadatumContext(self, self._ctx, self.state)
         self.enterRule(localctx, 226, self.RULE_metadatum)
         try:
             self.state = 1460
@@ -9997,38 +9997,38 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def constructorSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstructorSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.ConstructorSignatureContext,0)
 
 
         def initializers(self):
-            return self.getTypedRuleContext(Dart2Parser.InitializersContext,0)
+            return self.getTypedRuleContext(DartParser.InitializersContext,0)
 
 
         def factoryConstructorSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.FactoryConstructorSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.FactoryConstructorSignatureContext,0)
 
 
         def functionSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionSignatureContext,0)
 
 
         def STATIC_(self):
-            return self.getToken(Dart2Parser.STATIC_, 0)
+            return self.getToken(DartParser.STATIC_, 0)
 
         def getterSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.GetterSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.GetterSignatureContext,0)
 
 
         def setterSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.SetterSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.SetterSignatureContext,0)
 
 
         def operatorSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.OperatorSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.OperatorSignatureContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_methodSignature
+            return DartParser.RULE_methodSignature
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMethodSignature" ):
@@ -10043,7 +10043,7 @@ class Dart2Parser ( Parser ):
 
     def methodSignature(self):
 
-        localctx = Dart2Parser.MethodSignatureContext(self, self._ctx, self.state)
+        localctx = DartParser.MethodSignatureContext(self, self._ctx, self.state)
         self.enterRule(localctx, 228, self.RULE_methodSignature)
         self._la = 0 # Token type
         try:
@@ -10077,7 +10077,7 @@ class Dart2Parser ( Parser ):
                 la_ = self._interp.adaptivePredict(self._input,158,self._ctx)
                 if la_ == 1:
                     self.state = 1467
-                    self.match(Dart2Parser.STATIC_)
+                    self.match(DartParser.STATIC_)
 
 
                 self.state = 1470
@@ -10091,7 +10091,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==107:
                     self.state = 1471
-                    self.match(Dart2Parser.STATIC_)
+                    self.match(DartParser.STATIC_)
 
 
                 self.state = 1474
@@ -10105,7 +10105,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==107:
                     self.state = 1475
-                    self.match(Dart2Parser.STATIC_)
+                    self.match(DartParser.STATIC_)
 
 
                 self.state = 1478
@@ -10136,10 +10136,10 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def MINUS(self):
-            return self.getToken(Dart2Parser.MINUS, 0)
+            return self.getToken(DartParser.MINUS, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_minusOperator
+            return DartParser.RULE_minusOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMinusOperator" ):
@@ -10154,12 +10154,12 @@ class Dart2Parser ( Parser ):
 
     def minusOperator(self):
 
-        localctx = Dart2Parser.MinusOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.MinusOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 230, self.RULE_minusOperator)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1482
-            self.match(Dart2Parser.MINUS)
+            self.match(DartParser.MINUS)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -10177,19 +10177,19 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def typeNotVoid(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotVoidContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotVoidContext,0)
 
 
         def mixins(self):
-            return self.getTypedRuleContext(Dart2Parser.MixinsContext,0)
+            return self.getTypedRuleContext(DartParser.MixinsContext,0)
 
 
         def interfaces(self):
-            return self.getTypedRuleContext(Dart2Parser.InterfacesContext,0)
+            return self.getTypedRuleContext(DartParser.InterfacesContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_mixinApplication
+            return DartParser.RULE_mixinApplication
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMixinApplication" ):
@@ -10204,7 +10204,7 @@ class Dart2Parser ( Parser ):
 
     def mixinApplication(self):
 
-        localctx = Dart2Parser.MixinApplicationContext(self, self._ctx, self.state)
+        localctx = DartParser.MixinApplicationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 232, self.RULE_mixinApplication)
         self._la = 0 # Token type
         try:
@@ -10238,25 +10238,25 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def mixinApplication(self):
-            return self.getTypedRuleContext(Dart2Parser.MixinApplicationContext,0)
+            return self.getTypedRuleContext(DartParser.MixinApplicationContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def typeParameters(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeParametersContext,0)
+            return self.getTypedRuleContext(DartParser.TypeParametersContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_mixinApplicationClass
+            return DartParser.RULE_mixinApplicationClass
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMixinApplicationClass" ):
@@ -10271,7 +10271,7 @@ class Dart2Parser ( Parser ):
 
     def mixinApplicationClass(self):
 
-        localctx = Dart2Parser.MixinApplicationClassContext(self, self._ctx, self.state)
+        localctx = DartParser.MixinApplicationClassContext(self, self._ctx, self.state)
         self.enterRule(localctx, 234, self.RULE_mixinApplicationClass)
         self._la = 0 # Token type
         try:
@@ -10287,11 +10287,11 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1493
-            self.match(Dart2Parser.EQ)
+            self.match(DartParser.EQ)
             self.state = 1494
             self.mixinApplication()
             self.state = 1495
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -10309,49 +10309,49 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def MIXIN_(self):
-            return self.getToken(Dart2Parser.MIXIN_, 0)
+            return self.getToken(DartParser.MIXIN_, 0)
 
         def typeIdentifier(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeIdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.TypeIdentifierContext,0)
 
 
         def OBC(self):
-            return self.getToken(Dart2Parser.OBC, 0)
+            return self.getToken(DartParser.OBC, 0)
 
         def CBC(self):
-            return self.getToken(Dart2Parser.CBC, 0)
+            return self.getToken(DartParser.CBC, 0)
 
         def typeParameters(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeParametersContext,0)
+            return self.getTypedRuleContext(DartParser.TypeParametersContext,0)
 
 
         def ON_(self):
-            return self.getToken(Dart2Parser.ON_, 0)
+            return self.getToken(DartParser.ON_, 0)
 
         def typeNotVoidList(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotVoidListContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotVoidListContext,0)
 
 
         def interfaces(self):
-            return self.getTypedRuleContext(Dart2Parser.InterfacesContext,0)
+            return self.getTypedRuleContext(DartParser.InterfacesContext,0)
 
 
         def metadata(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.MetadataContext)
+                return self.getTypedRuleContexts(DartParser.MetadataContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.MetadataContext,i)
+                return self.getTypedRuleContext(DartParser.MetadataContext,i)
 
 
         def classMemberDeclaration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ClassMemberDeclarationContext)
+                return self.getTypedRuleContexts(DartParser.ClassMemberDeclarationContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ClassMemberDeclarationContext,i)
+                return self.getTypedRuleContext(DartParser.ClassMemberDeclarationContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_mixinDeclaration
+            return DartParser.RULE_mixinDeclaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMixinDeclaration" ):
@@ -10366,13 +10366,13 @@ class Dart2Parser ( Parser ):
 
     def mixinDeclaration(self):
 
-        localctx = Dart2Parser.MixinDeclarationContext(self, self._ctx, self.state)
+        localctx = DartParser.MixinDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 236, self.RULE_mixinDeclaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1497
-            self.match(Dart2Parser.MIXIN_)
+            self.match(DartParser.MIXIN_)
             self.state = 1498
             self.typeIdentifier()
             self.state = 1500
@@ -10388,7 +10388,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==99:
                 self.state = 1502
-                self.match(Dart2Parser.ON_)
+                self.match(DartParser.ON_)
                 self.state = 1503
                 self.typeNotVoidList()
 
@@ -10402,7 +10402,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1509
-            self.match(Dart2Parser.OBC)
+            self.match(DartParser.OBC)
             self.state = 1515
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -10416,7 +10416,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 1518
-            self.match(Dart2Parser.CBC)
+            self.match(DartParser.CBC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -10434,14 +10434,14 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def WITH_(self):
-            return self.getToken(Dart2Parser.WITH_, 0)
+            return self.getToken(DartParser.WITH_, 0)
 
         def typeNotVoidList(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotVoidListContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotVoidListContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_mixins
+            return DartParser.RULE_mixins
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMixins" ):
@@ -10456,12 +10456,12 @@ class Dart2Parser ( Parser ):
 
     def mixins(self):
 
-        localctx = Dart2Parser.MixinsContext(self, self._ctx, self.state)
+        localctx = DartParser.MixinsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 238, self.RULE_mixins)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1520
-            self.match(Dart2Parser.WITH_)
+            self.match(DartParser.WITH_)
             self.state = 1521
             self.typeNotVoidList()
         except RecognitionException as re:
@@ -10481,10 +10481,10 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def MultiLineString(self):
-            return self.getToken(Dart2Parser.MultiLineString, 0)
+            return self.getToken(DartParser.MultiLineString, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_multilineString
+            return DartParser.RULE_multilineString
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMultilineString" ):
@@ -10499,12 +10499,12 @@ class Dart2Parser ( Parser ):
 
     def multilineString(self):
 
-        localctx = Dart2Parser.MultilineStringContext(self, self._ctx, self.state)
+        localctx = DartParser.MultilineStringContext(self, self._ctx, self.state)
         self.enterRule(localctx, 240, self.RULE_multilineString)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1523
-            self.match(Dart2Parser.MultiLineString)
+            self.match(DartParser.MultiLineString)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -10523,23 +10523,23 @@ class Dart2Parser ( Parser ):
 
         def unaryExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.UnaryExpressionContext)
+                return self.getTypedRuleContexts(DartParser.UnaryExpressionContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.UnaryExpressionContext,i)
+                return self.getTypedRuleContext(DartParser.UnaryExpressionContext,i)
 
 
         def multiplicativeOperator(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.MultiplicativeOperatorContext)
+                return self.getTypedRuleContexts(DartParser.MultiplicativeOperatorContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.MultiplicativeOperatorContext,i)
+                return self.getTypedRuleContext(DartParser.MultiplicativeOperatorContext,i)
 
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_multiplicativeExpression
+            return DartParser.RULE_multiplicativeExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMultiplicativeExpression" ):
@@ -10554,7 +10554,7 @@ class Dart2Parser ( Parser ):
 
     def multiplicativeExpression(self):
 
-        localctx = Dart2Parser.MultiplicativeExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.MultiplicativeExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 242, self.RULE_multiplicativeExpression)
         try:
             self.state = 1542
@@ -10582,7 +10582,7 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1534
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 1538 
                 self._errHandler.sync(self)
                 _alt = 1
@@ -10619,19 +10619,19 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def ST(self):
-            return self.getToken(Dart2Parser.ST, 0)
+            return self.getToken(DartParser.ST, 0)
 
         def SL(self):
-            return self.getToken(Dart2Parser.SL, 0)
+            return self.getToken(DartParser.SL, 0)
 
         def PC(self):
-            return self.getToken(Dart2Parser.PC, 0)
+            return self.getToken(DartParser.PC, 0)
 
         def SQS(self):
-            return self.getToken(Dart2Parser.SQS, 0)
+            return self.getToken(DartParser.SQS, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_multiplicativeOperator
+            return DartParser.RULE_multiplicativeOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterMultiplicativeOperator" ):
@@ -10646,7 +10646,7 @@ class Dart2Parser ( Parser ):
 
     def multiplicativeOperator(self):
 
-        localctx = Dart2Parser.MultiplicativeOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.MultiplicativeOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 244, self.RULE_multiplicativeOperator)
         self._la = 0 # Token type
         try:
@@ -10675,15 +10675,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def label(self):
-            return self.getTypedRuleContext(Dart2Parser.LabelContext,0)
+            return self.getTypedRuleContext(DartParser.LabelContext,0)
 
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_namedArgument
+            return DartParser.RULE_namedArgument
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNamedArgument" ):
@@ -10698,7 +10698,7 @@ class Dart2Parser ( Parser ):
 
     def namedArgument(self):
 
-        localctx = Dart2Parser.NamedArgumentContext(self, self._ctx, self.state)
+        localctx = DartParser.NamedArgumentContext(self, self._ctx, self.state)
         self.enterRule(localctx, 246, self.RULE_namedArgument)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -10723,26 +10723,26 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OBC(self):
-            return self.getToken(Dart2Parser.OBC, 0)
+            return self.getToken(DartParser.OBC, 0)
 
         def defaultNamedParameter(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.DefaultNamedParameterContext)
+                return self.getTypedRuleContexts(DartParser.DefaultNamedParameterContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.DefaultNamedParameterContext,i)
+                return self.getTypedRuleContext(DartParser.DefaultNamedParameterContext,i)
 
 
         def CBC(self):
-            return self.getToken(Dart2Parser.CBC, 0)
+            return self.getToken(DartParser.CBC, 0)
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_namedFormalParameters
+            return DartParser.RULE_namedFormalParameters
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNamedFormalParameters" ):
@@ -10757,13 +10757,13 @@ class Dart2Parser ( Parser ):
 
     def namedFormalParameters(self):
 
-        localctx = Dart2Parser.NamedFormalParametersContext(self, self._ctx, self.state)
+        localctx = DartParser.NamedFormalParametersContext(self, self._ctx, self.state)
         self.enterRule(localctx, 248, self.RULE_namedFormalParameters)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1549
-            self.match(Dart2Parser.OBC)
+            self.match(DartParser.OBC)
             self.state = 1550
             self.defaultNamedParameter()
             self.state = 1555
@@ -10772,7 +10772,7 @@ class Dart2Parser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1551
-                    self.match(Dart2Parser.C)
+                    self.match(DartParser.C)
                     self.state = 1552
                     self.defaultNamedParameter() 
                 self.state = 1557
@@ -10784,11 +10784,11 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==5:
                 self.state = 1558
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
 
 
             self.state = 1561
-            self.match(Dart2Parser.CBC)
+            self.match(DartParser.CBC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -10806,18 +10806,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def typedIdentifier(self):
-            return self.getTypedRuleContext(Dart2Parser.TypedIdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.TypedIdentifierContext,0)
 
 
         def REQUIRED_(self):
-            return self.getToken(Dart2Parser.REQUIRED_, 0)
+            return self.getToken(DartParser.REQUIRED_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_namedParameterType
+            return DartParser.RULE_namedParameterType
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNamedParameterType" ):
@@ -10832,7 +10832,7 @@ class Dart2Parser ( Parser ):
 
     def namedParameterType(self):
 
-        localctx = Dart2Parser.NamedParameterTypeContext(self, self._ctx, self.state)
+        localctx = DartParser.NamedParameterTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 250, self.RULE_namedParameterType)
         self._la = 0 # Token type
         try:
@@ -10844,7 +10844,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==102:
                 self.state = 1564
-                self.match(Dart2Parser.REQUIRED_)
+                self.match(DartParser.REQUIRED_)
 
 
             self.state = 1567
@@ -10866,26 +10866,26 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OBC(self):
-            return self.getToken(Dart2Parser.OBC, 0)
+            return self.getToken(DartParser.OBC, 0)
 
         def namedParameterType(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.NamedParameterTypeContext)
+                return self.getTypedRuleContexts(DartParser.NamedParameterTypeContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.NamedParameterTypeContext,i)
+                return self.getTypedRuleContext(DartParser.NamedParameterTypeContext,i)
 
 
         def CBC(self):
-            return self.getToken(Dart2Parser.CBC, 0)
+            return self.getToken(DartParser.CBC, 0)
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_namedParameterTypes
+            return DartParser.RULE_namedParameterTypes
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNamedParameterTypes" ):
@@ -10900,13 +10900,13 @@ class Dart2Parser ( Parser ):
 
     def namedParameterTypes(self):
 
-        localctx = Dart2Parser.NamedParameterTypesContext(self, self._ctx, self.state)
+        localctx = DartParser.NamedParameterTypesContext(self, self._ctx, self.state)
         self.enterRule(localctx, 252, self.RULE_namedParameterTypes)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1569
-            self.match(Dart2Parser.OBC)
+            self.match(DartParser.OBC)
             self.state = 1570
             self.namedParameterType()
             self.state = 1575
@@ -10915,7 +10915,7 @@ class Dart2Parser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1571
-                    self.match(Dart2Parser.C)
+                    self.match(DartParser.C)
                     self.state = 1572
                     self.namedParameterType() 
                 self.state = 1577
@@ -10927,11 +10927,11 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==5:
                 self.state = 1578
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
 
 
             self.state = 1581
-            self.match(Dart2Parser.CBC)
+            self.match(DartParser.CBC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -10949,10 +10949,10 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def NOT(self):
-            return self.getToken(Dart2Parser.NOT, 0)
+            return self.getToken(DartParser.NOT, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_negationOperator
+            return DartParser.RULE_negationOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNegationOperator" ):
@@ -10967,12 +10967,12 @@ class Dart2Parser ( Parser ):
 
     def negationOperator(self):
 
-        localctx = Dart2Parser.NegationOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.NegationOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 254, self.RULE_negationOperator)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1583
-            self.match(Dart2Parser.NOT)
+            self.match(DartParser.NOT)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -10990,18 +10990,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def NEW_(self):
-            return self.getToken(Dart2Parser.NEW_, 0)
+            return self.getToken(DartParser.NEW_, 0)
 
         def constructorDesignation(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstructorDesignationContext,0)
+            return self.getTypedRuleContext(DartParser.ConstructorDesignationContext,0)
 
 
         def arguments(self):
-            return self.getTypedRuleContext(Dart2Parser.ArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.ArgumentsContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_newExpression
+            return DartParser.RULE_newExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNewExpression" ):
@@ -11016,12 +11016,12 @@ class Dart2Parser ( Parser ):
 
     def newExpression(self):
 
-        localctx = Dart2Parser.NewExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.NewExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 256, self.RULE_newExpression)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1585
-            self.match(Dart2Parser.NEW_)
+            self.match(DartParser.NEW_)
             self.state = 1586
             self.constructorDesignation()
             self.state = 1587
@@ -11043,75 +11043,75 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def block(self):
-            return self.getTypedRuleContext(Dart2Parser.BlockContext,0)
+            return self.getTypedRuleContext(DartParser.BlockContext,0)
 
 
         def localVariableDeclaration(self):
-            return self.getTypedRuleContext(Dart2Parser.LocalVariableDeclarationContext,0)
+            return self.getTypedRuleContext(DartParser.LocalVariableDeclarationContext,0)
 
 
         def forStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.ForStatementContext,0)
+            return self.getTypedRuleContext(DartParser.ForStatementContext,0)
 
 
         def whileStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.WhileStatementContext,0)
+            return self.getTypedRuleContext(DartParser.WhileStatementContext,0)
 
 
         def doStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.DoStatementContext,0)
+            return self.getTypedRuleContext(DartParser.DoStatementContext,0)
 
 
         def switchStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.SwitchStatementContext,0)
+            return self.getTypedRuleContext(DartParser.SwitchStatementContext,0)
 
 
         def ifStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.IfStatementContext,0)
+            return self.getTypedRuleContext(DartParser.IfStatementContext,0)
 
 
         def rethrowStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.RethrowStatementContext,0)
+            return self.getTypedRuleContext(DartParser.RethrowStatementContext,0)
 
 
         def tryStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.TryStatementContext,0)
+            return self.getTypedRuleContext(DartParser.TryStatementContext,0)
 
 
         def breakStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.BreakStatementContext,0)
+            return self.getTypedRuleContext(DartParser.BreakStatementContext,0)
 
 
         def continueStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.ContinueStatementContext,0)
+            return self.getTypedRuleContext(DartParser.ContinueStatementContext,0)
 
 
         def returnStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.ReturnStatementContext,0)
+            return self.getTypedRuleContext(DartParser.ReturnStatementContext,0)
 
 
         def yieldStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.YieldStatementContext,0)
+            return self.getTypedRuleContext(DartParser.YieldStatementContext,0)
 
 
         def yieldEachStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.YieldEachStatementContext,0)
+            return self.getTypedRuleContext(DartParser.YieldEachStatementContext,0)
 
 
         def expressionStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.ExpressionStatementContext,0)
+            return self.getTypedRuleContext(DartParser.ExpressionStatementContext,0)
 
 
         def assertStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.AssertStatementContext,0)
+            return self.getTypedRuleContext(DartParser.AssertStatementContext,0)
 
 
         def localFunctionDeclaration(self):
-            return self.getTypedRuleContext(Dart2Parser.LocalFunctionDeclarationContext,0)
+            return self.getTypedRuleContext(DartParser.LocalFunctionDeclarationContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_nonLabelledStatement
+            return DartParser.RULE_nonLabelledStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNonLabelledStatement" ):
@@ -11126,7 +11126,7 @@ class Dart2Parser ( Parser ):
 
     def nonLabelledStatement(self):
 
-        localctx = Dart2Parser.NonLabelledStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.NonLabelledStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 258, self.RULE_nonLabelledStatement)
         try:
             self.state = 1606
@@ -11252,15 +11252,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def normalFormalParameterNoMetadata(self):
-            return self.getTypedRuleContext(Dart2Parser.NormalFormalParameterNoMetadataContext,0)
+            return self.getTypedRuleContext(DartParser.NormalFormalParameterNoMetadataContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_normalFormalParameter
+            return DartParser.RULE_normalFormalParameter
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNormalFormalParameter" ):
@@ -11275,7 +11275,7 @@ class Dart2Parser ( Parser ):
 
     def normalFormalParameter(self):
 
-        localctx = Dart2Parser.NormalFormalParameterContext(self, self._ctx, self.state)
+        localctx = DartParser.NormalFormalParameterContext(self, self._ctx, self.state)
         self.enterRule(localctx, 260, self.RULE_normalFormalParameter)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -11300,19 +11300,19 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def functionFormalParameter(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionFormalParameterContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionFormalParameterContext,0)
 
 
         def fieldFormalParameter(self):
-            return self.getTypedRuleContext(Dart2Parser.FieldFormalParameterContext,0)
+            return self.getTypedRuleContext(DartParser.FieldFormalParameterContext,0)
 
 
         def simpleFormalParameter(self):
-            return self.getTypedRuleContext(Dart2Parser.SimpleFormalParameterContext,0)
+            return self.getTypedRuleContext(DartParser.SimpleFormalParameterContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_normalFormalParameterNoMetadata
+            return DartParser.RULE_normalFormalParameterNoMetadata
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNormalFormalParameterNoMetadata" ):
@@ -11327,7 +11327,7 @@ class Dart2Parser ( Parser ):
 
     def normalFormalParameterNoMetadata(self):
 
-        localctx = Dart2Parser.NormalFormalParameterNoMetadataContext(self, self._ctx, self.state)
+        localctx = DartParser.NormalFormalParameterNoMetadataContext(self, self._ctx, self.state)
         self.enterRule(localctx, 262, self.RULE_normalFormalParameterNoMetadata)
         try:
             self.state = 1614
@@ -11370,19 +11370,19 @@ class Dart2Parser ( Parser ):
 
         def normalFormalParameter(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.NormalFormalParameterContext)
+                return self.getTypedRuleContexts(DartParser.NormalFormalParameterContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.NormalFormalParameterContext,i)
+                return self.getTypedRuleContext(DartParser.NormalFormalParameterContext,i)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_normalFormalParameters
+            return DartParser.RULE_normalFormalParameters
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNormalFormalParameters" ):
@@ -11397,7 +11397,7 @@ class Dart2Parser ( Parser ):
 
     def normalFormalParameters(self):
 
-        localctx = Dart2Parser.NormalFormalParametersContext(self, self._ctx, self.state)
+        localctx = DartParser.NormalFormalParametersContext(self, self._ctx, self.state)
         self.enterRule(localctx, 264, self.RULE_normalFormalParameters)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -11409,7 +11409,7 @@ class Dart2Parser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1617
-                    self.match(Dart2Parser.C)
+                    self.match(DartParser.C)
                     self.state = 1618
                     self.normalFormalParameter() 
                 self.state = 1623
@@ -11433,19 +11433,19 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def typedIdentifier(self):
-            return self.getTypedRuleContext(Dart2Parser.TypedIdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.TypedIdentifierContext,0)
 
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_normalParameterType
+            return DartParser.RULE_normalParameterType
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNormalParameterType" ):
@@ -11460,7 +11460,7 @@ class Dart2Parser ( Parser ):
 
     def normalParameterType(self):
 
-        localctx = Dart2Parser.NormalParameterTypeContext(self, self._ctx, self.state)
+        localctx = DartParser.NormalParameterTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 266, self.RULE_normalParameterType)
         try:
             self.state = 1630
@@ -11501,19 +11501,19 @@ class Dart2Parser ( Parser ):
 
         def normalParameterType(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.NormalParameterTypeContext)
+                return self.getTypedRuleContexts(DartParser.NormalParameterTypeContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.NormalParameterTypeContext,i)
+                return self.getTypedRuleContext(DartParser.NormalParameterTypeContext,i)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_normalParameterTypes
+            return DartParser.RULE_normalParameterTypes
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNormalParameterTypes" ):
@@ -11528,7 +11528,7 @@ class Dart2Parser ( Parser ):
 
     def normalParameterTypes(self):
 
-        localctx = Dart2Parser.NormalParameterTypesContext(self, self._ctx, self.state)
+        localctx = DartParser.NormalParameterTypesContext(self, self._ctx, self.state)
         self.enterRule(localctx, 268, self.RULE_normalParameterTypes)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -11540,7 +11540,7 @@ class Dart2Parser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1633
-                    self.match(Dart2Parser.C)
+                    self.match(DartParser.C)
                     self.state = 1634
                     self.normalParameterType() 
                 self.state = 1639
@@ -11564,10 +11564,10 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def NULL_(self):
-            return self.getToken(Dart2Parser.NULL_, 0)
+            return self.getToken(DartParser.NULL_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_nullLiteral
+            return DartParser.RULE_nullLiteral
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNullLiteral" ):
@@ -11582,12 +11582,12 @@ class Dart2Parser ( Parser ):
 
     def nullLiteral(self):
 
-        localctx = Dart2Parser.NullLiteralContext(self, self._ctx, self.state)
+        localctx = DartParser.NullLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 270, self.RULE_nullLiteral)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1640
-            self.match(Dart2Parser.NULL_)
+            self.match(DartParser.NULL_)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -11605,13 +11605,13 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def NUMBER(self):
-            return self.getToken(Dart2Parser.NUMBER, 0)
+            return self.getToken(DartParser.NUMBER, 0)
 
         def HEX_NUMBER(self):
-            return self.getToken(Dart2Parser.HEX_NUMBER, 0)
+            return self.getToken(DartParser.HEX_NUMBER, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_numericLiteral
+            return DartParser.RULE_numericLiteral
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterNumericLiteral" ):
@@ -11626,7 +11626,7 @@ class Dart2Parser ( Parser ):
 
     def numericLiteral(self):
 
-        localctx = Dart2Parser.NumericLiteralContext(self, self._ctx, self.state)
+        localctx = DartParser.NumericLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 272, self.RULE_numericLiteral)
         self._la = 0 # Token type
         try:
@@ -11655,22 +11655,22 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def catchPart(self):
-            return self.getTypedRuleContext(Dart2Parser.CatchPartContext,0)
+            return self.getTypedRuleContext(DartParser.CatchPartContext,0)
 
 
         def block(self):
-            return self.getTypedRuleContext(Dart2Parser.BlockContext,0)
+            return self.getTypedRuleContext(DartParser.BlockContext,0)
 
 
         def ON_(self):
-            return self.getToken(Dart2Parser.ON_, 0)
+            return self.getToken(DartParser.ON_, 0)
 
         def typeNotVoid(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotVoidContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotVoidContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_onPart
+            return DartParser.RULE_onPart
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterOnPart" ):
@@ -11685,7 +11685,7 @@ class Dart2Parser ( Parser ):
 
     def onPart(self):
 
-        localctx = Dart2Parser.OnPartContext(self, self._ctx, self.state)
+        localctx = DartParser.OnPartContext(self, self._ctx, self.state)
         self.enterRule(localctx, 274, self.RULE_onPart)
         self._la = 0 # Token type
         try:
@@ -11702,7 +11702,7 @@ class Dart2Parser ( Parser ):
             elif token in [99]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1647
-                self.match(Dart2Parser.ON_)
+                self.match(DartParser.ON_)
                 self.state = 1648
                 self.typeNotVoid()
                 self.state = 1650
@@ -11736,23 +11736,23 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def SQUIG(self):
-            return self.getToken(Dart2Parser.SQUIG, 0)
+            return self.getToken(DartParser.SQUIG, 0)
 
         def binaryOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.BinaryOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.BinaryOperatorContext,0)
 
 
         def OB(self):
-            return self.getToken(Dart2Parser.OB, 0)
+            return self.getToken(DartParser.OB, 0)
 
         def CB(self):
-            return self.getToken(Dart2Parser.CB, 0)
+            return self.getToken(DartParser.CB, 0)
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_operator
+            return DartParser.RULE_operator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterOperator" ):
@@ -11767,7 +11767,7 @@ class Dart2Parser ( Parser ):
 
     def operator(self):
 
-        localctx = Dart2Parser.OperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.OperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 276, self.RULE_operator)
         try:
             self.state = 1663
@@ -11776,7 +11776,7 @@ class Dart2Parser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1656
-                self.match(Dart2Parser.SQUIG)
+                self.match(DartParser.SQUIG)
                 pass
 
             elif la_ == 2:
@@ -11788,19 +11788,19 @@ class Dart2Parser ( Parser ):
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1658
-                self.match(Dart2Parser.OB)
+                self.match(DartParser.OB)
                 self.state = 1659
-                self.match(Dart2Parser.CB)
+                self.match(DartParser.CB)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1660
-                self.match(Dart2Parser.OB)
+                self.match(DartParser.OB)
                 self.state = 1661
-                self.match(Dart2Parser.CB)
+                self.match(DartParser.CB)
                 self.state = 1662
-                self.match(Dart2Parser.EQ)
+                self.match(DartParser.EQ)
                 pass
 
 
@@ -11821,22 +11821,22 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OPERATOR_(self):
-            return self.getToken(Dart2Parser.OPERATOR_, 0)
+            return self.getToken(DartParser.OPERATOR_, 0)
 
         def operator(self):
-            return self.getTypedRuleContext(Dart2Parser.OperatorContext,0)
+            return self.getTypedRuleContext(DartParser.OperatorContext,0)
 
 
         def formalParameterList(self):
-            return self.getTypedRuleContext(Dart2Parser.FormalParameterListContext,0)
+            return self.getTypedRuleContext(DartParser.FormalParameterListContext,0)
 
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_operatorSignature
+            return DartParser.RULE_operatorSignature
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterOperatorSignature" ):
@@ -11851,7 +11851,7 @@ class Dart2Parser ( Parser ):
 
     def operatorSignature(self):
 
-        localctx = Dart2Parser.OperatorSignatureContext(self, self._ctx, self.state)
+        localctx = DartParser.OperatorSignatureContext(self, self._ctx, self.state)
         self.enterRule(localctx, 278, self.RULE_operatorSignature)
         self._la = 0 # Token type
         try:
@@ -11865,7 +11865,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1668
-            self.match(Dart2Parser.OPERATOR_)
+            self.match(DartParser.OPERATOR_)
             self.state = 1669
             self.operator()
             self.state = 1670
@@ -11887,15 +11887,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def optionalPositionalFormalParameters(self):
-            return self.getTypedRuleContext(Dart2Parser.OptionalPositionalFormalParametersContext,0)
+            return self.getTypedRuleContext(DartParser.OptionalPositionalFormalParametersContext,0)
 
 
         def namedFormalParameters(self):
-            return self.getTypedRuleContext(Dart2Parser.NamedFormalParametersContext,0)
+            return self.getTypedRuleContext(DartParser.NamedFormalParametersContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_optionalOrNamedFormalParameters
+            return DartParser.RULE_optionalOrNamedFormalParameters
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterOptionalOrNamedFormalParameters" ):
@@ -11910,7 +11910,7 @@ class Dart2Parser ( Parser ):
 
     def optionalOrNamedFormalParameters(self):
 
-        localctx = Dart2Parser.OptionalOrNamedFormalParametersContext(self, self._ctx, self.state)
+        localctx = DartParser.OptionalOrNamedFormalParametersContext(self, self._ctx, self.state)
         self.enterRule(localctx, 280, self.RULE_optionalOrNamedFormalParameters)
         try:
             self.state = 1674
@@ -11946,15 +11946,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def optionalPositionalParameterTypes(self):
-            return self.getTypedRuleContext(Dart2Parser.OptionalPositionalParameterTypesContext,0)
+            return self.getTypedRuleContext(DartParser.OptionalPositionalParameterTypesContext,0)
 
 
         def namedParameterTypes(self):
-            return self.getTypedRuleContext(Dart2Parser.NamedParameterTypesContext,0)
+            return self.getTypedRuleContext(DartParser.NamedParameterTypesContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_optionalParameterTypes
+            return DartParser.RULE_optionalParameterTypes
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterOptionalParameterTypes" ):
@@ -11969,7 +11969,7 @@ class Dart2Parser ( Parser ):
 
     def optionalParameterTypes(self):
 
-        localctx = Dart2Parser.OptionalParameterTypesContext(self, self._ctx, self.state)
+        localctx = DartParser.OptionalParameterTypesContext(self, self._ctx, self.state)
         self.enterRule(localctx, 282, self.RULE_optionalParameterTypes)
         try:
             self.state = 1678
@@ -12005,26 +12005,26 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OB(self):
-            return self.getToken(Dart2Parser.OB, 0)
+            return self.getToken(DartParser.OB, 0)
 
         def defaultFormalParameter(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.DefaultFormalParameterContext)
+                return self.getTypedRuleContexts(DartParser.DefaultFormalParameterContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.DefaultFormalParameterContext,i)
+                return self.getTypedRuleContext(DartParser.DefaultFormalParameterContext,i)
 
 
         def CB(self):
-            return self.getToken(Dart2Parser.CB, 0)
+            return self.getToken(DartParser.CB, 0)
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_optionalPositionalFormalParameters
+            return DartParser.RULE_optionalPositionalFormalParameters
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterOptionalPositionalFormalParameters" ):
@@ -12039,13 +12039,13 @@ class Dart2Parser ( Parser ):
 
     def optionalPositionalFormalParameters(self):
 
-        localctx = Dart2Parser.OptionalPositionalFormalParametersContext(self, self._ctx, self.state)
+        localctx = DartParser.OptionalPositionalFormalParametersContext(self, self._ctx, self.state)
         self.enterRule(localctx, 284, self.RULE_optionalPositionalFormalParameters)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1680
-            self.match(Dart2Parser.OB)
+            self.match(DartParser.OB)
             self.state = 1681
             self.defaultFormalParameter()
             self.state = 1686
@@ -12054,7 +12054,7 @@ class Dart2Parser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1682
-                    self.match(Dart2Parser.C)
+                    self.match(DartParser.C)
                     self.state = 1683
                     self.defaultFormalParameter() 
                 self.state = 1688
@@ -12066,11 +12066,11 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==5:
                 self.state = 1689
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
 
 
             self.state = 1692
-            self.match(Dart2Parser.CB)
+            self.match(DartParser.CB)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -12088,20 +12088,20 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OB(self):
-            return self.getToken(Dart2Parser.OB, 0)
+            return self.getToken(DartParser.OB, 0)
 
         def normalParameterTypes(self):
-            return self.getTypedRuleContext(Dart2Parser.NormalParameterTypesContext,0)
+            return self.getTypedRuleContext(DartParser.NormalParameterTypesContext,0)
 
 
         def CB(self):
-            return self.getToken(Dart2Parser.CB, 0)
+            return self.getToken(DartParser.CB, 0)
 
         def C(self):
-            return self.getToken(Dart2Parser.C, 0)
+            return self.getToken(DartParser.C, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_optionalPositionalParameterTypes
+            return DartParser.RULE_optionalPositionalParameterTypes
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterOptionalPositionalParameterTypes" ):
@@ -12116,13 +12116,13 @@ class Dart2Parser ( Parser ):
 
     def optionalPositionalParameterTypes(self):
 
-        localctx = Dart2Parser.OptionalPositionalParameterTypesContext(self, self._ctx, self.state)
+        localctx = DartParser.OptionalPositionalParameterTypesContext(self, self._ctx, self.state)
         self.enterRule(localctx, 286, self.RULE_optionalPositionalParameterTypes)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1694
-            self.match(Dart2Parser.OB)
+            self.match(DartParser.OB)
             self.state = 1695
             self.normalParameterTypes()
             self.state = 1697
@@ -12130,11 +12130,11 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==5:
                 self.state = 1696
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
 
 
             self.state = 1699
-            self.match(Dart2Parser.CB)
+            self.match(DartParser.CB)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -12152,24 +12152,24 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def normalParameterTypes(self):
-            return self.getTypedRuleContext(Dart2Parser.NormalParameterTypesContext,0)
+            return self.getTypedRuleContext(DartParser.NormalParameterTypesContext,0)
 
 
         def C(self):
-            return self.getToken(Dart2Parser.C, 0)
+            return self.getToken(DartParser.C, 0)
 
         def optionalParameterTypes(self):
-            return self.getTypedRuleContext(Dart2Parser.OptionalParameterTypesContext,0)
+            return self.getTypedRuleContext(DartParser.OptionalParameterTypesContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_parameterTypeList
+            return DartParser.RULE_parameterTypeList
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterParameterTypeList" ):
@@ -12184,7 +12184,7 @@ class Dart2Parser ( Parser ):
 
     def parameterTypeList(self):
 
-        localctx = Dart2Parser.ParameterTypeListContext(self, self._ctx, self.state)
+        localctx = DartParser.ParameterTypeListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 288, self.RULE_parameterTypeList)
         self._la = 0 # Token type
         try:
@@ -12194,29 +12194,29 @@ class Dart2Parser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1701
-                self.match(Dart2Parser.OP)
+                self.match(DartParser.OP)
                 self.state = 1702
-                self.match(Dart2Parser.CP)
+                self.match(DartParser.CP)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1703
-                self.match(Dart2Parser.OP)
+                self.match(DartParser.OP)
                 self.state = 1704
                 self.normalParameterTypes()
                 self.state = 1705
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 1706
                 self.optionalParameterTypes()
                 self.state = 1707
-                self.match(Dart2Parser.CP)
+                self.match(DartParser.CP)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1709
-                self.match(Dart2Parser.OP)
+                self.match(DartParser.OP)
                 self.state = 1710
                 self.normalParameterTypes()
                 self.state = 1712
@@ -12224,21 +12224,21 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==5:
                     self.state = 1711
-                    self.match(Dart2Parser.C)
+                    self.match(DartParser.C)
 
 
                 self.state = 1714
-                self.match(Dart2Parser.CP)
+                self.match(DartParser.CP)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1716
-                self.match(Dart2Parser.OP)
+                self.match(DartParser.OP)
                 self.state = 1717
                 self.optionalParameterTypes()
                 self.state = 1718
-                self.match(Dart2Parser.CP)
+                self.match(DartParser.CP)
                 pass
 
 
@@ -12259,25 +12259,25 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def partHeader(self):
-            return self.getTypedRuleContext(Dart2Parser.PartHeaderContext,0)
+            return self.getTypedRuleContext(DartParser.PartHeaderContext,0)
 
 
         def metadata(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.MetadataContext)
+                return self.getTypedRuleContexts(DartParser.MetadataContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.MetadataContext,i)
+                return self.getTypedRuleContext(DartParser.MetadataContext,i)
 
 
         def topLevelDeclaration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.TopLevelDeclarationContext)
+                return self.getTypedRuleContexts(DartParser.TopLevelDeclarationContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.TopLevelDeclarationContext,i)
+                return self.getTypedRuleContext(DartParser.TopLevelDeclarationContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_partDeclaration
+            return DartParser.RULE_partDeclaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPartDeclaration" ):
@@ -12292,7 +12292,7 @@ class Dart2Parser ( Parser ):
 
     def partDeclaration(self):
 
-        localctx = Dart2Parser.PartDeclarationContext(self, self._ctx, self.state)
+        localctx = DartParser.PartDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 290, self.RULE_partDeclaration)
         self._la = 0 # Token type
         try:
@@ -12328,21 +12328,21 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def PART_(self):
-            return self.getToken(Dart2Parser.PART_, 0)
+            return self.getToken(DartParser.PART_, 0)
 
         def uri(self):
-            return self.getTypedRuleContext(Dart2Parser.UriContext,0)
+            return self.getTypedRuleContext(DartParser.UriContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_partDirective
+            return DartParser.RULE_partDirective
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPartDirective" ):
@@ -12357,18 +12357,18 @@ class Dart2Parser ( Parser ):
 
     def partDirective(self):
 
-        localctx = Dart2Parser.PartDirectiveContext(self, self._ctx, self.state)
+        localctx = DartParser.PartDirectiveContext(self, self._ctx, self.state)
         self.enterRule(localctx, 292, self.RULE_partDirective)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1731
             self.metadata()
             self.state = 1732
-            self.match(Dart2Parser.PART_)
+            self.match(DartParser.PART_)
             self.state = 1733
             self.uri()
             self.state = 1734
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -12386,28 +12386,28 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def PART_(self):
-            return self.getToken(Dart2Parser.PART_, 0)
+            return self.getToken(DartParser.PART_, 0)
 
         def OF_(self):
-            return self.getToken(Dart2Parser.OF_, 0)
+            return self.getToken(DartParser.OF_, 0)
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def dottedIdentifierList(self):
-            return self.getTypedRuleContext(Dart2Parser.DottedIdentifierListContext,0)
+            return self.getTypedRuleContext(DartParser.DottedIdentifierListContext,0)
 
 
         def uri(self):
-            return self.getTypedRuleContext(Dart2Parser.UriContext,0)
+            return self.getTypedRuleContext(DartParser.UriContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_partHeader
+            return DartParser.RULE_partHeader
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPartHeader" ):
@@ -12422,16 +12422,16 @@ class Dart2Parser ( Parser ):
 
     def partHeader(self):
 
-        localctx = Dart2Parser.PartHeaderContext(self, self._ctx, self.state)
+        localctx = DartParser.PartHeaderContext(self, self._ctx, self.state)
         self.enterRule(localctx, 294, self.RULE_partHeader)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1736
             self.metadata()
             self.state = 1737
-            self.match(Dart2Parser.PART_)
+            self.match(DartParser.PART_)
             self.state = 1738
-            self.match(Dart2Parser.OF_)
+            self.match(DartParser.OF_)
             self.state = 1741
             self._errHandler.sync(self)
             token = self._input.LA(1)
@@ -12447,7 +12447,7 @@ class Dart2Parser ( Parser ):
                 raise NoViableAltException(self)
 
             self.state = 1743
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -12465,26 +12465,26 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def assignableExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.AssignableExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.AssignableExpressionContext,0)
 
 
         def postfixOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.PostfixOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.PostfixOperatorContext,0)
 
 
         def primary(self):
-            return self.getTypedRuleContext(Dart2Parser.PrimaryContext,0)
+            return self.getTypedRuleContext(DartParser.PrimaryContext,0)
 
 
         def selector(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.SelectorContext)
+                return self.getTypedRuleContexts(DartParser.SelectorContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.SelectorContext,i)
+                return self.getTypedRuleContext(DartParser.SelectorContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_postfixExpression
+            return DartParser.RULE_postfixExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPostfixExpression" ):
@@ -12499,7 +12499,7 @@ class Dart2Parser ( Parser ):
 
     def postfixExpression(self):
 
-        localctx = Dart2Parser.PostfixExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.PostfixExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 296, self.RULE_postfixExpression)
         try:
             self.state = 1755
@@ -12548,11 +12548,11 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def incrementOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.IncrementOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.IncrementOperatorContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_postfixOperator
+            return DartParser.RULE_postfixOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPostfixOperator" ):
@@ -12567,7 +12567,7 @@ class Dart2Parser ( Parser ):
 
     def postfixOperator(self):
 
-        localctx = Dart2Parser.PostfixOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.PostfixOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 298, self.RULE_postfixOperator)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -12590,19 +12590,19 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def minusOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.MinusOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.MinusOperatorContext,0)
 
 
         def negationOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.NegationOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.NegationOperatorContext,0)
 
 
         def tildeOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.TildeOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.TildeOperatorContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_prefixOperator
+            return DartParser.RULE_prefixOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPrefixOperator" ):
@@ -12617,7 +12617,7 @@ class Dart2Parser ( Parser ):
 
     def prefixOperator(self):
 
-        localctx = Dart2Parser.PrefixOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.PrefixOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 300, self.RULE_prefixOperator)
         try:
             self.state = 1762
@@ -12658,56 +12658,56 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def thisExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.ThisExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.ThisExpressionContext,0)
 
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def unconditionalAssignableSelector(self):
-            return self.getTypedRuleContext(Dart2Parser.UnconditionalAssignableSelectorContext,0)
+            return self.getTypedRuleContext(DartParser.UnconditionalAssignableSelectorContext,0)
 
 
         def argumentPart(self):
-            return self.getTypedRuleContext(Dart2Parser.ArgumentPartContext,0)
+            return self.getTypedRuleContext(DartParser.ArgumentPartContext,0)
 
 
         def functionExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionExpressionContext,0)
 
 
         def literal(self):
-            return self.getTypedRuleContext(Dart2Parser.LiteralContext,0)
+            return self.getTypedRuleContext(DartParser.LiteralContext,0)
 
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def newExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.NewExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.NewExpressionContext,0)
 
 
         def constObjectExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstObjectExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.ConstObjectExpressionContext,0)
 
 
         def constructorInvocation(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstructorInvocationContext,0)
+            return self.getTypedRuleContext(DartParser.ConstructorInvocationContext,0)
 
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_primary
+            return DartParser.RULE_primary
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPrimary" ):
@@ -12722,7 +12722,7 @@ class Dart2Parser ( Parser ):
 
     def primary(self):
 
-        localctx = Dart2Parser.PrimaryContext(self, self._ctx, self.state)
+        localctx = DartParser.PrimaryContext(self, self._ctx, self.state)
         self.enterRule(localctx, 302, self.RULE_primary)
         try:
             self.state = 1779
@@ -12737,7 +12737,7 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1765
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 1766
                 self.unconditionalAssignableSelector()
                 pass
@@ -12745,7 +12745,7 @@ class Dart2Parser ( Parser ):
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1767
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 1768
                 self.argumentPart()
                 pass
@@ -12789,11 +12789,11 @@ class Dart2Parser ( Parser ):
             elif la_ == 10:
                 self.enterOuterAlt(localctx, 10)
                 self.state = 1775
-                self.match(Dart2Parser.OP)
+                self.match(DartParser.OP)
                 self.state = 1776
                 self.expr()
                 self.state = 1777
-                self.match(Dart2Parser.CP)
+                self.match(DartParser.CP)
                 pass
 
 
@@ -12815,23 +12815,23 @@ class Dart2Parser ( Parser ):
 
         def typeIdentifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.TypeIdentifierContext)
+                return self.getTypedRuleContexts(DartParser.TypeIdentifierContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.TypeIdentifierContext,i)
+                return self.getTypedRuleContext(DartParser.TypeIdentifierContext,i)
 
 
         def D(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.D)
+                return self.getTokens(DartParser.D)
             else:
-                return self.getToken(Dart2Parser.D, i)
+                return self.getToken(DartParser.D, i)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_qualifiedName
+            return DartParser.RULE_qualifiedName
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterQualifiedName" ):
@@ -12846,7 +12846,7 @@ class Dart2Parser ( Parser ):
 
     def qualifiedName(self):
 
-        localctx = Dart2Parser.QualifiedNameContext(self, self._ctx, self.state)
+        localctx = DartParser.QualifiedNameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 304, self.RULE_qualifiedName)
         try:
             self.state = 1791
@@ -12857,7 +12857,7 @@ class Dart2Parser ( Parser ):
                 self.state = 1781
                 self.typeIdentifier()
                 self.state = 1782
-                self.match(Dart2Parser.D)
+                self.match(DartParser.D)
                 self.state = 1783
                 self.identifier()
                 pass
@@ -12867,11 +12867,11 @@ class Dart2Parser ( Parser ):
                 self.state = 1785
                 self.typeIdentifier()
                 self.state = 1786
-                self.match(Dart2Parser.D)
+                self.match(DartParser.D)
                 self.state = 1787
                 self.typeIdentifier()
                 self.state = 1788
-                self.match(Dart2Parser.D)
+                self.match(DartParser.D)
                 self.state = 1789
                 self.identifier()
                 pass
@@ -12894,28 +12894,28 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def FACTORY_(self):
-            return self.getToken(Dart2Parser.FACTORY_, 0)
+            return self.getToken(DartParser.FACTORY_, 0)
 
         def constructorName(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstructorNameContext,0)
+            return self.getTypedRuleContext(DartParser.ConstructorNameContext,0)
 
 
         def formalParameterList(self):
-            return self.getTypedRuleContext(Dart2Parser.FormalParameterListContext,0)
+            return self.getTypedRuleContext(DartParser.FormalParameterListContext,0)
 
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def constructorDesignation(self):
-            return self.getTypedRuleContext(Dart2Parser.ConstructorDesignationContext,0)
+            return self.getTypedRuleContext(DartParser.ConstructorDesignationContext,0)
 
 
         def CONST_(self):
-            return self.getToken(Dart2Parser.CONST_, 0)
+            return self.getToken(DartParser.CONST_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_redirectingFactoryConstructorSignature
+            return DartParser.RULE_redirectingFactoryConstructorSignature
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterRedirectingFactoryConstructorSignature" ):
@@ -12930,7 +12930,7 @@ class Dart2Parser ( Parser ):
 
     def redirectingFactoryConstructorSignature(self):
 
-        localctx = Dart2Parser.RedirectingFactoryConstructorSignatureContext(self, self._ctx, self.state)
+        localctx = DartParser.RedirectingFactoryConstructorSignatureContext(self, self._ctx, self.state)
         self.enterRule(localctx, 306, self.RULE_redirectingFactoryConstructorSignature)
         self._la = 0 # Token type
         try:
@@ -12940,17 +12940,17 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==63:
                 self.state = 1793
-                self.match(Dart2Parser.CONST_)
+                self.match(DartParser.CONST_)
 
 
             self.state = 1796
-            self.match(Dart2Parser.FACTORY_)
+            self.match(DartParser.FACTORY_)
             self.state = 1797
             self.constructorName()
             self.state = 1798
             self.formalParameterList()
             self.state = 1799
-            self.match(Dart2Parser.EQ)
+            self.match(DartParser.EQ)
             self.state = 1800
             self.constructorDesignation()
         except RecognitionException as re:
@@ -12970,24 +12970,24 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def CO(self):
-            return self.getToken(Dart2Parser.CO, 0)
+            return self.getToken(DartParser.CO, 0)
 
         def THIS_(self):
-            return self.getToken(Dart2Parser.THIS_, 0)
+            return self.getToken(DartParser.THIS_, 0)
 
         def arguments(self):
-            return self.getTypedRuleContext(Dart2Parser.ArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.ArgumentsContext,0)
 
 
         def D(self):
-            return self.getToken(Dart2Parser.D, 0)
+            return self.getToken(DartParser.D, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_redirection
+            return DartParser.RULE_redirection
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterRedirection" ):
@@ -13002,21 +13002,21 @@ class Dart2Parser ( Parser ):
 
     def redirection(self):
 
-        localctx = Dart2Parser.RedirectionContext(self, self._ctx, self.state)
+        localctx = DartParser.RedirectionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 308, self.RULE_redirection)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1802
-            self.match(Dart2Parser.CO)
+            self.match(DartParser.CO)
             self.state = 1803
-            self.match(Dart2Parser.THIS_)
+            self.match(DartParser.THIS_)
             self.state = 1806
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==12:
                 self.state = 1804
-                self.match(Dart2Parser.D)
+                self.match(DartParser.D)
                 self.state = 1805
                 self.identifier()
 
@@ -13041,28 +13041,28 @@ class Dart2Parser ( Parser ):
 
         def bitwiseOrExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.BitwiseOrExpressionContext)
+                return self.getTypedRuleContexts(DartParser.BitwiseOrExpressionContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.BitwiseOrExpressionContext,i)
+                return self.getTypedRuleContext(DartParser.BitwiseOrExpressionContext,i)
 
 
         def typeTest(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeTestContext,0)
+            return self.getTypedRuleContext(DartParser.TypeTestContext,0)
 
 
         def typeCast(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeCastContext,0)
+            return self.getTypedRuleContext(DartParser.TypeCastContext,0)
 
 
         def relationalOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.RelationalOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.RelationalOperatorContext,0)
 
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_relationalExpression
+            return DartParser.RULE_relationalExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterRelationalExpression" ):
@@ -13077,7 +13077,7 @@ class Dart2Parser ( Parser ):
 
     def relationalExpression(self):
 
-        localctx = Dart2Parser.RelationalExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.RelationalExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 310, self.RULE_relationalExpression)
         try:
             self.state = 1822
@@ -13110,7 +13110,7 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1818
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 1819
                 self.relationalOperator()
                 self.state = 1820
@@ -13135,19 +13135,19 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def GT(self):
-            return self.getToken(Dart2Parser.GT, 0)
+            return self.getToken(DartParser.GT, 0)
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def LTE(self):
-            return self.getToken(Dart2Parser.LTE, 0)
+            return self.getToken(DartParser.LTE, 0)
 
         def LT(self):
-            return self.getToken(Dart2Parser.LT, 0)
+            return self.getToken(DartParser.LT, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_relationalOperator
+            return DartParser.RULE_relationalOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterRelationalOperator" ):
@@ -13162,7 +13162,7 @@ class Dart2Parser ( Parser ):
 
     def relationalOperator(self):
 
-        localctx = Dart2Parser.RelationalOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.RelationalOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 312, self.RULE_relationalOperator)
         try:
             self.state = 1829
@@ -13171,27 +13171,27 @@ class Dart2Parser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1824
-                self.match(Dart2Parser.GT)
+                self.match(DartParser.GT)
                 self.state = 1825
-                self.match(Dart2Parser.EQ)
+                self.match(DartParser.EQ)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1826
-                self.match(Dart2Parser.GT)
+                self.match(DartParser.GT)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1827
-                self.match(Dart2Parser.LTE)
+                self.match(DartParser.LTE)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1828
-                self.match(Dart2Parser.LT)
+                self.match(DartParser.LT)
                 pass
 
 
@@ -13212,106 +13212,106 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def ASSERT_(self):
-            return self.getToken(Dart2Parser.ASSERT_, 0)
+            return self.getToken(DartParser.ASSERT_, 0)
 
         def BREAK_(self):
-            return self.getToken(Dart2Parser.BREAK_, 0)
+            return self.getToken(DartParser.BREAK_, 0)
 
         def CASE_(self):
-            return self.getToken(Dart2Parser.CASE_, 0)
+            return self.getToken(DartParser.CASE_, 0)
 
         def CATCH_(self):
-            return self.getToken(Dart2Parser.CATCH_, 0)
+            return self.getToken(DartParser.CATCH_, 0)
 
         def CLASS_(self):
-            return self.getToken(Dart2Parser.CLASS_, 0)
+            return self.getToken(DartParser.CLASS_, 0)
 
         def CONST_(self):
-            return self.getToken(Dart2Parser.CONST_, 0)
+            return self.getToken(DartParser.CONST_, 0)
 
         def CONTINUE_(self):
-            return self.getToken(Dart2Parser.CONTINUE_, 0)
+            return self.getToken(DartParser.CONTINUE_, 0)
 
         def DEFAULT_(self):
-            return self.getToken(Dart2Parser.DEFAULT_, 0)
+            return self.getToken(DartParser.DEFAULT_, 0)
 
         def DO_(self):
-            return self.getToken(Dart2Parser.DO_, 0)
+            return self.getToken(DartParser.DO_, 0)
 
         def ELSE_(self):
-            return self.getToken(Dart2Parser.ELSE_, 0)
+            return self.getToken(DartParser.ELSE_, 0)
 
         def ENUM_(self):
-            return self.getToken(Dart2Parser.ENUM_, 0)
+            return self.getToken(DartParser.ENUM_, 0)
 
         def EXTENDS_(self):
-            return self.getToken(Dart2Parser.EXTENDS_, 0)
+            return self.getToken(DartParser.EXTENDS_, 0)
 
         def FALSE_(self):
-            return self.getToken(Dart2Parser.FALSE_, 0)
+            return self.getToken(DartParser.FALSE_, 0)
 
         def FINAL_(self):
-            return self.getToken(Dart2Parser.FINAL_, 0)
+            return self.getToken(DartParser.FINAL_, 0)
 
         def FINALLY_(self):
-            return self.getToken(Dart2Parser.FINALLY_, 0)
+            return self.getToken(DartParser.FINALLY_, 0)
 
         def FOR_(self):
-            return self.getToken(Dart2Parser.FOR_, 0)
+            return self.getToken(DartParser.FOR_, 0)
 
         def IF_(self):
-            return self.getToken(Dart2Parser.IF_, 0)
+            return self.getToken(DartParser.IF_, 0)
 
         def IN_(self):
-            return self.getToken(Dart2Parser.IN_, 0)
+            return self.getToken(DartParser.IN_, 0)
 
         def IS_(self):
-            return self.getToken(Dart2Parser.IS_, 0)
+            return self.getToken(DartParser.IS_, 0)
 
         def NEW_(self):
-            return self.getToken(Dart2Parser.NEW_, 0)
+            return self.getToken(DartParser.NEW_, 0)
 
         def NULL_(self):
-            return self.getToken(Dart2Parser.NULL_, 0)
+            return self.getToken(DartParser.NULL_, 0)
 
         def RETHROW_(self):
-            return self.getToken(Dart2Parser.RETHROW_, 0)
+            return self.getToken(DartParser.RETHROW_, 0)
 
         def RETURN_(self):
-            return self.getToken(Dart2Parser.RETURN_, 0)
+            return self.getToken(DartParser.RETURN_, 0)
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def SWITCH_(self):
-            return self.getToken(Dart2Parser.SWITCH_, 0)
+            return self.getToken(DartParser.SWITCH_, 0)
 
         def THIS_(self):
-            return self.getToken(Dart2Parser.THIS_, 0)
+            return self.getToken(DartParser.THIS_, 0)
 
         def THROW_(self):
-            return self.getToken(Dart2Parser.THROW_, 0)
+            return self.getToken(DartParser.THROW_, 0)
 
         def TRUE_(self):
-            return self.getToken(Dart2Parser.TRUE_, 0)
+            return self.getToken(DartParser.TRUE_, 0)
 
         def TRY_(self):
-            return self.getToken(Dart2Parser.TRY_, 0)
+            return self.getToken(DartParser.TRY_, 0)
 
         def VAR_(self):
-            return self.getToken(Dart2Parser.VAR_, 0)
+            return self.getToken(DartParser.VAR_, 0)
 
         def VOID_(self):
-            return self.getToken(Dart2Parser.VOID_, 0)
+            return self.getToken(DartParser.VOID_, 0)
 
         def WHILE_(self):
-            return self.getToken(Dart2Parser.WHILE_, 0)
+            return self.getToken(DartParser.WHILE_, 0)
 
         def WITH_(self):
-            return self.getToken(Dart2Parser.WITH_, 0)
+            return self.getToken(DartParser.WITH_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_reserved_word
+            return DartParser.RULE_reserved_word
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterReserved_word" ):
@@ -13326,7 +13326,7 @@ class Dart2Parser ( Parser ):
 
     def reserved_word(self):
 
-        localctx = Dart2Parser.Reserved_wordContext(self, self._ctx, self.state)
+        localctx = DartParser.Reserved_wordContext(self, self._ctx, self.state)
         self.enterRule(localctx, 314, self.RULE_reserved_word)
         self._la = 0 # Token type
         try:
@@ -13355,13 +13355,13 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def RETHROW_(self):
-            return self.getToken(Dart2Parser.RETHROW_, 0)
+            return self.getToken(DartParser.RETHROW_, 0)
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_rethrowStatement
+            return DartParser.RULE_rethrowStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterRethrowStatement" ):
@@ -13376,14 +13376,14 @@ class Dart2Parser ( Parser ):
 
     def rethrowStatement(self):
 
-        localctx = Dart2Parser.RethrowStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.RethrowStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 316, self.RULE_rethrowStatement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1833
-            self.match(Dart2Parser.RETHROW_)
+            self.match(DartParser.RETHROW_)
             self.state = 1834
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -13401,17 +13401,17 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def RETURN_(self):
-            return self.getToken(Dart2Parser.RETURN_, 0)
+            return self.getToken(DartParser.RETURN_, 0)
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_returnStatement
+            return DartParser.RULE_returnStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterReturnStatement" ):
@@ -13426,13 +13426,13 @@ class Dart2Parser ( Parser ):
 
     def returnStatement(self):
 
-        localctx = Dart2Parser.ReturnStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.ReturnStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 318, self.RULE_returnStatement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1836
-            self.match(Dart2Parser.RETURN_)
+            self.match(DartParser.RETURN_)
             self.state = 1838
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -13442,7 +13442,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1840
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -13460,18 +13460,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def NOT(self):
-            return self.getToken(Dart2Parser.NOT, 0)
+            return self.getToken(DartParser.NOT, 0)
 
         def assignableSelector(self):
-            return self.getTypedRuleContext(Dart2Parser.AssignableSelectorContext,0)
+            return self.getTypedRuleContext(DartParser.AssignableSelectorContext,0)
 
 
         def argumentPart(self):
-            return self.getTypedRuleContext(Dart2Parser.ArgumentPartContext,0)
+            return self.getTypedRuleContext(DartParser.ArgumentPartContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_selector
+            return DartParser.RULE_selector
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSelector" ):
@@ -13486,7 +13486,7 @@ class Dart2Parser ( Parser ):
 
     def selector(self):
 
-        localctx = Dart2Parser.SelectorContext(self, self._ctx, self.state)
+        localctx = DartParser.SelectorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 320, self.RULE_selector)
         try:
             self.state = 1845
@@ -13495,7 +13495,7 @@ class Dart2Parser ( Parser ):
             if token in [28]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1842
-                self.match(Dart2Parser.NOT)
+                self.match(DartParser.NOT)
                 pass
             elif token in [12, 29, 41, 42]:
                 self.enterOuterAlt(localctx, 2)
@@ -13527,24 +13527,24 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OBC(self):
-            return self.getToken(Dart2Parser.OBC, 0)
+            return self.getToken(DartParser.OBC, 0)
 
         def CBC(self):
-            return self.getToken(Dart2Parser.CBC, 0)
+            return self.getToken(DartParser.CBC, 0)
 
         def CONST_(self):
-            return self.getToken(Dart2Parser.CONST_, 0)
+            return self.getToken(DartParser.CONST_, 0)
 
         def typeArguments(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.TypeArgumentsContext,0)
 
 
         def elements(self):
-            return self.getTypedRuleContext(Dart2Parser.ElementsContext,0)
+            return self.getTypedRuleContext(DartParser.ElementsContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_setOrMapLiteral
+            return DartParser.RULE_setOrMapLiteral
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSetOrMapLiteral" ):
@@ -13559,7 +13559,7 @@ class Dart2Parser ( Parser ):
 
     def setOrMapLiteral(self):
 
-        localctx = Dart2Parser.SetOrMapLiteralContext(self, self._ctx, self.state)
+        localctx = DartParser.SetOrMapLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 322, self.RULE_setOrMapLiteral)
         self._la = 0 # Token type
         try:
@@ -13569,7 +13569,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==63:
                 self.state = 1847
-                self.match(Dart2Parser.CONST_)
+                self.match(DartParser.CONST_)
 
 
             self.state = 1851
@@ -13581,7 +13581,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1853
-            self.match(Dart2Parser.OBC)
+            self.match(DartParser.OBC)
             self.state = 1855
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -13591,7 +13591,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1857
-            self.match(Dart2Parser.CBC)
+            self.match(DartParser.CBC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -13609,22 +13609,22 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def SET_(self):
-            return self.getToken(Dart2Parser.SET_, 0)
+            return self.getToken(DartParser.SET_, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def formalParameterList(self):
-            return self.getTypedRuleContext(Dart2Parser.FormalParameterListContext,0)
+            return self.getTypedRuleContext(DartParser.FormalParameterListContext,0)
 
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_setterSignature
+            return DartParser.RULE_setterSignature
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSetterSignature" ):
@@ -13639,7 +13639,7 @@ class Dart2Parser ( Parser ):
 
     def setterSignature(self):
 
-        localctx = Dart2Parser.SetterSignatureContext(self, self._ctx, self.state)
+        localctx = DartParser.SetterSignatureContext(self, self._ctx, self.state)
         self.enterRule(localctx, 324, self.RULE_setterSignature)
         self._la = 0 # Token type
         try:
@@ -13653,7 +13653,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1862
-            self.match(Dart2Parser.SET_)
+            self.match(DartParser.SET_)
             self.state = 1863
             self.identifier()
             self.state = 1864
@@ -13676,23 +13676,23 @@ class Dart2Parser ( Parser ):
 
         def additiveExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.AdditiveExpressionContext)
+                return self.getTypedRuleContexts(DartParser.AdditiveExpressionContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.AdditiveExpressionContext,i)
+                return self.getTypedRuleContext(DartParser.AdditiveExpressionContext,i)
 
 
         def shiftOperator(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.ShiftOperatorContext)
+                return self.getTypedRuleContexts(DartParser.ShiftOperatorContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.ShiftOperatorContext,i)
+                return self.getTypedRuleContext(DartParser.ShiftOperatorContext,i)
 
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_shiftExpression
+            return DartParser.RULE_shiftExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterShiftExpression" ):
@@ -13707,7 +13707,7 @@ class Dart2Parser ( Parser ):
 
     def shiftExpression(self):
 
-        localctx = Dart2Parser.ShiftExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.ShiftExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 326, self.RULE_shiftExpression)
         try:
             self.state = 1883
@@ -13735,7 +13735,7 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1875
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 self.state = 1879 
                 self._errHandler.sync(self)
                 _alt = 1
@@ -13772,16 +13772,16 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def LTLT(self):
-            return self.getToken(Dart2Parser.LTLT, 0)
+            return self.getToken(DartParser.LTLT, 0)
 
         def GT(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.GT)
+                return self.getTokens(DartParser.GT)
             else:
-                return self.getToken(Dart2Parser.GT, i)
+                return self.getToken(DartParser.GT, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_shiftOperator
+            return DartParser.RULE_shiftOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterShiftOperator" ):
@@ -13796,7 +13796,7 @@ class Dart2Parser ( Parser ):
 
     def shiftOperator(self):
 
-        localctx = Dart2Parser.ShiftOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.ShiftOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 328, self.RULE_shiftOperator)
         try:
             self.state = 1891
@@ -13805,25 +13805,25 @@ class Dart2Parser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1885
-                self.match(Dart2Parser.LTLT)
+                self.match(DartParser.LTLT)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1886
-                self.match(Dart2Parser.GT)
+                self.match(DartParser.GT)
                 self.state = 1887
-                self.match(Dart2Parser.GT)
+                self.match(DartParser.GT)
                 self.state = 1888
-                self.match(Dart2Parser.GT)
+                self.match(DartParser.GT)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1889
-                self.match(Dart2Parser.GT)
+                self.match(DartParser.GT)
                 self.state = 1890
-                self.match(Dart2Parser.GT)
+                self.match(DartParser.GT)
                 pass
 
 
@@ -13844,18 +13844,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def declaredIdentifier(self):
-            return self.getTypedRuleContext(Dart2Parser.DeclaredIdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.DeclaredIdentifierContext,0)
 
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def COVARIANT_(self):
-            return self.getToken(Dart2Parser.COVARIANT_, 0)
+            return self.getToken(DartParser.COVARIANT_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_simpleFormalParameter
+            return DartParser.RULE_simpleFormalParameter
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSimpleFormalParameter" ):
@@ -13870,7 +13870,7 @@ class Dart2Parser ( Parser ):
 
     def simpleFormalParameter(self):
 
-        localctx = Dart2Parser.SimpleFormalParameterContext(self, self._ctx, self.state)
+        localctx = DartParser.SimpleFormalParameterContext(self, self._ctx, self.state)
         self.enterRule(localctx, 330, self.RULE_simpleFormalParameter)
         try:
             self.state = 1898
@@ -13889,7 +13889,7 @@ class Dart2Parser ( Parser ):
                 la_ = self._interp.adaptivePredict(self._input,214,self._ctx)
                 if la_ == 1:
                     self.state = 1894
-                    self.match(Dart2Parser.COVARIANT_)
+                    self.match(DartParser.COVARIANT_)
 
 
                 self.state = 1897
@@ -13914,10 +13914,10 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def SingleLineString(self):
-            return self.getToken(Dart2Parser.SingleLineString, 0)
+            return self.getToken(DartParser.SingleLineString, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_singleLineString
+            return DartParser.RULE_singleLineString
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSingleLineString" ):
@@ -13932,12 +13932,12 @@ class Dart2Parser ( Parser ):
 
     def singleLineString(self):
 
-        localctx = Dart2Parser.SingleLineStringContext(self, self._ctx, self.state)
+        localctx = DartParser.SingleLineStringContext(self, self._ctx, self.state)
         self.enterRule(localctx, 332, self.RULE_singleLineString)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1900
-            self.match(Dart2Parser.SingleLineString)
+            self.match(DartParser.SingleLineString)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -13955,17 +13955,17 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def DDD(self):
-            return self.getToken(Dart2Parser.DDD, 0)
+            return self.getToken(DartParser.DDD, 0)
 
         def DDDQ(self):
-            return self.getToken(Dart2Parser.DDDQ, 0)
+            return self.getToken(DartParser.DDDQ, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_spreadElement
+            return DartParser.RULE_spreadElement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSpreadElement" ):
@@ -13980,7 +13980,7 @@ class Dart2Parser ( Parser ):
 
     def spreadElement(self):
 
-        localctx = Dart2Parser.SpreadElementContext(self, self._ctx, self.state)
+        localctx = DartParser.SpreadElementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 334, self.RULE_spreadElement)
         self._la = 0 # Token type
         try:
@@ -14011,18 +14011,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def nonLabelledStatement(self):
-            return self.getTypedRuleContext(Dart2Parser.NonLabelledStatementContext,0)
+            return self.getTypedRuleContext(DartParser.NonLabelledStatementContext,0)
 
 
         def label(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.LabelContext)
+                return self.getTypedRuleContexts(DartParser.LabelContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.LabelContext,i)
+                return self.getTypedRuleContext(DartParser.LabelContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_statement
+            return DartParser.RULE_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterStatement" ):
@@ -14037,7 +14037,7 @@ class Dart2Parser ( Parser ):
 
     def statement(self):
 
-        localctx = Dart2Parser.StatementContext(self, self._ctx, self.state)
+        localctx = DartParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 336, self.RULE_statement)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -14072,13 +14072,13 @@ class Dart2Parser ( Parser ):
 
         def statement(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.StatementContext)
+                return self.getTypedRuleContexts(DartParser.StatementContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.StatementContext,i)
+                return self.getTypedRuleContext(DartParser.StatementContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_statements
+            return DartParser.RULE_statements
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterStatements" ):
@@ -14093,7 +14093,7 @@ class Dart2Parser ( Parser ):
 
     def statements(self):
 
-        localctx = Dart2Parser.StatementsContext(self, self._ctx, self.state)
+        localctx = DartParser.StatementsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 338, self.RULE_statements)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -14125,18 +14125,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_staticFinalDeclaration
+            return DartParser.RULE_staticFinalDeclaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterStaticFinalDeclaration" ):
@@ -14151,14 +14151,14 @@ class Dart2Parser ( Parser ):
 
     def staticFinalDeclaration(self):
 
-        localctx = Dart2Parser.StaticFinalDeclarationContext(self, self._ctx, self.state)
+        localctx = DartParser.StaticFinalDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 340, self.RULE_staticFinalDeclaration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1919
             self.identifier()
             self.state = 1920
-            self.match(Dart2Parser.EQ)
+            self.match(DartParser.EQ)
             self.state = 1921
             self.expr()
         except RecognitionException as re:
@@ -14179,19 +14179,19 @@ class Dart2Parser ( Parser ):
 
         def staticFinalDeclaration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.StaticFinalDeclarationContext)
+                return self.getTypedRuleContexts(DartParser.StaticFinalDeclarationContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.StaticFinalDeclarationContext,i)
+                return self.getTypedRuleContext(DartParser.StaticFinalDeclarationContext,i)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_staticFinalDeclarationList
+            return DartParser.RULE_staticFinalDeclarationList
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterStaticFinalDeclarationList" ):
@@ -14206,7 +14206,7 @@ class Dart2Parser ( Parser ):
 
     def staticFinalDeclarationList(self):
 
-        localctx = Dart2Parser.StaticFinalDeclarationListContext(self, self._ctx, self.state)
+        localctx = DartParser.StaticFinalDeclarationListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 342, self.RULE_staticFinalDeclarationList)
         self._la = 0 # Token type
         try:
@@ -14218,7 +14218,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             while _la==5:
                 self.state = 1924
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 1925
                 self.staticFinalDeclaration()
                 self.state = 1930
@@ -14243,20 +14243,20 @@ class Dart2Parser ( Parser ):
 
         def multilineString(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.MultilineStringContext)
+                return self.getTypedRuleContexts(DartParser.MultilineStringContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.MultilineStringContext,i)
+                return self.getTypedRuleContext(DartParser.MultilineStringContext,i)
 
 
         def singleLineString(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.SingleLineStringContext)
+                return self.getTypedRuleContexts(DartParser.SingleLineStringContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.SingleLineStringContext,i)
+                return self.getTypedRuleContext(DartParser.SingleLineStringContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_stringLiteral
+            return DartParser.RULE_stringLiteral
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterStringLiteral" ):
@@ -14271,7 +14271,7 @@ class Dart2Parser ( Parser ):
 
     def stringLiteral(self):
 
-        localctx = Dart2Parser.StringLiteralContext(self, self._ctx, self.state)
+        localctx = DartParser.StringLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 344, self.RULE_stringLiteral)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -14318,18 +14318,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def EXTENDS_(self):
-            return self.getToken(Dart2Parser.EXTENDS_, 0)
+            return self.getToken(DartParser.EXTENDS_, 0)
 
         def typeNotVoid(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotVoidContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotVoidContext,0)
 
 
         def mixins(self):
-            return self.getTypedRuleContext(Dart2Parser.MixinsContext,0)
+            return self.getTypedRuleContext(DartParser.MixinsContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_superclass
+            return DartParser.RULE_superclass
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSuperclass" ):
@@ -14344,7 +14344,7 @@ class Dart2Parser ( Parser ):
 
     def superclass(self):
 
-        localctx = Dart2Parser.SuperclassContext(self, self._ctx, self.state)
+        localctx = DartParser.SuperclassContext(self, self._ctx, self.state)
         self.enterRule(localctx, 346, self.RULE_superclass)
         self._la = 0 # Token type
         try:
@@ -14354,7 +14354,7 @@ class Dart2Parser ( Parser ):
             if token in [73]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1937
-                self.match(Dart2Parser.EXTENDS_)
+                self.match(DartParser.EXTENDS_)
                 self.state = 1938
                 self.typeNotVoid()
                 self.state = 1940
@@ -14391,28 +14391,28 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def CASE_(self):
-            return self.getToken(Dart2Parser.CASE_, 0)
+            return self.getToken(DartParser.CASE_, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def CO(self):
-            return self.getToken(Dart2Parser.CO, 0)
+            return self.getToken(DartParser.CO, 0)
 
         def statements(self):
-            return self.getTypedRuleContext(Dart2Parser.StatementsContext,0)
+            return self.getTypedRuleContext(DartParser.StatementsContext,0)
 
 
         def label(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.LabelContext)
+                return self.getTypedRuleContexts(DartParser.LabelContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.LabelContext,i)
+                return self.getTypedRuleContext(DartParser.LabelContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_switchCase
+            return DartParser.RULE_switchCase
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSwitchCase" ):
@@ -14427,7 +14427,7 @@ class Dart2Parser ( Parser ):
 
     def switchCase(self):
 
-        localctx = Dart2Parser.SwitchCaseContext(self, self._ctx, self.state)
+        localctx = DartParser.SwitchCaseContext(self, self._ctx, self.state)
         self.enterRule(localctx, 348, self.RULE_switchCase)
         self._la = 0 # Token type
         try:
@@ -14443,11 +14443,11 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 1951
-            self.match(Dart2Parser.CASE_)
+            self.match(DartParser.CASE_)
             self.state = 1952
             self.expr()
             self.state = 1953
-            self.match(Dart2Parser.CO)
+            self.match(DartParser.CO)
             self.state = 1954
             self.statements()
         except RecognitionException as re:
@@ -14467,37 +14467,37 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def SWITCH_(self):
-            return self.getToken(Dart2Parser.SWITCH_, 0)
+            return self.getToken(DartParser.SWITCH_, 0)
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def OBC(self):
-            return self.getToken(Dart2Parser.OBC, 0)
+            return self.getToken(DartParser.OBC, 0)
 
         def CBC(self):
-            return self.getToken(Dart2Parser.CBC, 0)
+            return self.getToken(DartParser.CBC, 0)
 
         def switchCase(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.SwitchCaseContext)
+                return self.getTypedRuleContexts(DartParser.SwitchCaseContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.SwitchCaseContext,i)
+                return self.getTypedRuleContext(DartParser.SwitchCaseContext,i)
 
 
         def defaultCase(self):
-            return self.getTypedRuleContext(Dart2Parser.DefaultCaseContext,0)
+            return self.getTypedRuleContext(DartParser.DefaultCaseContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_switchStatement
+            return DartParser.RULE_switchStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSwitchStatement" ):
@@ -14512,21 +14512,21 @@ class Dart2Parser ( Parser ):
 
     def switchStatement(self):
 
-        localctx = Dart2Parser.SwitchStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.SwitchStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 350, self.RULE_switchStatement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1956
-            self.match(Dart2Parser.SWITCH_)
+            self.match(DartParser.SWITCH_)
             self.state = 1957
-            self.match(Dart2Parser.OP)
+            self.match(DartParser.OP)
             self.state = 1958
             self.expr()
             self.state = 1959
-            self.match(Dart2Parser.CP)
+            self.match(DartParser.CP)
             self.state = 1960
-            self.match(Dart2Parser.OBC)
+            self.match(DartParser.OBC)
             self.state = 1964
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,224,self._ctx)
@@ -14547,7 +14547,7 @@ class Dart2Parser ( Parser ):
 
 
             self.state = 1970
-            self.match(Dart2Parser.CBC)
+            self.match(DartParser.CBC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -14565,30 +14565,30 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def PO(self):
-            return self.getToken(Dart2Parser.PO, 0)
+            return self.getToken(DartParser.PO, 0)
 
         def identifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.IdentifierContext)
+                return self.getTypedRuleContexts(DartParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.IdentifierContext,i)
+                return self.getTypedRuleContext(DartParser.IdentifierContext,i)
 
 
         def operator(self):
-            return self.getTypedRuleContext(Dart2Parser.OperatorContext,0)
+            return self.getTypedRuleContext(DartParser.OperatorContext,0)
 
 
         def VOID_(self):
-            return self.getToken(Dart2Parser.VOID_, 0)
+            return self.getToken(DartParser.VOID_, 0)
 
         def D(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.D)
+                return self.getTokens(DartParser.D)
             else:
-                return self.getToken(Dart2Parser.D, i)
+                return self.getToken(DartParser.D, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_symbolLiteral
+            return DartParser.RULE_symbolLiteral
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSymbolLiteral" ):
@@ -14603,12 +14603,12 @@ class Dart2Parser ( Parser ):
 
     def symbolLiteral(self):
 
-        localctx = Dart2Parser.SymbolLiteralContext(self, self._ctx, self.state)
+        localctx = DartParser.SymbolLiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 352, self.RULE_symbolLiteral)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1972
-            self.match(Dart2Parser.PO)
+            self.match(DartParser.PO)
             self.state = 1983
             self._errHandler.sync(self)
             token = self._input.LA(1)
@@ -14621,7 +14621,7 @@ class Dart2Parser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 1974
-                        self.match(Dart2Parser.D)
+                        self.match(DartParser.D)
                         self.state = 1975
                         self.identifier() 
                     self.state = 1980
@@ -14635,7 +14635,7 @@ class Dart2Parser ( Parser ):
                 pass
             elif token in [117]:
                 self.state = 1982
-                self.match(Dart2Parser.VOID_)
+                self.match(DartParser.VOID_)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -14657,10 +14657,10 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def THIS_(self):
-            return self.getToken(Dart2Parser.THIS_, 0)
+            return self.getToken(DartParser.THIS_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_thisExpression
+            return DartParser.RULE_thisExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterThisExpression" ):
@@ -14675,12 +14675,12 @@ class Dart2Parser ( Parser ):
 
     def thisExpression(self):
 
-        localctx = Dart2Parser.ThisExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.ThisExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 354, self.RULE_thisExpression)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1985
-            self.match(Dart2Parser.THIS_)
+            self.match(DartParser.THIS_)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -14698,14 +14698,14 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def THROW_(self):
-            return self.getToken(Dart2Parser.THROW_, 0)
+            return self.getToken(DartParser.THROW_, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_throwExpression
+            return DartParser.RULE_throwExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterThrowExpression" ):
@@ -14720,12 +14720,12 @@ class Dart2Parser ( Parser ):
 
     def throwExpression(self):
 
-        localctx = Dart2Parser.ThrowExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.ThrowExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 356, self.RULE_throwExpression)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1987
-            self.match(Dart2Parser.THROW_)
+            self.match(DartParser.THROW_)
             self.state = 1988
             self.expr()
         except RecognitionException as re:
@@ -14745,14 +14745,14 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def THROW_(self):
-            return self.getToken(Dart2Parser.THROW_, 0)
+            return self.getToken(DartParser.THROW_, 0)
 
         def expressionWithoutCascade(self):
-            return self.getTypedRuleContext(Dart2Parser.ExpressionWithoutCascadeContext,0)
+            return self.getTypedRuleContext(DartParser.ExpressionWithoutCascadeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_throwExpressionWithoutCascade
+            return DartParser.RULE_throwExpressionWithoutCascade
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterThrowExpressionWithoutCascade" ):
@@ -14767,12 +14767,12 @@ class Dart2Parser ( Parser ):
 
     def throwExpressionWithoutCascade(self):
 
-        localctx = Dart2Parser.ThrowExpressionWithoutCascadeContext(self, self._ctx, self.state)
+        localctx = DartParser.ThrowExpressionWithoutCascadeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 358, self.RULE_throwExpressionWithoutCascade)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1990
-            self.match(Dart2Parser.THROW_)
+            self.match(DartParser.THROW_)
             self.state = 1991
             self.expressionWithoutCascade()
         except RecognitionException as re:
@@ -14792,10 +14792,10 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def SQUIG(self):
-            return self.getToken(Dart2Parser.SQUIG, 0)
+            return self.getToken(DartParser.SQUIG, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_tildeOperator
+            return DartParser.RULE_tildeOperator
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTildeOperator" ):
@@ -14810,12 +14810,12 @@ class Dart2Parser ( Parser ):
 
     def tildeOperator(self):
 
-        localctx = Dart2Parser.TildeOperatorContext(self, self._ctx, self.state)
+        localctx = DartParser.TildeOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 360, self.RULE_tildeOperator)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1993
-            self.match(Dart2Parser.SQUIG)
+            self.match(DartParser.SQUIG)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -14833,74 +14833,74 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def classDeclaration(self):
-            return self.getTypedRuleContext(Dart2Parser.ClassDeclarationContext,0)
+            return self.getTypedRuleContext(DartParser.ClassDeclarationContext,0)
 
 
         def mixinDeclaration(self):
-            return self.getTypedRuleContext(Dart2Parser.MixinDeclarationContext,0)
+            return self.getTypedRuleContext(DartParser.MixinDeclarationContext,0)
 
 
         def extensionDeclaration(self):
-            return self.getTypedRuleContext(Dart2Parser.ExtensionDeclarationContext,0)
+            return self.getTypedRuleContext(DartParser.ExtensionDeclarationContext,0)
 
 
         def enumType(self):
-            return self.getTypedRuleContext(Dart2Parser.EnumTypeContext,0)
+            return self.getTypedRuleContext(DartParser.EnumTypeContext,0)
 
 
         def typeAlias(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeAliasContext,0)
+            return self.getTypedRuleContext(DartParser.TypeAliasContext,0)
 
 
         def EXTERNAL_(self):
-            return self.getToken(Dart2Parser.EXTERNAL_, 0)
+            return self.getToken(DartParser.EXTERNAL_, 0)
 
         def functionSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionSignatureContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def getterSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.GetterSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.GetterSignatureContext,0)
 
 
         def setterSignature(self):
-            return self.getTypedRuleContext(Dart2Parser.SetterSignatureContext,0)
+            return self.getTypedRuleContext(DartParser.SetterSignatureContext,0)
 
 
         def functionBody(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionBodyContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionBodyContext,0)
 
 
         def staticFinalDeclarationList(self):
-            return self.getTypedRuleContext(Dart2Parser.StaticFinalDeclarationListContext,0)
+            return self.getTypedRuleContext(DartParser.StaticFinalDeclarationListContext,0)
 
 
         def FINAL_(self):
-            return self.getToken(Dart2Parser.FINAL_, 0)
+            return self.getToken(DartParser.FINAL_, 0)
 
         def CONST_(self):
-            return self.getToken(Dart2Parser.CONST_, 0)
+            return self.getToken(DartParser.CONST_, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def LATE_(self):
-            return self.getToken(Dart2Parser.LATE_, 0)
+            return self.getToken(DartParser.LATE_, 0)
 
         def initializedIdentifierList(self):
-            return self.getTypedRuleContext(Dart2Parser.InitializedIdentifierListContext,0)
+            return self.getTypedRuleContext(DartParser.InitializedIdentifierListContext,0)
 
 
         def varOrType(self):
-            return self.getTypedRuleContext(Dart2Parser.VarOrTypeContext,0)
+            return self.getTypedRuleContext(DartParser.VarOrTypeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_topLevelDeclaration
+            return DartParser.RULE_topLevelDeclaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTopLevelDeclaration" ):
@@ -14915,7 +14915,7 @@ class Dart2Parser ( Parser ):
 
     def topLevelDeclaration(self):
 
-        localctx = Dart2Parser.TopLevelDeclarationContext(self, self._ctx, self.state)
+        localctx = DartParser.TopLevelDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 362, self.RULE_topLevelDeclaration)
         self._la = 0 # Token type
         try:
@@ -14955,31 +14955,31 @@ class Dart2Parser ( Parser ):
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 2000
-                self.match(Dart2Parser.EXTERNAL_)
+                self.match(DartParser.EXTERNAL_)
                 self.state = 2001
                 self.functionSignature()
                 self.state = 2002
-                self.match(Dart2Parser.SC)
+                self.match(DartParser.SC)
                 pass
 
             elif la_ == 7:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 2004
-                self.match(Dart2Parser.EXTERNAL_)
+                self.match(DartParser.EXTERNAL_)
                 self.state = 2005
                 self.getterSignature()
                 self.state = 2006
-                self.match(Dart2Parser.SC)
+                self.match(DartParser.SC)
                 pass
 
             elif la_ == 8:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 2008
-                self.match(Dart2Parser.EXTERNAL_)
+                self.match(DartParser.EXTERNAL_)
                 self.state = 2009
                 self.setterSignature()
                 self.state = 2010
-                self.match(Dart2Parser.SC)
+                self.match(DartParser.SC)
                 pass
 
             elif la_ == 9:
@@ -15026,15 +15026,15 @@ class Dart2Parser ( Parser ):
                 self.state = 2025
                 self.staticFinalDeclarationList()
                 self.state = 2026
-                self.match(Dart2Parser.SC)
+                self.match(DartParser.SC)
                 pass
 
             elif la_ == 13:
                 self.enterOuterAlt(localctx, 13)
                 self.state = 2028
-                self.match(Dart2Parser.LATE_)
+                self.match(DartParser.LATE_)
                 self.state = 2029
-                self.match(Dart2Parser.FINAL_)
+                self.match(DartParser.FINAL_)
                 self.state = 2031
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,229,self._ctx)
@@ -15046,7 +15046,7 @@ class Dart2Parser ( Parser ):
                 self.state = 2033
                 self.initializedIdentifierList()
                 self.state = 2034
-                self.match(Dart2Parser.SC)
+                self.match(DartParser.SC)
                 pass
 
             elif la_ == 14:
@@ -15056,7 +15056,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==91:
                     self.state = 2036
-                    self.match(Dart2Parser.LATE_)
+                    self.match(DartParser.LATE_)
 
 
                 self.state = 2039
@@ -15064,7 +15064,7 @@ class Dart2Parser ( Parser ):
                 self.state = 2040
                 self.initializedIdentifierList()
                 self.state = 2041
-                self.match(Dart2Parser.SC)
+                self.match(DartParser.SC)
                 pass
 
 
@@ -15085,25 +15085,25 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def TRY_(self):
-            return self.getToken(Dart2Parser.TRY_, 0)
+            return self.getToken(DartParser.TRY_, 0)
 
         def block(self):
-            return self.getTypedRuleContext(Dart2Parser.BlockContext,0)
+            return self.getTypedRuleContext(DartParser.BlockContext,0)
 
 
         def finallyPart(self):
-            return self.getTypedRuleContext(Dart2Parser.FinallyPartContext,0)
+            return self.getTypedRuleContext(DartParser.FinallyPartContext,0)
 
 
         def onPart(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.OnPartContext)
+                return self.getTypedRuleContexts(DartParser.OnPartContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.OnPartContext,i)
+                return self.getTypedRuleContext(DartParser.OnPartContext,i)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_tryStatement
+            return DartParser.RULE_tryStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTryStatement" ):
@@ -15118,13 +15118,13 @@ class Dart2Parser ( Parser ):
 
     def tryStatement(self):
 
-        localctx = Dart2Parser.TryStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.TryStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 364, self.RULE_tryStatement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2045
-            self.match(Dart2Parser.TRY_)
+            self.match(DartParser.TRY_)
             self.state = 2046
             self.block()
             self.state = 2056
@@ -15178,18 +15178,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def functionType(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionTypeContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionTypeContext,0)
 
 
         def QU(self):
-            return self.getToken(Dart2Parser.QU, 0)
+            return self.getToken(DartParser.QU, 0)
 
         def typeNotFunction(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotFunctionContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotFunctionContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_type
+            return DartParser.RULE_type
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterType" ):
@@ -15204,7 +15204,7 @@ class Dart2Parser ( Parser ):
 
     def type_(self):
 
-        localctx = Dart2Parser.TypeContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 366, self.RULE_type)
         self._la = 0 # Token type
         try:
@@ -15220,7 +15220,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==41:
                     self.state = 2059
-                    self.match(Dart2Parser.QU)
+                    self.match(DartParser.QU)
 
 
                 pass
@@ -15249,32 +15249,32 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def TYPEDEF_(self):
-            return self.getToken(Dart2Parser.TYPEDEF_, 0)
+            return self.getToken(DartParser.TYPEDEF_, 0)
 
         def typeIdentifier(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeIdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.TypeIdentifierContext,0)
 
 
         def EQ(self):
-            return self.getToken(Dart2Parser.EQ, 0)
+            return self.getToken(DartParser.EQ, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def typeParameters(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeParametersContext,0)
+            return self.getTypedRuleContext(DartParser.TypeParametersContext,0)
 
 
         def functionTypeAlias(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionTypeAliasContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionTypeAliasContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeAlias
+            return DartParser.RULE_typeAlias
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeAlias" ):
@@ -15289,7 +15289,7 @@ class Dart2Parser ( Parser ):
 
     def typeAlias(self):
 
-        localctx = Dart2Parser.TypeAliasContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeAliasContext(self, self._ctx, self.state)
         self.enterRule(localctx, 368, self.RULE_typeAlias)
         self._la = 0 # Token type
         try:
@@ -15299,7 +15299,7 @@ class Dart2Parser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2065
-                self.match(Dart2Parser.TYPEDEF_)
+                self.match(DartParser.TYPEDEF_)
                 self.state = 2066
                 self.typeIdentifier()
                 self.state = 2068
@@ -15311,17 +15311,17 @@ class Dart2Parser ( Parser ):
 
 
                 self.state = 2070
-                self.match(Dart2Parser.EQ)
+                self.match(DartParser.EQ)
                 self.state = 2071
                 self.type_()
                 self.state = 2072
-                self.match(Dart2Parser.SC)
+                self.match(DartParser.SC)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2074
-                self.match(Dart2Parser.TYPEDEF_)
+                self.match(DartParser.TYPEDEF_)
                 self.state = 2075
                 self.functionTypeAlias()
                 pass
@@ -15344,17 +15344,17 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def LT(self):
-            return self.getToken(Dart2Parser.LT, 0)
+            return self.getToken(DartParser.LT, 0)
 
         def typeList(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeListContext,0)
+            return self.getTypedRuleContext(DartParser.TypeListContext,0)
 
 
         def GT(self):
-            return self.getToken(Dart2Parser.GT, 0)
+            return self.getToken(DartParser.GT, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeArguments
+            return DartParser.RULE_typeArguments
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeArguments" ):
@@ -15369,16 +15369,16 @@ class Dart2Parser ( Parser ):
 
     def typeArguments(self):
 
-        localctx = Dart2Parser.TypeArgumentsContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeArgumentsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 370, self.RULE_typeArguments)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2078
-            self.match(Dart2Parser.LT)
+            self.match(DartParser.LT)
             self.state = 2079
             self.typeList()
             self.state = 2080
-            self.match(Dart2Parser.GT)
+            self.match(DartParser.GT)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -15396,15 +15396,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def asOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.AsOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.AsOperatorContext,0)
 
 
         def typeNotVoid(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotVoidContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotVoidContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeCast
+            return DartParser.RULE_typeCast
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeCast" ):
@@ -15419,7 +15419,7 @@ class Dart2Parser ( Parser ):
 
     def typeCast(self):
 
-        localctx = Dart2Parser.TypeCastContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeCastContext(self, self._ctx, self.state)
         self.enterRule(localctx, 372, self.RULE_typeCast)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -15444,15 +15444,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typedIdentifier
+            return DartParser.RULE_typedIdentifier
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypedIdentifier" ):
@@ -15467,7 +15467,7 @@ class Dart2Parser ( Parser ):
 
     def typedIdentifier(self):
 
-        localctx = Dart2Parser.TypedIdentifierContext(self, self._ctx, self.state)
+        localctx = DartParser.TypedIdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 374, self.RULE_typedIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -15492,43 +15492,43 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def IDENTIFIER(self):
-            return self.getToken(Dart2Parser.IDENTIFIER, 0)
+            return self.getToken(DartParser.IDENTIFIER, 0)
 
         def ASYNC_(self):
-            return self.getToken(Dart2Parser.ASYNC_, 0)
+            return self.getToken(DartParser.ASYNC_, 0)
 
         def HIDE_(self):
-            return self.getToken(Dart2Parser.HIDE_, 0)
+            return self.getToken(DartParser.HIDE_, 0)
 
         def OF_(self):
-            return self.getToken(Dart2Parser.OF_, 0)
+            return self.getToken(DartParser.OF_, 0)
 
         def ON_(self):
-            return self.getToken(Dart2Parser.ON_, 0)
+            return self.getToken(DartParser.ON_, 0)
 
         def SHOW_(self):
-            return self.getToken(Dart2Parser.SHOW_, 0)
+            return self.getToken(DartParser.SHOW_, 0)
 
         def SYNC_(self):
-            return self.getToken(Dart2Parser.SYNC_, 0)
+            return self.getToken(DartParser.SYNC_, 0)
 
         def AWAIT_(self):
-            return self.getToken(Dart2Parser.AWAIT_, 0)
+            return self.getToken(DartParser.AWAIT_, 0)
 
         def YIELD_(self):
-            return self.getToken(Dart2Parser.YIELD_, 0)
+            return self.getToken(DartParser.YIELD_, 0)
 
         def DYNAMIC_(self):
-            return self.getToken(Dart2Parser.DYNAMIC_, 0)
+            return self.getToken(DartParser.DYNAMIC_, 0)
 
         def NATIVE_(self):
-            return self.getToken(Dart2Parser.NATIVE_, 0)
+            return self.getToken(DartParser.NATIVE_, 0)
 
         def FUNCTION_(self):
-            return self.getToken(Dart2Parser.FUNCTION_, 0)
+            return self.getToken(DartParser.FUNCTION_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeIdentifier
+            return DartParser.RULE_typeIdentifier
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeIdentifier" ):
@@ -15543,7 +15543,7 @@ class Dart2Parser ( Parser ):
 
     def typeIdentifier(self):
 
-        localctx = Dart2Parser.TypeIdentifierContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeIdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 376, self.RULE_typeIdentifier)
         self._la = 0 # Token type
         try:
@@ -15573,19 +15573,19 @@ class Dart2Parser ( Parser ):
 
         def type_(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.TypeContext)
+                return self.getTypedRuleContexts(DartParser.TypeContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.TypeContext,i)
+                return self.getTypedRuleContext(DartParser.TypeContext,i)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeList
+            return DartParser.RULE_typeList
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeList" ):
@@ -15600,7 +15600,7 @@ class Dart2Parser ( Parser ):
 
     def typeList(self):
 
-        localctx = Dart2Parser.TypeListContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 378, self.RULE_typeList)
         self._la = 0 # Token type
         try:
@@ -15612,7 +15612,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             while _la==5:
                 self.state = 2091
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 2092
                 self.type_()
                 self.state = 2097
@@ -15637,16 +15637,16 @@ class Dart2Parser ( Parser ):
 
         def typeIdentifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.TypeIdentifierContext)
+                return self.getTypedRuleContexts(DartParser.TypeIdentifierContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.TypeIdentifierContext,i)
+                return self.getTypedRuleContext(DartParser.TypeIdentifierContext,i)
 
 
         def D(self):
-            return self.getToken(Dart2Parser.D, 0)
+            return self.getToken(DartParser.D, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeName
+            return DartParser.RULE_typeName
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeName" ):
@@ -15661,7 +15661,7 @@ class Dart2Parser ( Parser ):
 
     def typeName(self):
 
-        localctx = Dart2Parser.TypeNameContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeNameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 380, self.RULE_typeName)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -15672,7 +15672,7 @@ class Dart2Parser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,240,self._ctx)
             if la_ == 1:
                 self.state = 2099
-                self.match(Dart2Parser.D)
+                self.match(DartParser.D)
                 self.state = 2100
                 self.typeIdentifier()
 
@@ -15694,14 +15694,14 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def VOID_(self):
-            return self.getToken(Dart2Parser.VOID_, 0)
+            return self.getToken(DartParser.VOID_, 0)
 
         def typeNotVoidNotFunction(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotVoidNotFunctionContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotVoidNotFunctionContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeNotFunction
+            return DartParser.RULE_typeNotFunction
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeNotFunction" ):
@@ -15716,7 +15716,7 @@ class Dart2Parser ( Parser ):
 
     def typeNotFunction(self):
 
-        localctx = Dart2Parser.TypeNotFunctionContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeNotFunctionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 382, self.RULE_typeNotFunction)
         try:
             self.state = 2105
@@ -15725,7 +15725,7 @@ class Dart2Parser ( Parser ):
             if token in [117]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2103
-                self.match(Dart2Parser.VOID_)
+                self.match(DartParser.VOID_)
                 pass
             elif token in [57, 58, 69, 81, 84, 95, 98, 99, 106, 110, 120, 125]:
                 self.enterOuterAlt(localctx, 2)
@@ -15752,18 +15752,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def functionType(self):
-            return self.getTypedRuleContext(Dart2Parser.FunctionTypeContext,0)
+            return self.getTypedRuleContext(DartParser.FunctionTypeContext,0)
 
 
         def QU(self):
-            return self.getToken(Dart2Parser.QU, 0)
+            return self.getToken(DartParser.QU, 0)
 
         def typeNotVoidNotFunction(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotVoidNotFunctionContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotVoidNotFunctionContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeNotVoid
+            return DartParser.RULE_typeNotVoid
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeNotVoid" ):
@@ -15778,7 +15778,7 @@ class Dart2Parser ( Parser ):
 
     def typeNotVoid(self):
 
-        localctx = Dart2Parser.TypeNotVoidContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeNotVoidContext(self, self._ctx, self.state)
         self.enterRule(localctx, 384, self.RULE_typeNotVoid)
         try:
             self.state = 2112
@@ -15793,7 +15793,7 @@ class Dart2Parser ( Parser ):
                 la_ = self._interp.adaptivePredict(self._input,242,self._ctx)
                 if la_ == 1:
                     self.state = 2108
-                    self.match(Dart2Parser.QU)
+                    self.match(DartParser.QU)
 
 
                 pass
@@ -15823,19 +15823,19 @@ class Dart2Parser ( Parser ):
 
         def typeNotVoid(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.TypeNotVoidContext)
+                return self.getTypedRuleContexts(DartParser.TypeNotVoidContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.TypeNotVoidContext,i)
+                return self.getTypedRuleContext(DartParser.TypeNotVoidContext,i)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeNotVoidList
+            return DartParser.RULE_typeNotVoidList
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeNotVoidList" ):
@@ -15850,7 +15850,7 @@ class Dart2Parser ( Parser ):
 
     def typeNotVoidList(self):
 
-        localctx = Dart2Parser.TypeNotVoidListContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeNotVoidListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 386, self.RULE_typeNotVoidList)
         self._la = 0 # Token type
         try:
@@ -15862,7 +15862,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             while _la==5:
                 self.state = 2115
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 2116
                 self.typeNotVoid()
                 self.state = 2121
@@ -15886,21 +15886,21 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def typeName(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNameContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNameContext,0)
 
 
         def typeArguments(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeArgumentsContext,0)
+            return self.getTypedRuleContext(DartParser.TypeArgumentsContext,0)
 
 
         def QU(self):
-            return self.getToken(Dart2Parser.QU, 0)
+            return self.getToken(DartParser.QU, 0)
 
         def FUNCTION_(self):
-            return self.getToken(Dart2Parser.FUNCTION_, 0)
+            return self.getToken(DartParser.FUNCTION_, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeNotVoidNotFunction
+            return DartParser.RULE_typeNotVoidNotFunction
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeNotVoidNotFunction" ):
@@ -15915,7 +15915,7 @@ class Dart2Parser ( Parser ):
 
     def typeNotVoidNotFunction(self):
 
-        localctx = Dart2Parser.TypeNotVoidNotFunctionContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeNotVoidNotFunctionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 388, self.RULE_typeNotVoidNotFunction)
         try:
             self.state = 2133
@@ -15938,7 +15938,7 @@ class Dart2Parser ( Parser ):
                 la_ = self._interp.adaptivePredict(self._input,246,self._ctx)
                 if la_ == 1:
                     self.state = 2126
-                    self.match(Dart2Parser.QU)
+                    self.match(DartParser.QU)
 
 
                 pass
@@ -15946,13 +15946,13 @@ class Dart2Parser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2129
-                self.match(Dart2Parser.FUNCTION_)
+                self.match(DartParser.FUNCTION_)
                 self.state = 2131
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,247,self._ctx)
                 if la_ == 1:
                     self.state = 2130
-                    self.match(Dart2Parser.QU)
+                    self.match(DartParser.QU)
 
 
                 pass
@@ -15976,19 +15976,19 @@ class Dart2Parser ( Parser ):
 
         def typeNotVoidNotFunction(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.TypeNotVoidNotFunctionContext)
+                return self.getTypedRuleContexts(DartParser.TypeNotVoidNotFunctionContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.TypeNotVoidNotFunctionContext,i)
+                return self.getTypedRuleContext(DartParser.TypeNotVoidNotFunctionContext,i)
 
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeNotVoidNotFunctionList
+            return DartParser.RULE_typeNotVoidNotFunctionList
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeNotVoidNotFunctionList" ):
@@ -16003,7 +16003,7 @@ class Dart2Parser ( Parser ):
 
     def typeNotVoidNotFunctionList(self):
 
-        localctx = Dart2Parser.TypeNotVoidNotFunctionListContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeNotVoidNotFunctionListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 390, self.RULE_typeNotVoidNotFunctionList)
         self._la = 0 # Token type
         try:
@@ -16015,7 +16015,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             while _la==5:
                 self.state = 2136
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 2137
                 self.typeNotVoidNotFunction()
                 self.state = 2142
@@ -16039,22 +16039,22 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def metadata(self):
-            return self.getTypedRuleContext(Dart2Parser.MetadataContext,0)
+            return self.getTypedRuleContext(DartParser.MetadataContext,0)
 
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def EXTENDS_(self):
-            return self.getToken(Dart2Parser.EXTENDS_, 0)
+            return self.getToken(DartParser.EXTENDS_, 0)
 
         def typeNotVoid(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotVoidContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotVoidContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeParameter
+            return DartParser.RULE_typeParameter
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeParameter" ):
@@ -16069,7 +16069,7 @@ class Dart2Parser ( Parser ):
 
     def typeParameter(self):
 
-        localctx = Dart2Parser.TypeParameterContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeParameterContext(self, self._ctx, self.state)
         self.enterRule(localctx, 392, self.RULE_typeParameter)
         self._la = 0 # Token type
         try:
@@ -16083,7 +16083,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==73:
                 self.state = 2145
-                self.match(Dart2Parser.EXTENDS_)
+                self.match(DartParser.EXTENDS_)
                 self.state = 2146
                 self.typeNotVoid()
 
@@ -16105,26 +16105,26 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def LT(self):
-            return self.getToken(Dart2Parser.LT, 0)
+            return self.getToken(DartParser.LT, 0)
 
         def typeParameter(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(Dart2Parser.TypeParameterContext)
+                return self.getTypedRuleContexts(DartParser.TypeParameterContext)
             else:
-                return self.getTypedRuleContext(Dart2Parser.TypeParameterContext,i)
+                return self.getTypedRuleContext(DartParser.TypeParameterContext,i)
 
 
         def GT(self):
-            return self.getToken(Dart2Parser.GT, 0)
+            return self.getToken(DartParser.GT, 0)
 
         def C(self, i:int=None):
             if i is None:
-                return self.getTokens(Dart2Parser.C)
+                return self.getTokens(DartParser.C)
             else:
-                return self.getToken(Dart2Parser.C, i)
+                return self.getToken(DartParser.C, i)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeParameters
+            return DartParser.RULE_typeParameters
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeParameters" ):
@@ -16139,13 +16139,13 @@ class Dart2Parser ( Parser ):
 
     def typeParameters(self):
 
-        localctx = Dart2Parser.TypeParametersContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeParametersContext(self, self._ctx, self.state)
         self.enterRule(localctx, 394, self.RULE_typeParameters)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2149
-            self.match(Dart2Parser.LT)
+            self.match(DartParser.LT)
             self.state = 2150
             self.typeParameter()
             self.state = 2155
@@ -16153,7 +16153,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             while _la==5:
                 self.state = 2151
-                self.match(Dart2Parser.C)
+                self.match(DartParser.C)
                 self.state = 2152
                 self.typeParameter()
                 self.state = 2157
@@ -16161,7 +16161,7 @@ class Dart2Parser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 2158
-            self.match(Dart2Parser.GT)
+            self.match(DartParser.GT)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -16179,15 +16179,15 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def isOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.IsOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.IsOperatorContext,0)
 
 
         def typeNotVoid(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeNotVoidContext,0)
+            return self.getTypedRuleContext(DartParser.TypeNotVoidContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_typeTest
+            return DartParser.RULE_typeTest
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTypeTest" ):
@@ -16202,7 +16202,7 @@ class Dart2Parser ( Parser ):
 
     def typeTest(self):
 
-        localctx = Dart2Parser.TypeTestContext(self, self._ctx, self.state)
+        localctx = DartParser.TypeTestContext(self, self._ctx, self.state)
         self.enterRule(localctx, 396, self.RULE_typeTest)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -16227,42 +16227,42 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def prefixOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.PrefixOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.PrefixOperatorContext,0)
 
 
         def unaryExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.UnaryExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.UnaryExpressionContext,0)
 
 
         def awaitExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.AwaitExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.AwaitExpressionContext,0)
 
 
         def postfixExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.PostfixExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.PostfixExpressionContext,0)
 
 
         def SUPER_(self):
-            return self.getToken(Dart2Parser.SUPER_, 0)
+            return self.getToken(DartParser.SUPER_, 0)
 
         def minusOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.MinusOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.MinusOperatorContext,0)
 
 
         def tildeOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.TildeOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.TildeOperatorContext,0)
 
 
         def incrementOperator(self):
-            return self.getTypedRuleContext(Dart2Parser.IncrementOperatorContext,0)
+            return self.getTypedRuleContext(DartParser.IncrementOperatorContext,0)
 
 
         def assignableExpression(self):
-            return self.getTypedRuleContext(Dart2Parser.AssignableExpressionContext,0)
+            return self.getTypedRuleContext(DartParser.AssignableExpressionContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_unaryExpression
+            return DartParser.RULE_unaryExpression
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterUnaryExpression" ):
@@ -16277,7 +16277,7 @@ class Dart2Parser ( Parser ):
 
     def unaryExpression(self):
 
-        localctx = Dart2Parser.UnaryExpressionContext(self, self._ctx, self.state)
+        localctx = DartParser.UnaryExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 398, self.RULE_unaryExpression)
         try:
             self.state = 2177
@@ -16320,7 +16320,7 @@ class Dart2Parser ( Parser ):
                     raise NoViableAltException(self)
 
                 self.state = 2172
-                self.match(Dart2Parser.SUPER_)
+                self.match(DartParser.SUPER_)
                 pass
 
             elif la_ == 5:
@@ -16349,24 +16349,24 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def OB(self):
-            return self.getToken(Dart2Parser.OB, 0)
+            return self.getToken(DartParser.OB, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def CB(self):
-            return self.getToken(Dart2Parser.CB, 0)
+            return self.getToken(DartParser.CB, 0)
 
         def D(self):
-            return self.getToken(Dart2Parser.D, 0)
+            return self.getToken(DartParser.D, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(Dart2Parser.IdentifierContext,0)
+            return self.getTypedRuleContext(DartParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_unconditionalAssignableSelector
+            return DartParser.RULE_unconditionalAssignableSelector
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterUnconditionalAssignableSelector" ):
@@ -16381,7 +16381,7 @@ class Dart2Parser ( Parser ):
 
     def unconditionalAssignableSelector(self):
 
-        localctx = Dart2Parser.UnconditionalAssignableSelectorContext(self, self._ctx, self.state)
+        localctx = DartParser.UnconditionalAssignableSelectorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 400, self.RULE_unconditionalAssignableSelector)
         try:
             self.state = 2185
@@ -16390,16 +16390,16 @@ class Dart2Parser ( Parser ):
             if token in [29]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2179
-                self.match(Dart2Parser.OB)
+                self.match(DartParser.OB)
                 self.state = 2180
                 self.expr()
                 self.state = 2181
-                self.match(Dart2Parser.CB)
+                self.match(DartParser.CB)
                 pass
             elif token in [12]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2183
-                self.match(Dart2Parser.D)
+                self.match(DartParser.D)
                 self.state = 2184
                 self.identifier()
                 pass
@@ -16423,11 +16423,11 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def stringLiteral(self):
-            return self.getTypedRuleContext(Dart2Parser.StringLiteralContext,0)
+            return self.getTypedRuleContext(DartParser.StringLiteralContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_uri
+            return DartParser.RULE_uri
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterUri" ):
@@ -16442,7 +16442,7 @@ class Dart2Parser ( Parser ):
 
     def uri(self):
 
-        localctx = Dart2Parser.UriContext(self, self._ctx, self.state)
+        localctx = DartParser.UriContext(self, self._ctx, self.state)
         self.enterRule(localctx, 402, self.RULE_uri)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -16465,18 +16465,18 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def dottedIdentifierList(self):
-            return self.getTypedRuleContext(Dart2Parser.DottedIdentifierListContext,0)
+            return self.getTypedRuleContext(DartParser.DottedIdentifierListContext,0)
 
 
         def EE(self):
-            return self.getToken(Dart2Parser.EE, 0)
+            return self.getToken(DartParser.EE, 0)
 
         def stringLiteral(self):
-            return self.getTypedRuleContext(Dart2Parser.StringLiteralContext,0)
+            return self.getTypedRuleContext(DartParser.StringLiteralContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_uriTest
+            return DartParser.RULE_uriTest
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterUriTest" ):
@@ -16491,7 +16491,7 @@ class Dart2Parser ( Parser ):
 
     def uriTest(self):
 
-        localctx = Dart2Parser.UriTestContext(self, self._ctx, self.state)
+        localctx = DartParser.UriTestContext(self, self._ctx, self.state)
         self.enterRule(localctx, 404, self.RULE_uriTest)
         self._la = 0 # Token type
         try:
@@ -16503,7 +16503,7 @@ class Dart2Parser ( Parser ):
             _la = self._input.LA(1)
             if _la==16:
                 self.state = 2190
-                self.match(Dart2Parser.EE)
+                self.match(DartParser.EE)
                 self.state = 2191
                 self.stringLiteral()
 
@@ -16525,14 +16525,14 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def VAR_(self):
-            return self.getToken(Dart2Parser.VAR_, 0)
+            return self.getToken(DartParser.VAR_, 0)
 
         def type_(self):
-            return self.getTypedRuleContext(Dart2Parser.TypeContext,0)
+            return self.getTypedRuleContext(DartParser.TypeContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_varOrType
+            return DartParser.RULE_varOrType
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterVarOrType" ):
@@ -16547,7 +16547,7 @@ class Dart2Parser ( Parser ):
 
     def varOrType(self):
 
-        localctx = Dart2Parser.VarOrTypeContext(self, self._ctx, self.state)
+        localctx = DartParser.VarOrTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 406, self.RULE_varOrType)
         try:
             self.state = 2196
@@ -16556,7 +16556,7 @@ class Dart2Parser ( Parser ):
             if token in [116]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2194
-                self.match(Dart2Parser.VAR_)
+                self.match(DartParser.VAR_)
                 pass
             elif token in [57, 58, 69, 81, 84, 95, 98, 99, 106, 110, 117, 120, 125]:
                 self.enterOuterAlt(localctx, 2)
@@ -16583,24 +16583,24 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def WHILE_(self):
-            return self.getToken(Dart2Parser.WHILE_, 0)
+            return self.getToken(DartParser.WHILE_, 0)
 
         def OP(self):
-            return self.getToken(Dart2Parser.OP, 0)
+            return self.getToken(DartParser.OP, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def CP(self):
-            return self.getToken(Dart2Parser.CP, 0)
+            return self.getToken(DartParser.CP, 0)
 
         def statement(self):
-            return self.getTypedRuleContext(Dart2Parser.StatementContext,0)
+            return self.getTypedRuleContext(DartParser.StatementContext,0)
 
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_whileStatement
+            return DartParser.RULE_whileStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterWhileStatement" ):
@@ -16615,18 +16615,18 @@ class Dart2Parser ( Parser ):
 
     def whileStatement(self):
 
-        localctx = Dart2Parser.WhileStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.WhileStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 408, self.RULE_whileStatement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2198
-            self.match(Dart2Parser.WHILE_)
+            self.match(DartParser.WHILE_)
             self.state = 2199
-            self.match(Dart2Parser.OP)
+            self.match(DartParser.OP)
             self.state = 2200
             self.expr()
             self.state = 2201
-            self.match(Dart2Parser.CP)
+            self.match(DartParser.CP)
             self.state = 2202
             self.statement()
         except RecognitionException as re:
@@ -16646,20 +16646,20 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def YIELD_(self):
-            return self.getToken(Dart2Parser.YIELD_, 0)
+            return self.getToken(DartParser.YIELD_, 0)
 
         def ST(self):
-            return self.getToken(Dart2Parser.ST, 0)
+            return self.getToken(DartParser.ST, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_yieldEachStatement
+            return DartParser.RULE_yieldEachStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterYieldEachStatement" ):
@@ -16674,18 +16674,18 @@ class Dart2Parser ( Parser ):
 
     def yieldEachStatement(self):
 
-        localctx = Dart2Parser.YieldEachStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.YieldEachStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 410, self.RULE_yieldEachStatement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2204
-            self.match(Dart2Parser.YIELD_)
+            self.match(DartParser.YIELD_)
             self.state = 2205
-            self.match(Dart2Parser.ST)
+            self.match(DartParser.ST)
             self.state = 2206
             self.expr()
             self.state = 2207
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -16703,17 +16703,17 @@ class Dart2Parser ( Parser ):
             self.parser = parser
 
         def YIELD_(self):
-            return self.getToken(Dart2Parser.YIELD_, 0)
+            return self.getToken(DartParser.YIELD_, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(Dart2Parser.ExprContext,0)
+            return self.getTypedRuleContext(DartParser.ExprContext,0)
 
 
         def SC(self):
-            return self.getToken(Dart2Parser.SC, 0)
+            return self.getToken(DartParser.SC, 0)
 
         def getRuleIndex(self):
-            return Dart2Parser.RULE_yieldStatement
+            return DartParser.RULE_yieldStatement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterYieldStatement" ):
@@ -16728,16 +16728,16 @@ class Dart2Parser ( Parser ):
 
     def yieldStatement(self):
 
-        localctx = Dart2Parser.YieldStatementContext(self, self._ctx, self.state)
+        localctx = DartParser.YieldStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 412, self.RULE_yieldStatement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2209
-            self.match(Dart2Parser.YIELD_)
+            self.match(DartParser.YIELD_)
             self.state = 2210
             self.expr()
             self.state = 2211
-            self.match(Dart2Parser.SC)
+            self.match(DartParser.SC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)

@@ -1,4 +1,4 @@
-# Generated from grammar/Dart2Lexer.g4 by ANTLR 4.13.2
+# Generated from grammar/DartLexer.g4 by ANTLR 4.13.2
 from antlr4 import *
 from io import StringIO
 import sys
@@ -7,11 +7,6 @@ if sys.version_info[1] > 5:
 else:
     from typing.io import TextIO
 
-
-if "." in __name__:
-    from .Dart2LexerBase import Dart2LexerBase
-else:
-    from Dart2LexerBase import Dart2LexerBase
 
 def serializedATN():
     return [
@@ -551,7 +546,7 @@ def serializedATN():
         1320,1353,1359,1364,1368,1372,1376,1,6,0,0
     ]
 
-class Dart2Lexer(Dart2LexerBase):
+class DartLexer(Lexer):
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -757,7 +752,7 @@ class Dart2Lexer(Dart2LexerBase):
                   "IDENTIFIER_PART_NO_DOLLAR", "IDENTIFIER_START", "IDENTIFIER_PART", 
                   "LETTER", "DIGIT" ]
 
-    grammarFileName = "Dart2Lexer.g4"
+    grammarFileName = "DartLexer.g4"
 
     def __init__(self, input=None, output:TextIO = sys.stdout):
         super().__init__(input, output)
