@@ -1,1 +1,3 @@
-# Projekat iz predmeta Konstrukcija kompilatora - Prevođenje Dart koda u UML dijagram aktivnosti
+# Projekat iz predmeta Konstrukcija kompilatora
+
+## Naziv projekta - Prevođenje Dart koda u UML dijagram aktivnosti
