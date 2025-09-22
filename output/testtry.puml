@@ -1,0 +1,16 @@
+@startuml
+start
+group try
+if (x<0) then (yes)
+:throw Exception("Negativan broj");
+endif
+:print "Sve je u redu";
+group catch (e)
+:print "Greška: ${e.toString()}";
+end group
+group finally
+:print "Ovo se uvek izvršava";
+end group
+end group
+stop
+@enduml

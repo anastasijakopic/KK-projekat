@@ -1,12 +1,12 @@
-int obradiListu() {
-  List<int> brojevi = [1, 2, 3, 4, 5];
-  int suma = 0;
-
-  for (var broj in brojevi) {
-    if (broj % 2 == 0) {
-      suma += broj;
+void main() {
+    var numbers = [1, 2, 3, 4, 5];
+    var sum = 0;
+    
+    for (var i = 0; i < 5; i++) {
+        if (numbers[i] % 2 == 0) {
+            sum = sum + numbers[i];
+        }
     }
-  }
-
-  return suma;
+    
+    print(sum);
 }

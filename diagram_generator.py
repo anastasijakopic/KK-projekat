@@ -1,12 +1,218 @@
-from antlr_gen.DartParserListener import DartParserListener
+from antlr_gen.Dart2ParserListener import Dart2ParserListener
+from antlr_gen.Dart2Parser import Dart2Parser
 
-class DiagramGenerator(DartParserListener):
+class DartActivityListenerImpl(Dart2ParserListener):
     def __init__(self):
-        super().__init__()
         self.uml_lines = []
-        self.in_for = False
-        self.in_if = False
+        self.label_count = 0
+        self.inside_function = False
+
+    def get_plantuml(self):
+        return "\n".join(self.uml_lines)
+
+    def new_label(self):
+        self.label_count += 1
+        return f"L{self.label_count}"
+
+    # -------------------------------
+    # FUNKCIJE
+    # -------------------------------
+    def enterFunctionDecl(self, ctx: Dart2Parser.FunctionDeclContext):
+        self.uml_lines.append("start")
+        self.inside_function = True
+
+    def exitFunctionDecl(self, ctx: Dart2Parser.FunctionDeclContext):
+        self.uml_lines.append("stop")
+        self.inside_function = False
+
+    # -------------------------------
+    # RETURN
+    # -------------------------------
+    def enterReturnStatement(self, ctx: Dart2Parser.ReturnStatementContext):
+        if ctx.expression():
+            expr_text = ctx.expression().getText()
+            self.uml_lines.append(f":return {expr_text};")
+        else:
+            self.uml_lines.append(":return;")
+
+    # -------------------------------
+    # IF / ELSE
+    # -------------------------------
+    def enterIfStatement(self, ctx: Dart2Parser.IfStatementContext):
+        condition = ctx.expression().getText()
+        self.uml_lines.append(f"if ({condition}) then (yes)")
+
+    def exitIfStatement(self, ctx: Dart2Parser.IfStatementContext):
+        if ctx.ELSE():
+            self.uml_lines.insert(-1, "else (no)")
+        self.uml_lines.append("endif")
+
+    # -------------------------------
+    # FOR
+    # -------------------------------
+    '''def enterForStatement(self, ctx: Dart2Parser.ForStatementContext):
+        var_name = ctx.ID().getText() if ctx.ID() else "?"
+        expr = ctx.expression().getText() if ctx.expression() else "?"
+        self.uml_lines.append(f"group for {var_name} in {expr}")'''
+    def enterForStatement(self, ctx: Dart2Parser.ForStatementContext):
+        self.in_for = True
         self.for_condition = ""
+        
+        if ctx.forLoopParts():
+            for_parts = ctx.forLoopParts()
+            
+            # Inicijalizacija
+            if for_parts.forInitializerStatement():
+                init_stmt = for_parts.forInitializerStatement()
+                if init_stmt.localVariableDeclaration():
+                    var_text = init_stmt.localVariableDeclaration().getText()
+                    self.uml_lines.append(f":{var_text};")
+            
+            # Uslov
+            if for_parts.expression():
+                self.for_condition = self.clean_text(for_parts.expression().getText())
+            
+            # Korak
+            if for_parts.expressionList():
+                step_text = self.clean_text(for_parts.expressionList().getText())
+                if step_text:
+                    self.uml_lines.append(f":{step_text};")
+
+            # Foreach stil
+            if for_parts.declaredIdentifier() and for_parts.expression():
+                var_name = for_parts.declaredIdentifier().getText()
+                expr_text = for_parts.expression().getText()
+                self.uml_lines.append(f"group foreach {var_name} in {expr_text}")
+
+        if self.for_condition:
+            self.uml_lines.append(f"group for ({self.for_condition})")
+        else:
+            self.uml_lines.append("group for")
+
+    def enterListLiteral(self, ctx: Dart2Parser.ListLiteralContext):
+        if ctx.expressionList():
+            elements = [self.clean_text(expr.getText()) for expr in ctx.expressionList().expression()]
+            list_text = f"[{', '.join(elements)}]"
+            self.uml_lines.append(f":{list_text};")
+
+    def exitForStatement(self, ctx):
+        self.in_for = False
+        self.uml_lines.append("end group")
+
+    
+
+    # -------------------------------
+    # WHILE / DO-WHILE
+    # -------------------------------
+    def enterWhileStatement(self, ctx: Dart2Parser.WhileStatementContext):
+        condition = ctx.expression().getText()
+        self.uml_lines.append(f"while ({condition}) is (true)")
+
+    def exitWhileStatement(self, ctx: Dart2Parser.WhileStatementContext):
+        self.uml_lines.append("endwhile")
+
+    def enterDoWhileStatement(self, ctx: Dart2Parser.DoWhileStatementContext):
+        self.uml_lines.append("repeat")
+
+    def exitDoWhileStatement(self, ctx: Dart2Parser.DoWhileStatementContext):
+        condition = ctx.expression().getText()
+        self.uml_lines.append(f"repeat while ({condition})")
+
+    # -------------------------------
+    # IZRAZI I PRINT
+    # -------------------------------
+    def enterExprStatement(self, ctx: Dart2Parser.ExprStatementContext):
+        expr_text = ctx.expression().getText()
+        if "+=" in expr_text:
+            var, value = expr_text.split("+=")
+            var = var.strip()
+            value = value.strip()
+            expr_text = f"{var} = {var} + {value}"
+        self.uml_lines.append(f":{expr_text};")
+
+    # -------------------------------
+    # DEKLARACIJE PROMENLJIVIH
+    # -------------------------------
+    def enterVarDecl(self, ctx: Dart2Parser.VarDeclContext):
+        var_name = ctx.ID().getText()
+        if ctx.expression():
+            value = ctx.expression().getText()
+            self.uml_lines.append(f":{var_name} = {value};")
+
+    def enterFinalDecl(self, ctx: Dart2Parser.FinalDeclContext):
+        var_name = ctx.ID().getText()
+        if ctx.expression():
+            value = ctx.expression().getText()
+            self.uml_lines.append(f":{var_name} = {value};")
+
+    def enterConstDecl(self, ctx: Dart2Parser.ConstDeclContext):
+        var_name = ctx.ID().getText()
+        if ctx.expression():
+            value = ctx.expression().getText()
+            self.uml_lines.append(f":{var_name} = {value};")
+
+    # -------------------------------
+    # PRINT
+    # -------------------------------
+    def enterPrintStatement(self, ctx: Dart2Parser.PrintStatementContext):
+        if ctx.expression():
+            expr_text = ctx.expression().getText()
+            self.uml_lines.append(f":print {expr_text};")
+        else:
+            self.uml_lines.append(":print;")
+
+    # -------------------------------
+    # SWITCH / CASE
+    # -------------------------------
+    def enterSwitchStatement(self, ctx: Dart2Parser.SwitchStatementContext):
+        condition = ctx.expression().getText()
+        self.uml_lines.append(f"switch ({condition})")
+
+    def enterSwitchCase(self, ctx: Dart2Parser.SwitchCaseContext):
+        expr = ctx.expression()
+        label = expr.getText() if expr else "default"
+        self.uml_lines.append(f"case ({label})")
+
+    def enterDefaultCase(self, ctx: Dart2Parser.DefaultCaseContext):
+        self.uml_lines.append("case (default)")
+
+    def exitSwitchStatement(self, ctx: Dart2Parser.SwitchStatementContext):
+        self.uml_lines.append("endswitch")
+
+    # -------------------------------
+    # TRY / CATCH / FINALLY
+    # -------------------------------
+    def enterTryStatement(self, ctx: Dart2Parser.TryStatementContext):
+        self.uml_lines.append("group try")
+
+    def enterCatchClause(self, ctx: Dart2Parser.CatchClauseContext):
+        var_name = ctx.ID().getText() if ctx.ID() else "exception"
+        self.uml_lines.append(f"group catch ({var_name})")
+
+    def exitCatchClause(self, ctx: Dart2Parser.CatchClauseContext):
+        self.uml_lines.append("end group")
+
+    def enterFinallyClause(self, ctx: Dart2Parser.FinallyClauseContext):
+        self.uml_lines.append("group finally")
+
+    def exitFinallyClause(self, ctx: Dart2Parser.FinallyClauseContext):
+        self.uml_lines.append("end group")
+
+    def exitTryStatement(self, ctx: Dart2Parser.TryStatementContext):
+        self.uml_lines.append("end group")
+
+    # -------------------------------
+    # BREAK / CONTINUE / THROW
+    # -------------------------------
+    def enterBreakStatement(self, ctx: Dart2Parser.BreakStatementContext):
+        self.uml_lines.append(":break;")
+
+    def enterContinueStatement(self, ctx: Dart2Parser.ContinueStatementContext):
+        self.uml_lines.append(":continue;")
+
+    def enterThrowStatement(self, ctx: Dart2Parser.ThrowStatementContext):
+        expr = ctx.expression().getText()
+        self.uml_lines.append(f":throw {expr};")
 
     def clean_text(self, text):
         if text:
@@ -14,120 +220,3 @@ class DiagramGenerator(DartParserListener):
             text = text.replace('var ', '')
             return text
         return ""
-
-    # FUNKCIJE - POČETAK
-    def enterFunctionSignature(self, ctx):
-        if ctx.identifier():
-            func_name = ctx.identifier().getText()
-            self.uml_lines.append("start")
-            self.uml_lines.append(f":{func_name}()")
-
-    # VARIJABLE
-    def enterInitializedVariableDeclaration(self, ctx):
-        try:
-            if hasattr(ctx, 'declaredIdentifier') and ctx.declaredIdentifier():
-                declared_ctx = ctx.declaredIdentifier()
-                if hasattr(declared_ctx, 'identifier') and declared_ctx.identifier():
-                    var_name = declared_ctx.identifier().getText()
-                    
-                    if ctx.getChildCount() > 1 and ctx.getChild(1).getText() == '=':
-                        value = self.clean_text(ctx.expr().getText())
-                        if value:
-                            self.uml_lines.append(f":{var_name} = {value};")
-        except:
-            pass
-
-    # FOR PETLJE
-    def enterForStatement(self, ctx):
-        self.in_for = True
-        self.for_condition = ""
-        
-        # Pokušaj da izvučeš for uslov iz forLoopParts
-        if ctx.forLoopParts():
-            for_parts = ctx.forLoopParts()
-            # Uslov (drugi dio for petlje)
-            if hasattr(for_parts, 'expr') and for_parts.expr():
-                self.for_condition = self.clean_text(for_parts.expr().getText())
-            
-            # Inicijalizacija (prvi dio for petlje)
-            if hasattr(for_parts, 'forInitializerStatement') and for_parts.forInitializerStatement():
-                init_stmt = for_parts.forInitializerStatement()
-                if hasattr(init_stmt, 'expr') and init_stmt.expr():
-                    init_text = self.clean_text(init_stmt.expr().getText())
-                    if init_text:
-                        self.uml_lines.append(f":{init_text};")
-
-        if self.for_condition:
-            self.uml_lines.append(f"group for ({self.for_condition})")
-        else:
-            self.uml_lines.append("group for")
-
-    def exitForStatement(self, ctx):
-        self.in_for = False
-        self.uml_lines.append("end group")
-
-    # IF STATEMENTS
-    def enterIfStatement(self, ctx):
-        self.in_if = True
-        if ctx.expr():
-            condition = self.clean_text(ctx.expr().getText())
-            self.uml_lines.append(f"if ({condition}) then (yes)")
-
-    def exitIfStatement(self, ctx):
-        self.in_if = False
-        self.uml_lines.append("endif")
-
-    # EXPRESSION STATEMENTS (izuzev u for/if blokovima)
-    def enterExpressionStatement(self, ctx):
-        if ctx.expr() and not self.in_for and not self.in_if:
-            expr_text = self.clean_text(ctx.expr().getText())
-            if expr_text and expr_text not in ['', '{}', '()']:
-                expr_text = expr_text.replace('var ', '')
-                self.uml_lines.append(f":{expr_text};")
-
-    # ASSIGNMENT U FOR/IF BLOKOVIMA
-    def enterExpr(self, ctx):
-        if (self.in_for or self.in_if) and ctx.getChildCount() > 2:
-            # Pokušaj da prepoznaš assignment (npr. sum = sum + numbers[i])
-            try:
-                left = self.clean_text(ctx.getChild(0).getText())
-                op = self.clean_text(ctx.getChild(1).getText())
-                right = self.clean_text(ctx.getChild(2).getText())
-                
-                if op == '=' and left and right:
-                    self.uml_lines.append(f":{left} = {right};")
-            except:
-                pass
-
-    # FUNCTION CALLS
-    def enterPostfixExpression(self, ctx):
-        try:
-            if ctx.selector() and ctx.primary():
-                primary_ctx = ctx.primary()
-                if hasattr(primary_ctx, 'identifier') and primary_ctx.identifier():
-                    func_name = primary_ctx.identifier().getText()
-                    
-                    selector_ctx = ctx.selector()
-                    if hasattr(selector_ctx, 'argumentPart') and selector_ctx.argumentPart():
-                        args_ctx = selector_ctx.argumentPart()
-                        if hasattr(args_ctx, 'arguments') and args_ctx.arguments():
-                            args_text = self.clean_text(args_ctx.arguments().getText())
-                            args_text = args_text.replace('(', '').replace(')', '')
-                            if args_text:
-                                self.uml_lines.append(f":{func_name}({args_text});")
-        except:
-            pass
-
-    # COMPILATION UNIT - KRAJ
-    def exitCompilationUnit(self, ctx):
-        self.uml_lines.append("stop")
-
-    def get_plantuml_code(self):
-        # Filtriraj duplikate i prazne linije
-        filtered_lines = []
-        seen = set()
-        for line in self.uml_lines:
-            if line and line not in seen and not line.endswith('();'):
-                filtered_lines.append(line)
-                seen.add(line)
-        return "\n".join(filtered_lines)

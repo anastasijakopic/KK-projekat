@@ -1,30 +1,27 @@
-import subprocess
 import os
+import subprocess
+import shutil
 
-def generate_diagram(puml_file_path):
-    """
-    Generiše PNG dijagram iz PlantUML fajla koristeći plantuml.jar.
-    Vraća True za uspeh, False za neuspeh.
-    """
-    if not os.path.exists(puml_file_path):
-        print(f"Greska: Fajl {puml_file_path} ne postoji.")
-        return False
+OUTPUT_FOLDER = "output"
+PLANTUML_JAR = "plantuml.jar"
 
-    command = ['java', '-jar', 'plantuml.jar', puml_file_path]
+def generate_uml_image(plantuml_code: str, base_name: str):
+    if not os.path.exists(OUTPUT_FOLDER):
+        os.makedirs(OUTPUT_FOLDER)
 
-    try:
-        print(f"Pokrecem PlantUML za: {puml_file_path}...")
-        result = subprocess.run(command, check=True, capture_output=True, text=True, timeout=30)
-        print("PlantUML izvrsen uspjesno.")
-        print(result.stdout)
-        return True
-    except subprocess.CalledProcessError as e:
-        print(f"PlantUML se zavrsio sa greskom (status kod {e.returncode}):")
-        print(e.stderr)
-        return False
-    except FileNotFoundError:
-        print("Greska: Nije moguce pronaci 'java' komandu. Provjerite da li je Java instalirana.")
-        return False
-    except subprocess.TimeoutExpired:
-        print("Greska: PlantUML je premasio vremensko ogranicenje.")
-        return False
+    if not shutil.which("java"):
+        print("[GREŠKA] Java nije instalirana ili nije dostupna u PATH-u.")
+        return
+
+    if not os.path.exists(PLANTUML_JAR):
+        print(f"[GREŠKA] Ne postoji fajl: {PLANTUML_JAR}")
+        return
+
+    puml_path = os.path.join(OUTPUT_FOLDER, base_name + ".puml")
+    with open(puml_path, "w", encoding="utf-8") as f:
+        f.write("@startuml\n")
+        f.write(plantuml_code)
+        f.write("\n@enduml\n")
+
+    subprocess.run(["java", "-jar", PLANTUML_JAR, puml_path], check=True)
+    print(f"Dijagram generisan: {os.path.join(OUTPUT_FOLDER, base_name + '.png')}")
