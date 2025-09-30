@@ -12,13 +12,12 @@ class SemanticAnalyzer(Dart2ParserListener):
         self.builtin_identifiers = {"print"}
         self.builtin_properties = {"hashCode", "runtimeType"}
 
-    # -------------------------------
-    # POMOĆNE METODE
-    # -------------------------------
-    def _current_symbols(self):
-        return {**self.global_symbols, **self.local_symbols}
 
-    def _is_ignored(self, ident):
+    # POMOĆNE METODE
+    def _current_symbols(self):
+        return {**self.global_symbols, **self.local_symbols}      #spaja lokalne i globalne simbole
+
+    def _is_ignored(self, ident):     # provjerava da li je identifikator nesto sto se ne tretira kao greska (vec poznata promj. itd)
         symbols = self._current_symbols()
         return (
             ident in symbols or
@@ -29,13 +28,13 @@ class SemanticAnalyzer(Dart2ParserListener):
             (ident.startswith('"') and ident.endswith('"')) or
             (ident.startswith("'") and ident.endswith("'"))
         )
-
+    #izvlaci sve identifikatore
     def _extract_identifiers(self, expr_text):
-        expr_text = re.sub(r'"[^"]*"', '', expr_text)
+        expr_text = re.sub(r'"[^"]*"', '', expr_text)   #uklanja stringove u dvostrukim i jednostrukim navodnicima
         expr_text = re.sub(r"'[^']*'", '', expr_text)
         return re.findall(r'\b[a-zA-Z_][a-zA-Z0-9_]*\b', expr_text)
 
-    def _check_binary_expr_types(self, expr_text):
+    def _check_binary_expr_types(self, expr_text):    #kompatibilnost tipova
         if '+' in expr_text:
             parts = expr_text.split('+')
             if len(parts) == 2:
@@ -116,7 +115,7 @@ class SemanticAnalyzer(Dart2ParserListener):
                         f"[SEMANTIČKA GREŠKA] Operator '+' nije dozvoljen za tipove {left_type} i {right_type}"
                     )
 
-    def enterExprStatement(self, ctx: Dart2Parser.ExprStatementContext):
+    def enterExprStatement(self, ctx: Dart2Parser.ExprStatementContext):    #provjerava izraze koji stoje kao posebne naredbe (poziv f-je)
         if ctx.expression():
             self.check_expression_variables(ctx.expression().getText())
 
@@ -124,14 +123,14 @@ class SemanticAnalyzer(Dart2ParserListener):
     # FUNCTIONS
     # -------------------------------
     def enterFunctionDecl(self, ctx: Dart2Parser.FunctionDeclContext):
-        self.local_symbols = {}
+        self.local_symbols = {}   #resetuje lokalne simbole
         if ctx.parameterList():
             for param in ctx.parameterList().parameter():
                 name = param.ID().getText()
                 type_ = param.type_().getText() if param.type_() else "dynamic"
-                self.local_symbols[name] = type_
+                self.local_symbols[name] = type_      #dodaje parametre u lokalne simbole
 
-    def enterReturnStatement(self, ctx: Dart2Parser.ReturnStatementContext):
+    def enterReturnStatement(self, ctx: Dart2Parser.ReturnStatementContext):   #provjera promjenljivih u return-u
         if ctx.expression():
             self.check_expression_variables(ctx.expression().getText(), "return")
 
@@ -182,19 +181,19 @@ class SemanticAnalyzer(Dart2ParserListener):
                 self.check_expression_variables(for_parts.expression().getText(), "foreach izrazu")
 
 
-    def enterListLiteral(self, ctx: Dart2Parser.ListLiteralContext):
+    def enterListLiteral(self, ctx: Dart2Parser.ListLiteralContext):   #provjera elemenata liste
         if ctx.expressionList():
             for expr in ctx.expressionList().expression():
                 self.check_expression_variables(expr.getText(), "listi")
 
-    def enterCatchClause(self, ctx: Dart2Parser.CatchClauseContext):
+    def enterCatchClause(self, ctx: Dart2Parser.CatchClauseContext):   #dodaje promjenljivu iz catch(e)
         if ctx.ID():
             self.local_symbols[ctx.ID().getText()] = "Exception"
 
     # -------------------------------
-    # MAIN ANALYZE
+    # MAIN ANALYZE  
     # -------------------------------
-    def analyze(self, tree):
+    def analyze(self, tree):      #vraca listu pronadjenih semantickih gresaka 
         walker = ParseTreeWalker()
         walker.walk(self, tree)
         return self.errors
@@ -222,7 +221,7 @@ class SemanticAnalyzer(Dart2ParserListener):
                 "[SEMANTIČKA GREŠKA] 'try' blok mora imati bar jedan 'catch' ili 'finally' blok"
             )
 
-    def enterForLoopParts(self, ctx):
+    def enterForLoopParts(self, ctx):   #dodatna provjera za for
         if hasattr(ctx, 'forInitializerStatement') and ctx.forInitializerStatement():
             init_stmt = ctx.forInitializerStatement()
             if hasattr(init_stmt, 'localVariableDeclaration') and init_stmt.localVariableDeclaration():

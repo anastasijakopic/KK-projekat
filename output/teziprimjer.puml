@@ -1,0 +1,39 @@
+@startuml
+start
+:i = 1;
+:i++;
+group for (i<=n)
+:rezultat=rezultat*i;
+end group
+:return rezultat;
+stop
+start
+switch (broj%2)
+case (0)
+:return "Paran";
+case (1)
+:return "Neparan";
+case (default)
+:return "Nepoznato";
+endswitch
+stop
+start
+while (i<=n) is (true)
+:s=s+i;
+:i=i+1;
+endwhile
+:return s;
+stop
+start
+group try
+:rezultattt = 100/broj;
+:print "Rezultat je $rezultattt";
+group catch (IntegerDivisionByZeroException)
+:print "Greška: dijeljenje nulom";
+end group
+group finally
+:print "Završena obrada.";
+end group
+end group
+stop
+@enduml

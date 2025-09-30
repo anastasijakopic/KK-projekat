@@ -65,8 +65,8 @@ class DartActivityListenerImpl(Dart2ParserListener):
             if for_parts.forInitializerStatement():
                 init_stmt = for_parts.forInitializerStatement()
                 if init_stmt.localVariableDeclaration():
-                    var_text = init_stmt.localVariableDeclaration().getText()
-                    self.uml_lines.append(f":{var_text};")
+                    var_text = init_stmt.localVariableDeclaration().ID().getText()
+                    self.uml_lines.append(f":{var_text} = 1;")
             
             # Uslov
             if for_parts.expression():
@@ -202,6 +202,17 @@ class DartActivityListenerImpl(Dart2ParserListener):
         self.uml_lines.append("end group")
 
     # -------------------------------
+    # ON (za catch)
+    # -------------------------------
+    def enterOnClause(self, ctx: Dart2Parser.OnClauseContext):
+        type_name = ctx.type_().getText() if ctx.type_() else "Exception"
+        self.uml_lines.append(f"group catch ({type_name})")
+
+    def exitOnClause(self, ctx: Dart2Parser.OnClauseContext):
+        self.uml_lines.append("end group")
+
+
+    # -------------------------------
     # BREAK / CONTINUE / THROW
     # -------------------------------
     def enterBreakStatement(self, ctx: Dart2Parser.BreakStatementContext):
@@ -214,7 +225,7 @@ class DartActivityListenerImpl(Dart2ParserListener):
         expr = ctx.expression().getText()
         self.uml_lines.append(f":throw {expr};")
 
-    def clean_text(self, text):
+    def clean_text(self, text):  #čisti tekst izraza: uklanja ;, escape-uje navodnike, uklanja var.
         if text:
             text = text.replace(';', '').replace('"', '\\"').strip()
             text = text.replace('var ', '')

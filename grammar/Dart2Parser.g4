@@ -37,7 +37,8 @@ functionDecl
     ;
 
 parameterList: parameter (COMMA parameter)*;
-parameter: ID COLON type   // tip je obavezan
+parameter: type ID 
+         | ID COLON type   // tip je obavezan
          | ID             // tip nije obavezan
          ;
 
@@ -96,7 +97,11 @@ defaultCase
 
 // Try-catch-finally blok
 tryStatement: TRY block (catchClause | onClause)* finallyClause?;
-onClause: ON type block;
+// onClause: ON type block;
+onClause
+    : ON type (LPAREN ID RPAREN)? block
+    ;
+
 catchClause: CATCH LPAREN ID (COLON type)? RPAREN block;
 finallyClause: FINALLY block;
 
@@ -105,6 +110,7 @@ returnStatement: RETURN expression? SEMI?;
 
 // Deklaracije promenljivih
 varDecl: VAR ID (ASSIGN expression)? SEMI?;
+// intDecl: INT? ID (ASSIGN expression)? SEMI?;
 finalDecl: FINAL ID (ASSIGN expression)? SEMI?;
 constDecl: CONST ID (ASSIGN expression)? SEMI?;
 
@@ -130,7 +136,7 @@ expression
     : literal
     | ID
     | listLiteral
-    | ID ASSIGN expression                      // dodela vrednosti
+    | ID ASSIGN expression                      // dodela vrijednosti
     | expression (PLUSEQ | MINUSEQ | MULEQ | DIVEQ | MODEQ) expression  // OPERATORI DODJELE
     | expression DOT ID                         // npr. obj.method
     | expression DOT ID LPAREN argumentList? RPAREN     // metoda 

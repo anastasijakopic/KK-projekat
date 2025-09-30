@@ -1,0 +1,14 @@
+@startuml
+start
+group try
+:rezultat = 100/broj;
+:print "Rezultat je $rezultat";
+group catch (IntegerDivisionByZeroException)
+:print "Greška: dijeljenje nulom";
+end group
+group finally
+:print "Završena obrada.";
+end group
+end group
+stop
+@enduml

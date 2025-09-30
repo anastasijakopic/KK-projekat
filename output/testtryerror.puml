@@ -1,9 +1,0 @@
-@startuml
-start
-group try
-:print "Početak";
-:throw Exception;
-:("Greška");
-end group
-stop
-@enduml
